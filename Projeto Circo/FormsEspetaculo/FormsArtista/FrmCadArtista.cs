@@ -1,12 +1,17 @@
-﻿using System;
+﻿using Business;
+using System;
 using System.Collections.Generic;
 using System.ComponentModel;
 using System.Data;
 using System.Drawing;
+using System.IO;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
+
+
+
 
 namespace Projeto_Circo.FormsArtista
 {
@@ -40,6 +45,35 @@ namespace Projeto_Circo.FormsArtista
         {
             this.Close();
         }
+
+        
+
+        private void btnInserirFoto_Click(object sender, EventArgs e)
+        {
+            OpenFileDialog file = new OpenFileDialog();
+            file.Filter = "jpg|*.jpg";
+            if (file.ShowDialog() == DialogResult.OK)
+            {
+                picFoto.ImageLocation = file.FileName;
+            }
+
+        }
+
+        private void btnSalvar_Click(object sender, EventArgs e)
+        {
+            
+            var U = new Usuario();
+        }
+
+        //Converte imagem para bytes
+        public byte[] ConverterImagemParaBytes()
+        {
+            MemoryStream stream = new MemoryStream();
+            picFoto.Image.Save(stream, System.Drawing.Imaging.ImageFormat.Jpeg);
+            byte[] foto = stream.ToArray();
+            return foto;
+        }
+
 
         public void LimparArtista()
         {

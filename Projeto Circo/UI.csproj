@@ -305,5 +305,11 @@
   <ItemGroup>
     <None Include="Resources\mostrarBitmap.bmp" />
   </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\Business\Business.csproj">
+      <Project>{8105cce9-176f-47b4-bb2b-82d036bb2742}</Project>
+      <Name>Business</Name>
+    </ProjectReference>
+  </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>

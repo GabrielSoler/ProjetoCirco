@@ -46,6 +46,8 @@ namespace Database
                     return "datetime";
                 case "Boolean":
                     return "tinyint";
+                case "byte[]":
+                    return "image";
                 default:
                     return "varchar(255)";
             }

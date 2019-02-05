@@ -1,4 +1,5 @@
-﻿using Projeto_Circo.FormsArtista;
+﻿using Business;
+using Projeto_Circo.FormsArtista;
 using Projeto_Circo.FormsFigurino;
 using Projeto_Circo.FormsFuncionario;
 using Projeto_Circo.FormsLogin;
@@ -21,7 +22,7 @@ namespace Projeto_Circo
             InitializeComponent();
         }
 
-
+       
         private void abrirArtista_Click(object sender, EventArgs e)
         {
             FrmCadArtista Form = new FrmCadArtista();
@@ -76,8 +77,11 @@ namespace Projeto_Circo
         {
             FrmLoginADM Form = new FrmLoginADM();
             Form.Show();
+
+            
         }
 
+       
        
     }
 }

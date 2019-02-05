@@ -4,6 +4,7 @@ using System.Linq;
 using System.Threading.Tasks;
 using System.Windows.Forms;
 
+
 namespace Projeto_Circo
 {
     static class Program
@@ -17,6 +18,7 @@ namespace Projeto_Circo
             Application.EnableVisualStyles();
             Application.SetCompatibleTextRenderingDefault(false);
             Application.Run(new FrmMain());
+    
         }
     }
 }

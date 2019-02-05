@@ -186,6 +186,7 @@
             this.btnInserirFoto.TabIndex = 81;
             this.btnInserirFoto.Text = "Inserir foto";
             this.btnInserirFoto.UseVisualStyleBackColor = false;
+            this.btnInserirFoto.Click += new System.EventHandler(this.btnInserirFoto_Click);
             // 
             // label27
             // 
@@ -232,6 +233,7 @@
             this.picFoto.Location = new System.Drawing.Point(280, 6);
             this.picFoto.Name = "picFoto";
             this.picFoto.Size = new System.Drawing.Size(142, 162);
+            this.picFoto.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
             this.picFoto.TabIndex = 75;
             this.picFoto.TabStop = false;
             // 
@@ -716,6 +718,7 @@
             this.btnSalvar.TabIndex = 57;
             this.btnSalvar.Text = "Salvar";
             this.btnSalvar.UseVisualStyleBackColor = false;
+            this.btnSalvar.Click += new System.EventHandler(this.btnSalvar_Click);
             // 
             // FrmCadArtista
             // 

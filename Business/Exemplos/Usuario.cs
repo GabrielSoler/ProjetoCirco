@@ -1,9 +1,4 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
-using System.Data;
+﻿using System.Collections.Generic;
 using Database;
 
 namespace Business
@@ -15,6 +10,7 @@ namespace Business
 
         [OpcoesBase(UsarNoBancoDeDados = true)]
         public string Nome { get; set; }
+
 
         [OpcoesBase(UsarNoBancoDeDados = true)]
         public string Telefone { get; set; }
