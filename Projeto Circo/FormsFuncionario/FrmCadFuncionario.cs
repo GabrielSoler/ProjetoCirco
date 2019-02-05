@@ -22,5 +22,10 @@ namespace Projeto_Circo.FormsFuncionario
             FrmAltLoginFuncionario Form = new FrmAltLoginFuncionario();
             Form.Show();
         }
+
+        private void btnSair_Click(object sender, EventArgs e)
+        {
+            this.Close();
+        }
     }
 }

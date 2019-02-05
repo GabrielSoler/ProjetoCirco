@@ -37,6 +37,9 @@ namespace Projeto_Circo.FormsFigurino.FormsPeças
             webBrowser1.Url = new Uri("https://outlook.live.com/owa/");
         }
 
-        
+        private void btnSair_Click(object sender, EventArgs e)
+        {
+            this.Close();
+        }
     }
 }
