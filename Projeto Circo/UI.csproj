@@ -1,0 +1,309 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="15.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <Import Project="$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props" Condition="Exists('$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props')" />
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProjectGuid>{E18ECF9B-2247-4FF3-96DA-29B7C4A7AFBD}</ProjectGuid>
+    <OutputType>WinExe</OutputType>
+    <RootNamespace>Projeto_Circo</RootNamespace>
+    <AssemblyName>Projeto Circo</AssemblyName>
+    <TargetFrameworkVersion>v4.6.1</TargetFrameworkVersion>
+    <FileAlignment>512</FileAlignment>
+    <AutoGenerateBindingRedirects>true</AutoGenerateBindingRedirects>
+    <Deterministic>true</Deterministic>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <PlatformTarget>AnyCPU</PlatformTarget>
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\Debug\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <PlatformTarget>AnyCPU</PlatformTarget>
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\Release\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup>
+    <ApplicationIcon>circoIcone.ico</ApplicationIcon>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="System" />
+    <Reference Include="System.Core" />
+    <Reference Include="System.Xml.Linq" />
+    <Reference Include="System.Data.DataSetExtensions" />
+    <Reference Include="Microsoft.CSharp" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Deployment" />
+    <Reference Include="System.Drawing" />
+    <Reference Include="System.Net.Http" />
+    <Reference Include="System.Windows.Forms" />
+    <Reference Include="System.Xml" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="FormsEspetaculo\FormsArtista\FrmArtistas.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FormsEspetaculo\FormsArtista\FrmArtistas.Designer.cs">
+      <DependentUpon>FrmArtistas.cs</DependentUpon>
+    </Compile>
+    <Compile Include="FormsEspetaculo\FormsArtista\FrmCadArtista.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FormsEspetaculo\FormsArtista\FrmCadArtista.Designer.cs">
+      <DependentUpon>FrmCadArtista.cs</DependentUpon>
+    </Compile>
+    <Compile Include="FormsEspetaculo\FormsArtista\FrmDelAltArtista.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FormsEspetaculo\FormsArtista\FrmDelAltArtista.Designer.cs">
+      <DependentUpon>FrmDelAltArtista.cs</DependentUpon>
+    </Compile>
+    <Compile Include="FormsEspetaculo\FormsFigurino\FormsColeções\FrmCadColecoes.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FormsEspetaculo\FormsFigurino\FormsColeções\FrmCadColecoes.Designer.cs">
+      <DependentUpon>FrmCadColecoes.cs</DependentUpon>
+    </Compile>
+    <Compile Include="FormsEspetaculo\FormsFigurino\FormsPeças\FrmCadPec.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FormsEspetaculo\FormsFigurino\FormsPeças\FrmCadPec.Designer.cs">
+      <DependentUpon>FrmCadPec.cs</DependentUpon>
+    </Compile>
+    <Compile Include="FormsEspetaculo\FormsFigurino\FormsColeções\FrmColecoes.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FormsEspetaculo\FormsFigurino\FormsColeções\FrmColecoes.Designer.cs">
+      <DependentUpon>FrmColecoes.cs</DependentUpon>
+    </Compile>
+    <Compile Include="FormsEspetaculo\FormsFigurino\FormsColeções\FrmDelAltColecoes.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FormsEspetaculo\FormsFigurino\FormsColeções\FrmDelAltColecoes.Designer.cs">
+      <DependentUpon>FrmDelAltColecoes.cs</DependentUpon>
+    </Compile>
+    <Compile Include="FormsEspetaculo\FormsFigurino\FormsPeças\FrmDelAltPec.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FormsEspetaculo\FormsFigurino\FormsPeças\FrmDelAltPec.Designer.cs">
+      <DependentUpon>FrmDelAltPec.cs</DependentUpon>
+    </Compile>
+    <Compile Include="FormsEspetaculo\FormsFigurino\FormsPeças\FrmEmail.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FormsEspetaculo\FormsFigurino\FormsPeças\FrmEmail.Designer.cs">
+      <DependentUpon>FrmEmail.cs</DependentUpon>
+    </Compile>
+    <Compile Include="FormsEspetaculo\FormsFigurino\FrmFigurino.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FormsEspetaculo\FormsFigurino\FrmFigurino.Designer.cs">
+      <DependentUpon>FrmFigurino.cs</DependentUpon>
+    </Compile>
+    <Compile Include="FormsEspetaculo\FormsFigurino\FormsPeças\FrmPec.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FormsEspetaculo\FormsFigurino\FormsPeças\FrmPec.Designer.cs">
+      <DependentUpon>FrmPec.cs</DependentUpon>
+    </Compile>
+    <Compile Include="FormsFinanceiro\FrmBuscaAltFinanceiro.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FormsFinanceiro\FrmBuscaAltFinanceiro.Designer.cs">
+      <DependentUpon>FrmBuscaAltFinanceiro.cs</DependentUpon>
+    </Compile>
+    <Compile Include="FormsFinanceiro\FrmCadFinanceiro.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FormsFinanceiro\FrmCadFinanceiro.Designer.cs">
+      <DependentUpon>FrmCadFinanceiro.cs</DependentUpon>
+    </Compile>
+    <Compile Include="FormsFinanceiro\FrmFinanceiro.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FormsFinanceiro\FrmFinanceiro.Designer.cs">
+      <DependentUpon>FrmFinanceiro.cs</DependentUpon>
+    </Compile>
+    <Compile Include="FormsFuncionario\FrmAltLoginFuncionario.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FormsFuncionario\FrmAltLoginFuncionario.Designer.cs">
+      <DependentUpon>FrmAltLoginFuncionario.cs</DependentUpon>
+    </Compile>
+    <Compile Include="FormsFuncionario\FrmCadFuncionario.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FormsFuncionario\FrmCadFuncionario.Designer.cs">
+      <DependentUpon>FrmCadFuncionario.cs</DependentUpon>
+    </Compile>
+    <Compile Include="FormsFuncionario\FrmDelAltFuncionario.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FormsFuncionario\FrmDelAltFuncionario.Designer.cs">
+      <DependentUpon>FrmDelAltFuncionario.cs</DependentUpon>
+    </Compile>
+    <Compile Include="FormsFuncionario\FrmFuncionario.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FormsFuncionario\FrmFuncionario.Designer.cs">
+      <DependentUpon>FrmFuncionario.cs</DependentUpon>
+    </Compile>
+    <Compile Include="FormsLogin\FrmLoginADM.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FormsLogin\FrmLoginADM.Designer.cs">
+      <DependentUpon>FrmLoginADM.cs</DependentUpon>
+    </Compile>
+    <Compile Include="FormsLogin\FrmLoginFinanceiro.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FormsLogin\FrmLoginFinanceiro.Designer.cs">
+      <DependentUpon>FrmLoginFinanceiro.cs</DependentUpon>
+    </Compile>
+    <Compile Include="FormsEspetaculo\FrmEspetaculo.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FormsEspetaculo\FrmEspetaculo.Designer.cs">
+      <DependentUpon>FrmEspetaculo.cs</DependentUpon>
+    </Compile>
+    <Compile Include="FormsEspetaculo\FrmMenuEspetaculo.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FormsEspetaculo\FrmMenuEspetaculo.Designer.cs">
+      <DependentUpon>FrmMenuEspetaculo.cs</DependentUpon>
+    </Compile>
+    <Compile Include="FrmMain.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FrmMain.Designer.cs">
+      <DependentUpon>FrmMain.cs</DependentUpon>
+    </Compile>
+    <Compile Include="FormsEspetaculo\FrmRelatorio.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FormsEspetaculo\FrmRelatorio.Designer.cs">
+      <DependentUpon>FrmRelatorio.cs</DependentUpon>
+    </Compile>
+    <Compile Include="FrmMenuADM.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FrmMenuADM.Designer.cs">
+      <DependentUpon>FrmMenuADM.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Program.cs" />
+    <Compile Include="Properties\AssemblyInfo.cs" />
+    <EmbeddedResource Include="FormsEspetaculo\FormsArtista\FrmArtistas.resx">
+      <DependentUpon>FrmArtistas.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FormsEspetaculo\FormsArtista\FrmCadArtista.resx">
+      <DependentUpon>FrmCadArtista.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FormsEspetaculo\FormsArtista\FrmDelAltArtista.resx">
+      <DependentUpon>FrmDelAltArtista.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FormsEspetaculo\FormsFigurino\FormsColeções\FrmCadColecoes.resx">
+      <DependentUpon>FrmCadColecoes.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FormsEspetaculo\FormsFigurino\FormsColeções\FrmColecoes.resx">
+      <DependentUpon>FrmColecoes.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FormsEspetaculo\FormsFigurino\FormsColeções\FrmDelAltColecoes.resx">
+      <DependentUpon>FrmDelAltColecoes.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FormsEspetaculo\FormsFigurino\FormsPeças\FrmCadPec.resx">
+      <DependentUpon>FrmCadPec.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FormsEspetaculo\FormsFigurino\FormsPeças\FrmDelAltPec.resx">
+      <DependentUpon>FrmDelAltPec.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FormsEspetaculo\FormsFigurino\FormsPeças\FrmEmail.resx">
+      <DependentUpon>FrmEmail.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FormsEspetaculo\FormsFigurino\FormsPeças\FrmPec.resx">
+      <DependentUpon>FrmPec.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FormsEspetaculo\FormsFigurino\FrmFigurino.resx">
+      <DependentUpon>FrmFigurino.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FormsEspetaculo\FrmEspetaculo.resx">
+      <DependentUpon>FrmEspetaculo.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FormsEspetaculo\FrmMenuEspetaculo.resx">
+      <DependentUpon>FrmMenuEspetaculo.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FormsFinanceiro\FrmBuscaAltFinanceiro.resx">
+      <DependentUpon>FrmBuscaAltFinanceiro.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FormsFinanceiro\FrmCadFinanceiro.resx">
+      <DependentUpon>FrmCadFinanceiro.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FormsFinanceiro\FrmFinanceiro.resx">
+      <DependentUpon>FrmFinanceiro.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FormsFuncionario\FrmAltLoginFuncionario.resx">
+      <DependentUpon>FrmAltLoginFuncionario.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FormsFuncionario\FrmCadFuncionario.resx">
+      <DependentUpon>FrmCadFuncionario.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FormsFuncionario\FrmDelAltFuncionario.resx">
+      <DependentUpon>FrmDelAltFuncionario.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FormsFuncionario\FrmFuncionario.resx">
+      <DependentUpon>FrmFuncionario.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FormsLogin\FrmLoginADM.resx">
+      <DependentUpon>FrmLoginADM.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FormsLogin\FrmLoginFinanceiro.resx">
+      <DependentUpon>FrmLoginFinanceiro.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FrmMain.resx">
+      <DependentUpon>FrmMain.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FormsEspetaculo\FrmRelatorio.resx">
+      <DependentUpon>FrmRelatorio.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FrmMenuADM.resx">
+      <DependentUpon>FrmMenuADM.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Properties\Resources.resx">
+      <Generator>ResXFileCodeGenerator</Generator>
+      <LastGenOutput>Resources.Designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <Compile Include="Properties\Resources.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DependentUpon>Resources.resx</DependentUpon>
+      <DesignTime>True</DesignTime>
+    </Compile>
+    <None Include="Properties\Settings.settings">
+      <Generator>SettingsSingleFileGenerator</Generator>
+      <LastGenOutput>Settings.Designer.cs</LastGenOutput>
+    </None>
+    <Compile Include="Properties\Settings.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DependentUpon>Settings.settings</DependentUpon>
+      <DesignTimeSharedInput>True</DesignTimeSharedInput>
+    </Compile>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="App.config" />
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="circoIcone.ico" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\mostrarBitmap.bmp" />
+  </ItemGroup>
+  <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
+</Project>
