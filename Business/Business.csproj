@@ -40,10 +40,10 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="Carro.cs" />
-    <Compile Include="Fornecedor.cs" />
-    <Compile Include="Endereco.cs" />
-    <Compile Include="Usuario.cs" />
+    <Compile Include="Exemplos\Carro.cs" />
+    <Compile Include="Exemplos\Fornecedor.cs" />
+    <Compile Include="Exemplos\Endereco.cs" />
+    <Compile Include="Exemplos\Usuario.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
   <ItemGroup>
