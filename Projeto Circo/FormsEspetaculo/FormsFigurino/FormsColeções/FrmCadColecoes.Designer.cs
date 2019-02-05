@@ -36,14 +36,14 @@
             this.label4 = new System.Windows.Forms.Label();
             this.label5 = new System.Windows.Forms.Label();
             this.label6 = new System.Windows.Forms.Label();
-            this.textBox1 = new System.Windows.Forms.TextBox();
-            this.maskedTextBox1 = new System.Windows.Forms.MaskedTextBox();
-            this.maskedTextBox2 = new System.Windows.Forms.MaskedTextBox();
-            this.textBox2 = new System.Windows.Forms.TextBox();
-            this.textBox3 = new System.Windows.Forms.TextBox();
-            this.radioButton1 = new System.Windows.Forms.RadioButton();
-            this.radioButton2 = new System.Windows.Forms.RadioButton();
-            this.comboBox1 = new System.Windows.Forms.ComboBox();
+            this.txtNomeCole = new System.Windows.Forms.TextBox();
+            this.txtDataCria = new System.Windows.Forms.MaskedTextBox();
+            this.txtQtdPecUnic = new System.Windows.Forms.MaskedTextBox();
+            this.txtNotas = new System.Windows.Forms.TextBox();
+            this.txtTeciAvi = new System.Windows.Forms.TextBox();
+            this.rbtAtivo = new System.Windows.Forms.RadioButton();
+            this.rbtInativo = new System.Windows.Forms.RadioButton();
+            this.cboCostu = new System.Windows.Forms.ComboBox();
             this.btnCancelar = new System.Windows.Forms.Button();
             this.btnSalvar = new System.Windows.Forms.Button();
             this.SuspendLayout();
@@ -118,74 +118,74 @@
             this.label6.TabIndex = 73;
             this.label6.Text = "Notas:";
             // 
-            // textBox1
+            // txtNomeCole
             // 
-            this.textBox1.Location = new System.Drawing.Point(16, 38);
-            this.textBox1.Name = "textBox1";
-            this.textBox1.Size = new System.Drawing.Size(190, 20);
-            this.textBox1.TabIndex = 0;
+            this.txtNomeCole.Location = new System.Drawing.Point(16, 38);
+            this.txtNomeCole.Name = "txtNomeCole";
+            this.txtNomeCole.Size = new System.Drawing.Size(190, 20);
+            this.txtNomeCole.TabIndex = 0;
             // 
-            // maskedTextBox1
+            // txtDataCria
             // 
-            this.maskedTextBox1.Location = new System.Drawing.Point(16, 83);
-            this.maskedTextBox1.Name = "maskedTextBox1";
-            this.maskedTextBox1.Size = new System.Drawing.Size(126, 20);
-            this.maskedTextBox1.TabIndex = 1;
+            this.txtDataCria.Location = new System.Drawing.Point(16, 83);
+            this.txtDataCria.Name = "txtDataCria";
+            this.txtDataCria.Size = new System.Drawing.Size(126, 20);
+            this.txtDataCria.TabIndex = 1;
             // 
-            // maskedTextBox2
+            // txtQtdPecUnic
             // 
-            this.maskedTextBox2.Location = new System.Drawing.Point(16, 257);
-            this.maskedTextBox2.Name = "maskedTextBox2";
-            this.maskedTextBox2.Size = new System.Drawing.Size(190, 20);
-            this.maskedTextBox2.TabIndex = 6;
+            this.txtQtdPecUnic.Location = new System.Drawing.Point(16, 257);
+            this.txtQtdPecUnic.Name = "txtQtdPecUnic";
+            this.txtQtdPecUnic.Size = new System.Drawing.Size(190, 20);
+            this.txtQtdPecUnic.TabIndex = 6;
             // 
-            // textBox2
+            // txtNotas
             // 
-            this.textBox2.Location = new System.Drawing.Point(16, 302);
-            this.textBox2.Multiline = true;
-            this.textBox2.Name = "textBox2";
-            this.textBox2.ScrollBars = System.Windows.Forms.ScrollBars.Vertical;
-            this.textBox2.Size = new System.Drawing.Size(218, 60);
-            this.textBox2.TabIndex = 7;
+            this.txtNotas.Location = new System.Drawing.Point(16, 302);
+            this.txtNotas.Multiline = true;
+            this.txtNotas.Name = "txtNotas";
+            this.txtNotas.ScrollBars = System.Windows.Forms.ScrollBars.Vertical;
+            this.txtNotas.Size = new System.Drawing.Size(218, 60);
+            this.txtNotas.TabIndex = 7;
             // 
-            // textBox3
+            // txtTeciAvi
             // 
-            this.textBox3.Location = new System.Drawing.Point(16, 170);
-            this.textBox3.Name = "textBox3";
-            this.textBox3.Size = new System.Drawing.Size(190, 20);
-            this.textBox3.TabIndex = 3;
+            this.txtTeciAvi.Location = new System.Drawing.Point(16, 170);
+            this.txtTeciAvi.Name = "txtTeciAvi";
+            this.txtTeciAvi.Size = new System.Drawing.Size(190, 20);
+            this.txtTeciAvi.TabIndex = 3;
             // 
-            // radioButton1
+            // rbtAtivo
             // 
-            this.radioButton1.AutoSize = true;
-            this.radioButton1.Font = new System.Drawing.Font("Times New Roman", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.radioButton1.Location = new System.Drawing.Point(17, 215);
-            this.radioButton1.Name = "radioButton1";
-            this.radioButton1.Size = new System.Drawing.Size(58, 21);
-            this.radioButton1.TabIndex = 4;
-            this.radioButton1.TabStop = true;
-            this.radioButton1.Text = "Ativo";
-            this.radioButton1.UseVisualStyleBackColor = true;
+            this.rbtAtivo.AutoSize = true;
+            this.rbtAtivo.Font = new System.Drawing.Font("Times New Roman", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.rbtAtivo.Location = new System.Drawing.Point(17, 215);
+            this.rbtAtivo.Name = "rbtAtivo";
+            this.rbtAtivo.Size = new System.Drawing.Size(58, 21);
+            this.rbtAtivo.TabIndex = 4;
+            this.rbtAtivo.TabStop = true;
+            this.rbtAtivo.Text = "Ativo";
+            this.rbtAtivo.UseVisualStyleBackColor = true;
             // 
-            // radioButton2
+            // rbtInativo
             // 
-            this.radioButton2.AutoSize = true;
-            this.radioButton2.Font = new System.Drawing.Font("Times New Roman", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.radioButton2.Location = new System.Drawing.Point(108, 215);
-            this.radioButton2.Name = "radioButton2";
-            this.radioButton2.Size = new System.Drawing.Size(66, 21);
-            this.radioButton2.TabIndex = 5;
-            this.radioButton2.TabStop = true;
-            this.radioButton2.Text = "Inativo";
-            this.radioButton2.UseVisualStyleBackColor = true;
+            this.rbtInativo.AutoSize = true;
+            this.rbtInativo.Font = new System.Drawing.Font("Times New Roman", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.rbtInativo.Location = new System.Drawing.Point(108, 215);
+            this.rbtInativo.Name = "rbtInativo";
+            this.rbtInativo.Size = new System.Drawing.Size(66, 21);
+            this.rbtInativo.TabIndex = 5;
+            this.rbtInativo.TabStop = true;
+            this.rbtInativo.Text = "Inativo";
+            this.rbtInativo.UseVisualStyleBackColor = true;
             // 
-            // comboBox1
+            // cboCostu
             // 
-            this.comboBox1.FormattingEnabled = true;
-            this.comboBox1.Location = new System.Drawing.Point(16, 124);
-            this.comboBox1.Name = "comboBox1";
-            this.comboBox1.Size = new System.Drawing.Size(190, 21);
-            this.comboBox1.TabIndex = 2;
+            this.cboCostu.FormattingEnabled = true;
+            this.cboCostu.Location = new System.Drawing.Point(16, 124);
+            this.cboCostu.Name = "cboCostu";
+            this.cboCostu.Size = new System.Drawing.Size(190, 21);
+            this.cboCostu.TabIndex = 2;
             // 
             // btnCancelar
             // 
@@ -220,6 +220,7 @@
             this.btnSalvar.TextAlign = System.Drawing.ContentAlignment.BottomCenter;
             this.btnSalvar.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageAboveText;
             this.btnSalvar.UseVisualStyleBackColor = false;
+            this.btnSalvar.Click += new System.EventHandler(this.btnSalvar_Click);
             // 
             // FrmCadColecoes
             // 
@@ -229,14 +230,14 @@
             this.ClientSize = new System.Drawing.Size(261, 464);
             this.Controls.Add(this.btnCancelar);
             this.Controls.Add(this.btnSalvar);
-            this.Controls.Add(this.comboBox1);
-            this.Controls.Add(this.radioButton2);
-            this.Controls.Add(this.radioButton1);
-            this.Controls.Add(this.textBox3);
-            this.Controls.Add(this.textBox2);
-            this.Controls.Add(this.maskedTextBox2);
-            this.Controls.Add(this.maskedTextBox1);
-            this.Controls.Add(this.textBox1);
+            this.Controls.Add(this.cboCostu);
+            this.Controls.Add(this.rbtInativo);
+            this.Controls.Add(this.rbtAtivo);
+            this.Controls.Add(this.txtTeciAvi);
+            this.Controls.Add(this.txtNotas);
+            this.Controls.Add(this.txtQtdPecUnic);
+            this.Controls.Add(this.txtDataCria);
+            this.Controls.Add(this.txtNomeCole);
             this.Controls.Add(this.label6);
             this.Controls.Add(this.label5);
             this.Controls.Add(this.label4);
@@ -262,14 +263,14 @@
         private System.Windows.Forms.Label label4;
         private System.Windows.Forms.Label label5;
         private System.Windows.Forms.Label label6;
-        private System.Windows.Forms.TextBox textBox1;
-        private System.Windows.Forms.MaskedTextBox maskedTextBox1;
-        private System.Windows.Forms.MaskedTextBox maskedTextBox2;
-        private System.Windows.Forms.TextBox textBox2;
-        private System.Windows.Forms.TextBox textBox3;
-        private System.Windows.Forms.RadioButton radioButton1;
-        private System.Windows.Forms.RadioButton radioButton2;
-        private System.Windows.Forms.ComboBox comboBox1;
+        private System.Windows.Forms.TextBox txtNomeCole;
+        private System.Windows.Forms.MaskedTextBox txtDataCria;
+        private System.Windows.Forms.MaskedTextBox txtQtdPecUnic;
+        private System.Windows.Forms.TextBox txtNotas;
+        private System.Windows.Forms.TextBox txtTeciAvi;
+        private System.Windows.Forms.RadioButton rbtAtivo;
+        private System.Windows.Forms.RadioButton rbtInativo;
+        private System.Windows.Forms.ComboBox cboCostu;
         private System.Windows.Forms.Button btnCancelar;
         private System.Windows.Forms.Button btnSalvar;
     }

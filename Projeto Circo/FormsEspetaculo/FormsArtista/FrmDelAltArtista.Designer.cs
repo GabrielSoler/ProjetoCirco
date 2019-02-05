@@ -34,27 +34,27 @@
             this.label23 = new System.Windows.Forms.Label();
             this.button1 = new System.Windows.Forms.Button();
             this.label27 = new System.Windows.Forms.Label();
-            this.maskedTextBox27 = new System.Windows.Forms.MaskedTextBox();
+            this.txtEmail = new System.Windows.Forms.MaskedTextBox();
             this.label26 = new System.Windows.Forms.Label();
-            this.maskedTextBox26 = new System.Windows.Forms.MaskedTextBox();
-            this.maskedTextBox25 = new System.Windows.Forms.MaskedTextBox();
-            this.pictureBox1 = new System.Windows.Forms.PictureBox();
+            this.txtTel = new System.Windows.Forms.MaskedTextBox();
+            this.txtEnderecoImage = new System.Windows.Forms.MaskedTextBox();
+            this.picFoto = new System.Windows.Forms.PictureBox();
             this.label25 = new System.Windows.Forms.Label();
-            this.radioButton2 = new System.Windows.Forms.RadioButton();
-            this.radioButton1 = new System.Windows.Forms.RadioButton();
+            this.rbtMasc = new System.Windows.Forms.RadioButton();
+            this.rbtFem = new System.Windows.Forms.RadioButton();
             this.label20 = new System.Windows.Forms.Label();
             this.label22 = new System.Windows.Forms.Label();
             this.label24 = new System.Windows.Forms.Label();
-            this.maskedTextBox20 = new System.Windows.Forms.MaskedTextBox();
-            this.maskedTextBox22 = new System.Windows.Forms.MaskedTextBox();
-            this.maskedTextBox23 = new System.Windows.Forms.MaskedTextBox();
-            this.maskedTextBox24 = new System.Windows.Forms.MaskedTextBox();
+            this.txtCpf = new System.Windows.Forms.MaskedTextBox();
+            this.txtDataNasc = new System.Windows.Forms.MaskedTextBox();
+            this.txtFunc = new System.Windows.Forms.MaskedTextBox();
+            this.txtNomeArt = new System.Windows.Forms.MaskedTextBox();
             this.tbMedidas = new System.Windows.Forms.TabPage();
-            this.maskedTextBox17 = new System.Windows.Forms.MaskedTextBox();
+            this.txtAltManga = new System.Windows.Forms.MaskedTextBox();
             this.label21 = new System.Windows.Forms.Label();
-            this.maskedTextBox21 = new System.Windows.Forms.MaskedTextBox();
+            this.txtAltura = new System.Windows.Forms.MaskedTextBox();
             this.label19 = new System.Windows.Forms.Label();
-            this.maskedTextBox19 = new System.Windows.Forms.MaskedTextBox();
+            this.txtAltCintDoJoelho = new System.Windows.Forms.MaskedTextBox();
             this.label18 = new System.Windows.Forms.Label();
             this.label17 = new System.Windows.Forms.Label();
             this.label16 = new System.Windows.Forms.Label();
@@ -73,30 +73,30 @@
             this.label3 = new System.Windows.Forms.Label();
             this.label2 = new System.Windows.Forms.Label();
             this.label1 = new System.Windows.Forms.Label();
-            this.maskedTextBox18 = new System.Windows.Forms.MaskedTextBox();
-            this.maskedTextBox16 = new System.Windows.Forms.MaskedTextBox();
-            this.maskedTextBox15 = new System.Windows.Forms.MaskedTextBox();
-            this.maskedTextBox14 = new System.Windows.Forms.MaskedTextBox();
-            this.maskedTextBox13 = new System.Windows.Forms.MaskedTextBox();
-            this.maskedTextBox12 = new System.Windows.Forms.MaskedTextBox();
-            this.maskedTextBox11 = new System.Windows.Forms.MaskedTextBox();
-            this.maskedTextBox10 = new System.Windows.Forms.MaskedTextBox();
-            this.maskedTextBox9 = new System.Windows.Forms.MaskedTextBox();
-            this.maskedTextBox8 = new System.Windows.Forms.MaskedTextBox();
-            this.maskedTextBox7 = new System.Windows.Forms.MaskedTextBox();
-            this.maskedTextBox6 = new System.Windows.Forms.MaskedTextBox();
-            this.maskedTextBox5 = new System.Windows.Forms.MaskedTextBox();
-            this.maskedTextBox4 = new System.Windows.Forms.MaskedTextBox();
-            this.maskedTextBox3 = new System.Windows.Forms.MaskedTextBox();
-            this.maskedTextBox2 = new System.Windows.Forms.MaskedTextBox();
-            this.maskedTextBox1 = new System.Windows.Forms.MaskedTextBox();
+            this.txtAltMangaCurta = new System.Windows.Forms.MaskedTextBox();
+            this.txtPunho = new System.Windows.Forms.MaskedTextBox();
+            this.txtLargBraco = new System.Windows.Forms.MaskedTextBox();
+            this.txtCompBraco = new System.Windows.Forms.MaskedTextBox();
+            this.txtAltCintAoTornozelo = new System.Windows.Forms.MaskedTextBox();
+            this.txtQuadril = new System.Windows.Forms.MaskedTextBox();
+            this.txtAlturaQuadril = new System.Windows.Forms.MaskedTextBox();
+            this.txtAltDesjDaSaia = new System.Windows.Forms.MaskedTextBox();
+            this.txtCintura = new System.Windows.Forms.MaskedTextBox();
+            this.txtSeparacaoBusto = new System.Windows.Forms.MaskedTextBox();
+            this.txtAlturaBusto = new System.Windows.Forms.MaskedTextBox();
+            this.txtBusto = new System.Windows.Forms.MaskedTextBox();
+            this.txtCentroCosta = new System.Windows.Forms.MaskedTextBox();
+            this.txtEntreCavasFrente = new System.Windows.Forms.MaskedTextBox();
+            this.txtColarinho = new System.Windows.Forms.MaskedTextBox();
+            this.txtOmbro = new System.Windows.Forms.MaskedTextBox();
+            this.txtOmbroAOmbro = new System.Windows.Forms.MaskedTextBox();
             this.btnBack = new System.Windows.Forms.Button();
             this.btnNext = new System.Windows.Forms.Button();
             this.btnEditar = new System.Windows.Forms.Button();
             this.btnExcluir = new System.Windows.Forms.Button();
             this.tabControl.SuspendLayout();
             this.tbDadosPessoais.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.picFoto)).BeginInit();
             this.tbMedidas.SuspendLayout();
             this.SuspendLayout();
             // 
@@ -116,21 +116,21 @@
             this.tbDadosPessoais.Controls.Add(this.label23);
             this.tbDadosPessoais.Controls.Add(this.button1);
             this.tbDadosPessoais.Controls.Add(this.label27);
-            this.tbDadosPessoais.Controls.Add(this.maskedTextBox27);
+            this.tbDadosPessoais.Controls.Add(this.txtEmail);
             this.tbDadosPessoais.Controls.Add(this.label26);
-            this.tbDadosPessoais.Controls.Add(this.maskedTextBox26);
-            this.tbDadosPessoais.Controls.Add(this.maskedTextBox25);
-            this.tbDadosPessoais.Controls.Add(this.pictureBox1);
+            this.tbDadosPessoais.Controls.Add(this.txtTel);
+            this.tbDadosPessoais.Controls.Add(this.txtEnderecoImage);
+            this.tbDadosPessoais.Controls.Add(this.picFoto);
             this.tbDadosPessoais.Controls.Add(this.label25);
-            this.tbDadosPessoais.Controls.Add(this.radioButton2);
-            this.tbDadosPessoais.Controls.Add(this.radioButton1);
+            this.tbDadosPessoais.Controls.Add(this.rbtMasc);
+            this.tbDadosPessoais.Controls.Add(this.rbtFem);
             this.tbDadosPessoais.Controls.Add(this.label20);
             this.tbDadosPessoais.Controls.Add(this.label22);
             this.tbDadosPessoais.Controls.Add(this.label24);
-            this.tbDadosPessoais.Controls.Add(this.maskedTextBox20);
-            this.tbDadosPessoais.Controls.Add(this.maskedTextBox22);
-            this.tbDadosPessoais.Controls.Add(this.maskedTextBox23);
-            this.tbDadosPessoais.Controls.Add(this.maskedTextBox24);
+            this.tbDadosPessoais.Controls.Add(this.txtCpf);
+            this.tbDadosPessoais.Controls.Add(this.txtDataNasc);
+            this.tbDadosPessoais.Controls.Add(this.txtFunc);
+            this.tbDadosPessoais.Controls.Add(this.txtNomeArt);
             this.tbDadosPessoais.Font = new System.Drawing.Font("Times New Roman", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.tbDadosPessoais.Location = new System.Drawing.Point(4, 30);
             this.tbDadosPessoais.Name = "tbDadosPessoais";
@@ -170,12 +170,12 @@
             this.label27.TabIndex = 80;
             this.label27.Text = "Email:";
             // 
-            // maskedTextBox27
+            // txtEmail
             // 
-            this.maskedTextBox27.Location = new System.Drawing.Point(28, 338);
-            this.maskedTextBox27.Name = "maskedTextBox27";
-            this.maskedTextBox27.Size = new System.Drawing.Size(181, 26);
-            this.maskedTextBox27.TabIndex = 35;
+            this.txtEmail.Location = new System.Drawing.Point(28, 338);
+            this.txtEmail.Name = "txtEmail";
+            this.txtEmail.Size = new System.Drawing.Size(181, 26);
+            this.txtEmail.TabIndex = 35;
             // 
             // label26
             // 
@@ -186,28 +186,28 @@
             this.label26.TabIndex = 78;
             this.label26.Text = "Telefone:";
             // 
-            // maskedTextBox26
+            // txtTel
             // 
-            this.maskedTextBox26.Location = new System.Drawing.Point(26, 291);
-            this.maskedTextBox26.Name = "maskedTextBox26";
-            this.maskedTextBox26.Size = new System.Drawing.Size(181, 26);
-            this.maskedTextBox26.TabIndex = 34;
+            this.txtTel.Location = new System.Drawing.Point(26, 291);
+            this.txtTel.Name = "txtTel";
+            this.txtTel.Size = new System.Drawing.Size(181, 26);
+            this.txtTel.TabIndex = 34;
             // 
-            // maskedTextBox25
+            // txtEnderecoImage
             // 
-            this.maskedTextBox25.Location = new System.Drawing.Point(260, 203);
-            this.maskedTextBox25.Name = "maskedTextBox25";
-            this.maskedTextBox25.Size = new System.Drawing.Size(181, 26);
-            this.maskedTextBox25.TabIndex = 76;
+            this.txtEnderecoImage.Location = new System.Drawing.Point(260, 203);
+            this.txtEnderecoImage.Name = "txtEnderecoImage";
+            this.txtEnderecoImage.Size = new System.Drawing.Size(181, 26);
+            this.txtEnderecoImage.TabIndex = 76;
             // 
-            // pictureBox1
+            // picFoto
             // 
-            this.pictureBox1.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
-            this.pictureBox1.Location = new System.Drawing.Point(280, 35);
-            this.pictureBox1.Name = "pictureBox1";
-            this.pictureBox1.Size = new System.Drawing.Size(142, 162);
-            this.pictureBox1.TabIndex = 75;
-            this.pictureBox1.TabStop = false;
+            this.picFoto.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
+            this.picFoto.Location = new System.Drawing.Point(280, 35);
+            this.picFoto.Name = "picFoto";
+            this.picFoto.Size = new System.Drawing.Size(142, 162);
+            this.picFoto.TabIndex = 75;
+            this.picFoto.TabStop = false;
             // 
             // label25
             // 
@@ -218,27 +218,27 @@
             this.label25.TabIndex = 74;
             this.label25.Text = "Sexo:";
             // 
-            // radioButton2
+            // rbtMasc
             // 
-            this.radioButton2.AutoSize = true;
-            this.radioButton2.Location = new System.Drawing.Point(27, 243);
-            this.radioButton2.Name = "radioButton2";
-            this.radioButton2.Size = new System.Drawing.Size(89, 23);
-            this.radioButton2.TabIndex = 32;
-            this.radioButton2.TabStop = true;
-            this.radioButton2.Text = "Masculino";
-            this.radioButton2.UseVisualStyleBackColor = true;
+            this.rbtMasc.AutoSize = true;
+            this.rbtMasc.Location = new System.Drawing.Point(27, 243);
+            this.rbtMasc.Name = "rbtMasc";
+            this.rbtMasc.Size = new System.Drawing.Size(89, 23);
+            this.rbtMasc.TabIndex = 32;
+            this.rbtMasc.TabStop = true;
+            this.rbtMasc.Text = "Masculino";
+            this.rbtMasc.UseVisualStyleBackColor = true;
             // 
-            // radioButton1
+            // rbtFem
             // 
-            this.radioButton1.AutoSize = true;
-            this.radioButton1.Location = new System.Drawing.Point(153, 243);
-            this.radioButton1.Name = "radioButton1";
-            this.radioButton1.Size = new System.Drawing.Size(82, 23);
-            this.radioButton1.TabIndex = 33;
-            this.radioButton1.TabStop = true;
-            this.radioButton1.Text = "Feminino";
-            this.radioButton1.UseVisualStyleBackColor = true;
+            this.rbtFem.AutoSize = true;
+            this.rbtFem.Location = new System.Drawing.Point(153, 243);
+            this.rbtFem.Name = "rbtFem";
+            this.rbtFem.Size = new System.Drawing.Size(82, 23);
+            this.rbtFem.TabIndex = 33;
+            this.rbtFem.TabStop = true;
+            this.rbtFem.Text = "Feminino";
+            this.rbtFem.UseVisualStyleBackColor = true;
             // 
             // label20
             // 
@@ -267,41 +267,41 @@
             this.label24.TabIndex = 67;
             this.label24.Text = "Nome do Artistas:";
             // 
-            // maskedTextBox20
+            // txtCpf
             // 
-            this.maskedTextBox20.Location = new System.Drawing.Point(27, 194);
-            this.maskedTextBox20.Name = "maskedTextBox20";
-            this.maskedTextBox20.Size = new System.Drawing.Size(181, 26);
-            this.maskedTextBox20.TabIndex = 31;
+            this.txtCpf.Location = new System.Drawing.Point(27, 194);
+            this.txtCpf.Name = "txtCpf";
+            this.txtCpf.Size = new System.Drawing.Size(181, 26);
+            this.txtCpf.TabIndex = 31;
             // 
-            // maskedTextBox22
+            // txtDataNasc
             // 
-            this.maskedTextBox22.Location = new System.Drawing.Point(26, 149);
-            this.maskedTextBox22.Name = "maskedTextBox22";
-            this.maskedTextBox22.Size = new System.Drawing.Size(181, 26);
-            this.maskedTextBox22.TabIndex = 30;
+            this.txtDataNasc.Location = new System.Drawing.Point(26, 149);
+            this.txtDataNasc.Name = "txtDataNasc";
+            this.txtDataNasc.Size = new System.Drawing.Size(181, 26);
+            this.txtDataNasc.TabIndex = 30;
             // 
-            // maskedTextBox23
+            // txtFunc
             // 
-            this.maskedTextBox23.Location = new System.Drawing.Point(26, 99);
-            this.maskedTextBox23.Name = "maskedTextBox23";
-            this.maskedTextBox23.Size = new System.Drawing.Size(181, 26);
-            this.maskedTextBox23.TabIndex = 29;
+            this.txtFunc.Location = new System.Drawing.Point(26, 99);
+            this.txtFunc.Name = "txtFunc";
+            this.txtFunc.Size = new System.Drawing.Size(181, 26);
+            this.txtFunc.TabIndex = 29;
             // 
-            // maskedTextBox24
+            // txtNomeArt
             // 
-            this.maskedTextBox24.Location = new System.Drawing.Point(26, 50);
-            this.maskedTextBox24.Name = "maskedTextBox24";
-            this.maskedTextBox24.Size = new System.Drawing.Size(181, 26);
-            this.maskedTextBox24.TabIndex = 28;
+            this.txtNomeArt.Location = new System.Drawing.Point(26, 50);
+            this.txtNomeArt.Name = "txtNomeArt";
+            this.txtNomeArt.Size = new System.Drawing.Size(181, 26);
+            this.txtNomeArt.TabIndex = 28;
             // 
             // tbMedidas
             // 
-            this.tbMedidas.Controls.Add(this.maskedTextBox17);
+            this.tbMedidas.Controls.Add(this.txtAltManga);
             this.tbMedidas.Controls.Add(this.label21);
-            this.tbMedidas.Controls.Add(this.maskedTextBox21);
+            this.tbMedidas.Controls.Add(this.txtAltura);
             this.tbMedidas.Controls.Add(this.label19);
-            this.tbMedidas.Controls.Add(this.maskedTextBox19);
+            this.tbMedidas.Controls.Add(this.txtAltCintDoJoelho);
             this.tbMedidas.Controls.Add(this.label18);
             this.tbMedidas.Controls.Add(this.label17);
             this.tbMedidas.Controls.Add(this.label16);
@@ -320,23 +320,23 @@
             this.tbMedidas.Controls.Add(this.label3);
             this.tbMedidas.Controls.Add(this.label2);
             this.tbMedidas.Controls.Add(this.label1);
-            this.tbMedidas.Controls.Add(this.maskedTextBox18);
-            this.tbMedidas.Controls.Add(this.maskedTextBox16);
-            this.tbMedidas.Controls.Add(this.maskedTextBox15);
-            this.tbMedidas.Controls.Add(this.maskedTextBox14);
-            this.tbMedidas.Controls.Add(this.maskedTextBox13);
-            this.tbMedidas.Controls.Add(this.maskedTextBox12);
-            this.tbMedidas.Controls.Add(this.maskedTextBox11);
-            this.tbMedidas.Controls.Add(this.maskedTextBox10);
-            this.tbMedidas.Controls.Add(this.maskedTextBox9);
-            this.tbMedidas.Controls.Add(this.maskedTextBox8);
-            this.tbMedidas.Controls.Add(this.maskedTextBox7);
-            this.tbMedidas.Controls.Add(this.maskedTextBox6);
-            this.tbMedidas.Controls.Add(this.maskedTextBox5);
-            this.tbMedidas.Controls.Add(this.maskedTextBox4);
-            this.tbMedidas.Controls.Add(this.maskedTextBox3);
-            this.tbMedidas.Controls.Add(this.maskedTextBox2);
-            this.tbMedidas.Controls.Add(this.maskedTextBox1);
+            this.tbMedidas.Controls.Add(this.txtAltMangaCurta);
+            this.tbMedidas.Controls.Add(this.txtPunho);
+            this.tbMedidas.Controls.Add(this.txtLargBraco);
+            this.tbMedidas.Controls.Add(this.txtCompBraco);
+            this.tbMedidas.Controls.Add(this.txtAltCintAoTornozelo);
+            this.tbMedidas.Controls.Add(this.txtQuadril);
+            this.tbMedidas.Controls.Add(this.txtAlturaQuadril);
+            this.tbMedidas.Controls.Add(this.txtAltDesjDaSaia);
+            this.tbMedidas.Controls.Add(this.txtCintura);
+            this.tbMedidas.Controls.Add(this.txtSeparacaoBusto);
+            this.tbMedidas.Controls.Add(this.txtAlturaBusto);
+            this.tbMedidas.Controls.Add(this.txtBusto);
+            this.tbMedidas.Controls.Add(this.txtCentroCosta);
+            this.tbMedidas.Controls.Add(this.txtEntreCavasFrente);
+            this.tbMedidas.Controls.Add(this.txtColarinho);
+            this.tbMedidas.Controls.Add(this.txtOmbro);
+            this.tbMedidas.Controls.Add(this.txtOmbroAOmbro);
             this.tbMedidas.Font = new System.Drawing.Font("Times New Roman", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.tbMedidas.Location = new System.Drawing.Point(4, 30);
             this.tbMedidas.Name = "tbMedidas";
@@ -346,12 +346,12 @@
             this.tbMedidas.Text = "Medidas";
             this.tbMedidas.UseVisualStyleBackColor = true;
             // 
-            // maskedTextBox17
+            // txtAltManga
             // 
-            this.maskedTextBox17.Location = new System.Drawing.Point(248, 332);
-            this.maskedTextBox17.Name = "maskedTextBox17";
-            this.maskedTextBox17.Size = new System.Drawing.Size(169, 26);
-            this.maskedTextBox17.TabIndex = 54;
+            this.txtAltManga.Location = new System.Drawing.Point(248, 332);
+            this.txtAltManga.Name = "txtAltManga";
+            this.txtAltManga.Size = new System.Drawing.Size(169, 26);
+            this.txtAltManga.TabIndex = 54;
             // 
             // label21
             // 
@@ -362,12 +362,12 @@
             this.label21.TabIndex = 81;
             this.label21.Text = "Altura:";
             // 
-            // maskedTextBox21
+            // txtAltura
             // 
-            this.maskedTextBox21.Location = new System.Drawing.Point(14, 425);
-            this.maskedTextBox21.Name = "maskedTextBox21";
-            this.maskedTextBox21.Size = new System.Drawing.Size(155, 26);
-            this.maskedTextBox21.TabIndex = 46;
+            this.txtAltura.Location = new System.Drawing.Point(14, 425);
+            this.txtAltura.Name = "txtAltura";
+            this.txtAltura.Size = new System.Drawing.Size(155, 26);
+            this.txtAltura.TabIndex = 46;
             // 
             // label19
             // 
@@ -378,12 +378,12 @@
             this.label19.TabIndex = 79;
             this.label19.Text = "Altura desejada da saia:";
             // 
-            // maskedTextBox19
+            // txtAltCintDoJoelho
             // 
-            this.maskedTextBox19.Location = new System.Drawing.Point(248, 127);
-            this.maskedTextBox19.Name = "maskedTextBox19";
-            this.maskedTextBox19.Size = new System.Drawing.Size(169, 26);
-            this.maskedTextBox19.TabIndex = 49;
+            this.txtAltCintDoJoelho.Location = new System.Drawing.Point(248, 127);
+            this.txtAltCintDoJoelho.Name = "txtAltCintDoJoelho";
+            this.txtAltCintDoJoelho.Size = new System.Drawing.Size(169, 26);
+            this.txtAltCintDoJoelho.TabIndex = 49;
             // 
             // label18
             // 
@@ -547,124 +547,124 @@
             this.label1.TabIndex = 57;
             this.label1.Text = "Ombro a ombro:";
             // 
-            // maskedTextBox18
+            // txtAltMangaCurta
             // 
-            this.maskedTextBox18.Location = new System.Drawing.Point(247, 380);
-            this.maskedTextBox18.Name = "maskedTextBox18";
-            this.maskedTextBox18.Size = new System.Drawing.Size(169, 26);
-            this.maskedTextBox18.TabIndex = 55;
+            this.txtAltMangaCurta.Location = new System.Drawing.Point(247, 380);
+            this.txtAltMangaCurta.Name = "txtAltMangaCurta";
+            this.txtAltMangaCurta.Size = new System.Drawing.Size(169, 26);
+            this.txtAltMangaCurta.TabIndex = 55;
             // 
-            // maskedTextBox16
+            // txtPunho
             // 
-            this.maskedTextBox16.Location = new System.Drawing.Point(248, 296);
-            this.maskedTextBox16.Name = "maskedTextBox16";
-            this.maskedTextBox16.Size = new System.Drawing.Size(169, 26);
-            this.maskedTextBox16.TabIndex = 53;
+            this.txtPunho.Location = new System.Drawing.Point(248, 296);
+            this.txtPunho.Name = "txtPunho";
+            this.txtPunho.Size = new System.Drawing.Size(169, 26);
+            this.txtPunho.TabIndex = 53;
             // 
-            // maskedTextBox15
+            // txtLargBraco
             // 
-            this.maskedTextBox15.Location = new System.Drawing.Point(247, 253);
-            this.maskedTextBox15.Name = "maskedTextBox15";
-            this.maskedTextBox15.Size = new System.Drawing.Size(169, 26);
-            this.maskedTextBox15.TabIndex = 52;
+            this.txtLargBraco.Location = new System.Drawing.Point(247, 253);
+            this.txtLargBraco.Name = "txtLargBraco";
+            this.txtLargBraco.Size = new System.Drawing.Size(169, 26);
+            this.txtLargBraco.TabIndex = 52;
             // 
-            // maskedTextBox14
+            // txtCompBraco
             // 
-            this.maskedTextBox14.Location = new System.Drawing.Point(247, 209);
-            this.maskedTextBox14.Name = "maskedTextBox14";
-            this.maskedTextBox14.Size = new System.Drawing.Size(169, 26);
-            this.maskedTextBox14.TabIndex = 51;
+            this.txtCompBraco.Location = new System.Drawing.Point(247, 209);
+            this.txtCompBraco.Name = "txtCompBraco";
+            this.txtCompBraco.Size = new System.Drawing.Size(169, 26);
+            this.txtCompBraco.TabIndex = 51;
             // 
-            // maskedTextBox13
+            // txtAltCintAoTornozelo
             // 
-            this.maskedTextBox13.Location = new System.Drawing.Point(247, 169);
-            this.maskedTextBox13.Name = "maskedTextBox13";
-            this.maskedTextBox13.Size = new System.Drawing.Size(169, 26);
-            this.maskedTextBox13.TabIndex = 50;
+            this.txtAltCintAoTornozelo.Location = new System.Drawing.Point(247, 169);
+            this.txtAltCintAoTornozelo.Name = "txtAltCintAoTornozelo";
+            this.txtAltCintAoTornozelo.Size = new System.Drawing.Size(169, 26);
+            this.txtAltCintAoTornozelo.TabIndex = 50;
             // 
-            // maskedTextBox12
+            // txtQuadril
             // 
-            this.maskedTextBox12.Location = new System.Drawing.Point(247, 83);
-            this.maskedTextBox12.Name = "maskedTextBox12";
-            this.maskedTextBox12.Size = new System.Drawing.Size(169, 26);
-            this.maskedTextBox12.TabIndex = 48;
+            this.txtQuadril.Location = new System.Drawing.Point(247, 83);
+            this.txtQuadril.Name = "txtQuadril";
+            this.txtQuadril.Size = new System.Drawing.Size(169, 26);
+            this.txtQuadril.TabIndex = 48;
             // 
-            // maskedTextBox11
+            // txtAlturaQuadril
             // 
-            this.maskedTextBox11.Location = new System.Drawing.Point(247, 34);
-            this.maskedTextBox11.Name = "maskedTextBox11";
-            this.maskedTextBox11.Size = new System.Drawing.Size(169, 26);
-            this.maskedTextBox11.TabIndex = 47;
+            this.txtAlturaQuadril.Location = new System.Drawing.Point(247, 34);
+            this.txtAlturaQuadril.Name = "txtAlturaQuadril";
+            this.txtAlturaQuadril.Size = new System.Drawing.Size(169, 26);
+            this.txtAlturaQuadril.TabIndex = 47;
             // 
-            // maskedTextBox10
+            // txtAltDesjDaSaia
             // 
-            this.maskedTextBox10.Location = new System.Drawing.Point(247, 425);
-            this.maskedTextBox10.Name = "maskedTextBox10";
-            this.maskedTextBox10.Size = new System.Drawing.Size(169, 26);
-            this.maskedTextBox10.TabIndex = 56;
+            this.txtAltDesjDaSaia.Location = new System.Drawing.Point(247, 425);
+            this.txtAltDesjDaSaia.Name = "txtAltDesjDaSaia";
+            this.txtAltDesjDaSaia.Size = new System.Drawing.Size(169, 26);
+            this.txtAltDesjDaSaia.TabIndex = 56;
             // 
-            // maskedTextBox9
+            // txtCintura
             // 
-            this.maskedTextBox9.Location = new System.Drawing.Point(14, 380);
-            this.maskedTextBox9.Name = "maskedTextBox9";
-            this.maskedTextBox9.Size = new System.Drawing.Size(154, 26);
-            this.maskedTextBox9.TabIndex = 45;
+            this.txtCintura.Location = new System.Drawing.Point(14, 380);
+            this.txtCintura.Name = "txtCintura";
+            this.txtCintura.Size = new System.Drawing.Size(154, 26);
+            this.txtCintura.TabIndex = 45;
             // 
-            // maskedTextBox8
+            // txtSeparacaoBusto
             // 
-            this.maskedTextBox8.Location = new System.Drawing.Point(14, 336);
-            this.maskedTextBox8.Name = "maskedTextBox8";
-            this.maskedTextBox8.Size = new System.Drawing.Size(154, 26);
-            this.maskedTextBox8.TabIndex = 44;
+            this.txtSeparacaoBusto.Location = new System.Drawing.Point(14, 336);
+            this.txtSeparacaoBusto.Name = "txtSeparacaoBusto";
+            this.txtSeparacaoBusto.Size = new System.Drawing.Size(154, 26);
+            this.txtSeparacaoBusto.TabIndex = 44;
             // 
-            // maskedTextBox7
+            // txtAlturaBusto
             // 
-            this.maskedTextBox7.Location = new System.Drawing.Point(15, 296);
-            this.maskedTextBox7.Name = "maskedTextBox7";
-            this.maskedTextBox7.Size = new System.Drawing.Size(154, 26);
-            this.maskedTextBox7.TabIndex = 43;
+            this.txtAlturaBusto.Location = new System.Drawing.Point(15, 296);
+            this.txtAlturaBusto.Name = "txtAlturaBusto";
+            this.txtAlturaBusto.Size = new System.Drawing.Size(154, 26);
+            this.txtAlturaBusto.TabIndex = 43;
             // 
-            // maskedTextBox6
+            // txtBusto
             // 
-            this.maskedTextBox6.Location = new System.Drawing.Point(17, 253);
-            this.maskedTextBox6.Name = "maskedTextBox6";
-            this.maskedTextBox6.Size = new System.Drawing.Size(154, 26);
-            this.maskedTextBox6.TabIndex = 42;
+            this.txtBusto.Location = new System.Drawing.Point(17, 253);
+            this.txtBusto.Name = "txtBusto";
+            this.txtBusto.Size = new System.Drawing.Size(154, 26);
+            this.txtBusto.TabIndex = 42;
             // 
-            // maskedTextBox5
+            // txtCentroCosta
             // 
-            this.maskedTextBox5.Location = new System.Drawing.Point(14, 209);
-            this.maskedTextBox5.Name = "maskedTextBox5";
-            this.maskedTextBox5.Size = new System.Drawing.Size(154, 26);
-            this.maskedTextBox5.TabIndex = 41;
+            this.txtCentroCosta.Location = new System.Drawing.Point(14, 209);
+            this.txtCentroCosta.Name = "txtCentroCosta";
+            this.txtCentroCosta.Size = new System.Drawing.Size(154, 26);
+            this.txtCentroCosta.TabIndex = 41;
             // 
-            // maskedTextBox4
+            // txtEntreCavasFrente
             // 
-            this.maskedTextBox4.Location = new System.Drawing.Point(15, 169);
-            this.maskedTextBox4.Name = "maskedTextBox4";
-            this.maskedTextBox4.Size = new System.Drawing.Size(154, 26);
-            this.maskedTextBox4.TabIndex = 40;
+            this.txtEntreCavasFrente.Location = new System.Drawing.Point(15, 169);
+            this.txtEntreCavasFrente.Name = "txtEntreCavasFrente";
+            this.txtEntreCavasFrente.Size = new System.Drawing.Size(154, 26);
+            this.txtEntreCavasFrente.TabIndex = 40;
             // 
-            // maskedTextBox3
+            // txtColarinho
             // 
-            this.maskedTextBox3.Location = new System.Drawing.Point(16, 127);
-            this.maskedTextBox3.Name = "maskedTextBox3";
-            this.maskedTextBox3.Size = new System.Drawing.Size(154, 26);
-            this.maskedTextBox3.TabIndex = 39;
+            this.txtColarinho.Location = new System.Drawing.Point(16, 127);
+            this.txtColarinho.Name = "txtColarinho";
+            this.txtColarinho.Size = new System.Drawing.Size(154, 26);
+            this.txtColarinho.TabIndex = 39;
             // 
-            // maskedTextBox2
+            // txtOmbro
             // 
-            this.maskedTextBox2.Location = new System.Drawing.Point(14, 83);
-            this.maskedTextBox2.Name = "maskedTextBox2";
-            this.maskedTextBox2.Size = new System.Drawing.Size(154, 26);
-            this.maskedTextBox2.TabIndex = 38;
+            this.txtOmbro.Location = new System.Drawing.Point(14, 83);
+            this.txtOmbro.Name = "txtOmbro";
+            this.txtOmbro.Size = new System.Drawing.Size(154, 26);
+            this.txtOmbro.TabIndex = 38;
             // 
-            // maskedTextBox1
+            // txtOmbroAOmbro
             // 
-            this.maskedTextBox1.Location = new System.Drawing.Point(15, 34);
-            this.maskedTextBox1.Name = "maskedTextBox1";
-            this.maskedTextBox1.Size = new System.Drawing.Size(154, 26);
-            this.maskedTextBox1.TabIndex = 37;
+            this.txtOmbroAOmbro.Location = new System.Drawing.Point(15, 34);
+            this.txtOmbroAOmbro.Name = "txtOmbroAOmbro";
+            this.txtOmbroAOmbro.Size = new System.Drawing.Size(154, 26);
+            this.txtOmbroAOmbro.TabIndex = 37;
             // 
             // btnBack
             // 
@@ -733,7 +733,7 @@
             this.tabControl.ResumeLayout(false);
             this.tbDadosPessoais.ResumeLayout(false);
             this.tbDadosPessoais.PerformLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.picFoto)).EndInit();
             this.tbMedidas.ResumeLayout(false);
             this.tbMedidas.PerformLayout();
             this.ResumeLayout(false);
@@ -747,27 +747,27 @@
         private System.Windows.Forms.Label label23;
         private System.Windows.Forms.Button button1;
         private System.Windows.Forms.Label label27;
-        private System.Windows.Forms.MaskedTextBox maskedTextBox27;
+        private System.Windows.Forms.MaskedTextBox txtEmail;
         private System.Windows.Forms.Label label26;
-        private System.Windows.Forms.MaskedTextBox maskedTextBox26;
-        private System.Windows.Forms.MaskedTextBox maskedTextBox25;
-        private System.Windows.Forms.PictureBox pictureBox1;
+        private System.Windows.Forms.MaskedTextBox txtTel;
+        private System.Windows.Forms.MaskedTextBox txtEnderecoImage;
+        private System.Windows.Forms.PictureBox picFoto;
         private System.Windows.Forms.Label label25;
-        private System.Windows.Forms.RadioButton radioButton2;
-        private System.Windows.Forms.RadioButton radioButton1;
+        private System.Windows.Forms.RadioButton rbtMasc;
+        private System.Windows.Forms.RadioButton rbtFem;
         private System.Windows.Forms.Label label20;
         private System.Windows.Forms.Label label22;
         private System.Windows.Forms.Label label24;
-        private System.Windows.Forms.MaskedTextBox maskedTextBox20;
-        private System.Windows.Forms.MaskedTextBox maskedTextBox22;
-        private System.Windows.Forms.MaskedTextBox maskedTextBox23;
-        private System.Windows.Forms.MaskedTextBox maskedTextBox24;
+        private System.Windows.Forms.MaskedTextBox txtCpf;
+        private System.Windows.Forms.MaskedTextBox txtDataNasc;
+        private System.Windows.Forms.MaskedTextBox txtFunc;
+        private System.Windows.Forms.MaskedTextBox txtNomeArt;
         private System.Windows.Forms.TabPage tbMedidas;
-        private System.Windows.Forms.MaskedTextBox maskedTextBox17;
+        private System.Windows.Forms.MaskedTextBox txtAltManga;
         private System.Windows.Forms.Label label21;
-        private System.Windows.Forms.MaskedTextBox maskedTextBox21;
+        private System.Windows.Forms.MaskedTextBox txtAltura;
         private System.Windows.Forms.Label label19;
-        private System.Windows.Forms.MaskedTextBox maskedTextBox19;
+        private System.Windows.Forms.MaskedTextBox txtAltCintDoJoelho;
         private System.Windows.Forms.Label label18;
         private System.Windows.Forms.Label label17;
         private System.Windows.Forms.Label label16;
@@ -786,23 +786,23 @@
         private System.Windows.Forms.Label label3;
         private System.Windows.Forms.Label label2;
         private System.Windows.Forms.Label label1;
-        private System.Windows.Forms.MaskedTextBox maskedTextBox18;
-        private System.Windows.Forms.MaskedTextBox maskedTextBox16;
-        private System.Windows.Forms.MaskedTextBox maskedTextBox15;
-        private System.Windows.Forms.MaskedTextBox maskedTextBox14;
-        private System.Windows.Forms.MaskedTextBox maskedTextBox13;
-        private System.Windows.Forms.MaskedTextBox maskedTextBox12;
-        private System.Windows.Forms.MaskedTextBox maskedTextBox11;
-        private System.Windows.Forms.MaskedTextBox maskedTextBox10;
-        private System.Windows.Forms.MaskedTextBox maskedTextBox9;
-        private System.Windows.Forms.MaskedTextBox maskedTextBox8;
-        private System.Windows.Forms.MaskedTextBox maskedTextBox7;
-        private System.Windows.Forms.MaskedTextBox maskedTextBox6;
-        private System.Windows.Forms.MaskedTextBox maskedTextBox5;
-        private System.Windows.Forms.MaskedTextBox maskedTextBox4;
-        private System.Windows.Forms.MaskedTextBox maskedTextBox3;
-        private System.Windows.Forms.MaskedTextBox maskedTextBox2;
-        private System.Windows.Forms.MaskedTextBox maskedTextBox1;
+        private System.Windows.Forms.MaskedTextBox txtAltMangaCurta;
+        private System.Windows.Forms.MaskedTextBox txtPunho;
+        private System.Windows.Forms.MaskedTextBox txtLargBraco;
+        private System.Windows.Forms.MaskedTextBox txtCompBraco;
+        private System.Windows.Forms.MaskedTextBox txtAltCintAoTornozelo;
+        private System.Windows.Forms.MaskedTextBox txtQuadril;
+        private System.Windows.Forms.MaskedTextBox txtAlturaQuadril;
+        private System.Windows.Forms.MaskedTextBox txtAltDesjDaSaia;
+        private System.Windows.Forms.MaskedTextBox txtCintura;
+        private System.Windows.Forms.MaskedTextBox txtSeparacaoBusto;
+        private System.Windows.Forms.MaskedTextBox txtAlturaBusto;
+        private System.Windows.Forms.MaskedTextBox txtBusto;
+        private System.Windows.Forms.MaskedTextBox txtCentroCosta;
+        private System.Windows.Forms.MaskedTextBox txtEntreCavasFrente;
+        private System.Windows.Forms.MaskedTextBox txtColarinho;
+        private System.Windows.Forms.MaskedTextBox txtOmbro;
+        private System.Windows.Forms.MaskedTextBox txtOmbroAOmbro;
         private System.Windows.Forms.Button btnBack;
         private System.Windows.Forms.Button btnNext;
         private System.Windows.Forms.Button btnEditar;

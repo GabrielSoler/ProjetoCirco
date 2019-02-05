@@ -21,5 +21,27 @@ namespace Projeto_Circo.FormsFigurino
         {
             this.Close();
         }
+
+        private void limparFrmCadPec()
+        {
+            txtEnderecoImage.Text = string.Empty;
+            txtNotas.Text = string.Empty;
+            txtCodPec.Text = string.Empty;
+            txtQtdComp.Text = string.Empty;
+
+
+            chkAtivo.Checked = false;
+            chkInativo.Checked = false;
+
+            rbtSim.Checked = false;
+            rbtNao.Checked = false;
+            lstColecao.Items.Clear();
+            picFoto.Image = null;
+        }
+
+        private void btnSalvar_Click(object sender, EventArgs e)
+        {
+            limparFrmCadPec();
+        }
     }
 }

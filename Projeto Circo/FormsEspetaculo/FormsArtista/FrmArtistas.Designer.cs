@@ -34,7 +34,7 @@
             this.lstPesquisa = new System.Windows.Forms.ListBox();
             this.toolStrip1 = new System.Windows.Forms.ToolStrip();
             this.toolStripButton1 = new System.Windows.Forms.ToolStripButton();
-            this.toolStripTextBox1 = new System.Windows.Forms.ToolStripTextBox();
+            this.toolStripTextBoxPesquisa = new System.Windows.Forms.ToolStripTextBox();
             this.btnCad = new System.Windows.Forms.Button();
             this.pnlBuscar.SuspendLayout();
             this.toolStrip1.SuspendLayout();
@@ -88,7 +88,7 @@
             this.toolStrip1.BackColor = System.Drawing.SystemColors.ButtonHighlight;
             this.toolStrip1.Items.AddRange(new System.Windows.Forms.ToolStripItem[] {
             this.toolStripButton1,
-            this.toolStripTextBox1});
+            this.toolStripTextBoxPesquisa});
             this.toolStrip1.Location = new System.Drawing.Point(0, 0);
             this.toolStrip1.Name = "toolStrip1";
             this.toolStrip1.Size = new System.Drawing.Size(556, 25);
@@ -104,11 +104,11 @@
             this.toolStripButton1.Size = new System.Drawing.Size(23, 22);
             this.toolStripButton1.Text = "toolStripButton1";
             // 
-            // toolStripTextBox1
+            // toolStripTextBoxPesquisa
             // 
-            this.toolStripTextBox1.Name = "toolStripTextBox1";
-            this.toolStripTextBox1.Size = new System.Drawing.Size(100, 25);
-            this.toolStripTextBox1.Text = "Buscar Artista";
+            this.toolStripTextBoxPesquisa.Name = "toolStripTextBoxPesquisa";
+            this.toolStripTextBoxPesquisa.Size = new System.Drawing.Size(100, 25);
+            this.toolStripTextBoxPesquisa.Text = "Buscar Artista";
             // 
             // btnCad
             // 
@@ -156,7 +156,7 @@
         private System.Windows.Forms.ListBox lstPesquisa;
         private System.Windows.Forms.ToolStrip toolStrip1;
         private System.Windows.Forms.ToolStripButton toolStripButton1;
-        private System.Windows.Forms.ToolStripTextBox toolStripTextBox1;
+        private System.Windows.Forms.ToolStripTextBox toolStripTextBoxPesquisa;
         private System.Windows.Forms.Button btnCad;
     }
 }

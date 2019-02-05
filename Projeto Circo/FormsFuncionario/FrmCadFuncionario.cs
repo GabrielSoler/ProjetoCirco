@@ -27,5 +27,29 @@ namespace Projeto_Circo.FormsFuncionario
         {
             this.Close();
         }
+
+        private void limparFrmCadFuncionario()
+        {
+            txtNome.Text = string.Empty;
+            txtCargo.Text = string.Empty;
+            txtDataNasc.Text = string.Empty;
+            txtCPF.Text = string.Empty;
+            txtRG.Text = string.Empty;
+            txtTelefone.Text = string.Empty;
+            txtEmail.Text = string.Empty;
+            txtEnderecoImage.Text = string.Empty;
+            txtUsuario.Text = string.Empty;
+            txtSenha.Text = string.Empty;
+            txtSenhaNovamente.Text = string.Empty;
+
+            rbtFeminino.Checked = false;
+            rbtMasculino.Checked = false;
+            picFoto.Image = null;
+        }
+
+        private void btnInserirFoto_Click(object sender, EventArgs e)
+        {
+          
+        }
     }
 }

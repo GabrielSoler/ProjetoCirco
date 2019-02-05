@@ -33,5 +33,43 @@ namespace Projeto_Circo.FormsArtista
         {
             tabControl.SelectTab("tbDadosPessoais");
         }
+
+        public void LimparArtista()
+        {
+            //////////////LIMPAR DADDOS PESSOAIS///////////////////////////////////
+            txtNomeArt.Text = string.Empty;
+            txtFunc.Text = string.Empty;
+            txtDataNasc.Text = string.Empty;
+            txtCpf.Text = string.Empty;
+            txtTel.Text = string.Empty;
+            txtEmail.Text = string.Empty;
+            txtEnderecoImage.Text = string.Empty;
+
+            rbtMasc.Checked = false;
+            rbtFem.Checked = false;
+            picFoto.Image = null;
+            //////////////LIMPAR MEDIDAS///////////////////////////////////
+            txtOmbroAOmbro.Text = string.Empty;
+            txtOmbro.Text = string.Empty;
+            txtColarinho.Text = string.Empty;
+            txtEntreCavasFrente.Text = string.Empty;
+            txtCentroCosta.Text = string.Empty;
+            txtBusto.Text = string.Empty;
+            txtAlturaBusto.Text = string.Empty;
+            txtSeparacaoBusto.Text = string.Empty;
+            txtCintura.Text = string.Empty;
+            txtAltura.Text = string.Empty;
+            txtAlturaQuadril.Text = string.Empty;
+            txtQuadril.Text = string.Empty;
+            txtAltCintDoJoelho.Text = string.Empty;
+            txtAltCintAoTornozelo.Text = string.Empty;
+            txtCompBraco.Text = string.Empty;
+            txtLargBraco.Text = string.Empty;
+            txtPunho.Text = string.Empty;
+            txtAltManga.Text = string.Empty;
+            txtAltMangaCurta.Text = string.Empty;
+            txtAltDesjDaSaia.Text = string.Empty;
+
+        }
     }
 }

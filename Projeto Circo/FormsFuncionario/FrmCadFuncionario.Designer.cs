@@ -30,35 +30,35 @@
         {
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(FrmCadFuncionario));
             this.label1 = new System.Windows.Forms.Label();
-            this.maskedTextBox1 = new System.Windows.Forms.MaskedTextBox();
+            this.txtRG = new System.Windows.Forms.MaskedTextBox();
             this.btnSair = new System.Windows.Forms.Button();
             this.btnSalvar = new System.Windows.Forms.Button();
             this.label23 = new System.Windows.Forms.Label();
-            this.button1 = new System.Windows.Forms.Button();
+            this.btnInserirFoto = new System.Windows.Forms.Button();
             this.label27 = new System.Windows.Forms.Label();
-            this.maskedTextBox27 = new System.Windows.Forms.MaskedTextBox();
+            this.txtEmail = new System.Windows.Forms.MaskedTextBox();
             this.label26 = new System.Windows.Forms.Label();
-            this.maskedTextBox26 = new System.Windows.Forms.MaskedTextBox();
-            this.maskedTextBox25 = new System.Windows.Forms.MaskedTextBox();
-            this.pictureBox1 = new System.Windows.Forms.PictureBox();
+            this.txtTelefone = new System.Windows.Forms.MaskedTextBox();
+            this.txtEnderecoImage = new System.Windows.Forms.MaskedTextBox();
+            this.picFoto = new System.Windows.Forms.PictureBox();
             this.label25 = new System.Windows.Forms.Label();
-            this.radioButton2 = new System.Windows.Forms.RadioButton();
-            this.radioButton1 = new System.Windows.Forms.RadioButton();
+            this.rbtMasculino = new System.Windows.Forms.RadioButton();
+            this.rbtFeminino = new System.Windows.Forms.RadioButton();
             this.label20 = new System.Windows.Forms.Label();
             this.label22 = new System.Windows.Forms.Label();
             this.label24 = new System.Windows.Forms.Label();
-            this.maskedTextBox20 = new System.Windows.Forms.MaskedTextBox();
-            this.maskedTextBox22 = new System.Windows.Forms.MaskedTextBox();
-            this.maskedTextBox23 = new System.Windows.Forms.MaskedTextBox();
-            this.maskedTextBox24 = new System.Windows.Forms.MaskedTextBox();
+            this.txtCPF = new System.Windows.Forms.MaskedTextBox();
+            this.txtDataNasc = new System.Windows.Forms.MaskedTextBox();
+            this.txtCargo = new System.Windows.Forms.MaskedTextBox();
+            this.txtNome = new System.Windows.Forms.MaskedTextBox();
             this.panel1 = new System.Windows.Forms.Panel();
             this.label2 = new System.Windows.Forms.Label();
-            this.maskedTextBox2 = new System.Windows.Forms.MaskedTextBox();
-            this.maskedTextBox4 = new System.Windows.Forms.MaskedTextBox();
+            this.txtSenhaNovamente = new System.Windows.Forms.MaskedTextBox();
+            this.txtUsuario = new System.Windows.Forms.MaskedTextBox();
             this.label3 = new System.Windows.Forms.Label();
             this.label4 = new System.Windows.Forms.Label();
-            this.maskedTextBox3 = new System.Windows.Forms.MaskedTextBox();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
+            this.txtSenha = new System.Windows.Forms.MaskedTextBox();
+            ((System.ComponentModel.ISupportInitialize)(this.picFoto)).BeginInit();
             this.panel1.SuspendLayout();
             this.SuspendLayout();
             // 
@@ -72,13 +72,13 @@
             this.label1.TabIndex = 155;
             this.label1.Text = "RG:";
             // 
-            // maskedTextBox1
+            // txtRG
             // 
-            this.maskedTextBox1.Font = new System.Drawing.Font("Times New Roman", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.maskedTextBox1.Location = new System.Drawing.Point(32, 233);
-            this.maskedTextBox1.Name = "maskedTextBox1";
-            this.maskedTextBox1.Size = new System.Drawing.Size(181, 26);
-            this.maskedTextBox1.TabIndex = 5;
+            this.txtRG.Font = new System.Drawing.Font("Times New Roman", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.txtRG.Location = new System.Drawing.Point(32, 233);
+            this.txtRG.Name = "txtRG";
+            this.txtRG.Size = new System.Drawing.Size(181, 26);
+            this.txtRG.TabIndex = 5;
             // 
             // btnSair
             // 
@@ -115,17 +115,18 @@
             this.label23.TabIndex = 141;
             this.label23.Text = "Cargo:";
             // 
-            // button1
+            // btnInserirFoto
             // 
-            this.button1.BackColor = System.Drawing.SystemColors.ButtonHighlight;
-            this.button1.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.button1.Font = new System.Drawing.Font("Times New Roman", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.button1.Location = new System.Drawing.Point(323, 222);
-            this.button1.Name = "button1";
-            this.button1.Size = new System.Drawing.Size(90, 33);
-            this.button1.TabIndex = 10;
-            this.button1.Text = "Inserir foto";
-            this.button1.UseVisualStyleBackColor = false;
+            this.btnInserirFoto.BackColor = System.Drawing.SystemColors.ButtonHighlight;
+            this.btnInserirFoto.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.btnInserirFoto.Font = new System.Drawing.Font("Times New Roman", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnInserirFoto.Location = new System.Drawing.Point(323, 222);
+            this.btnInserirFoto.Name = "btnInserirFoto";
+            this.btnInserirFoto.Size = new System.Drawing.Size(90, 33);
+            this.btnInserirFoto.TabIndex = 10;
+            this.btnInserirFoto.Text = "Inserir foto";
+            this.btnInserirFoto.UseVisualStyleBackColor = false;
+            this.btnInserirFoto.Click += new System.EventHandler(this.btnInserirFoto_Click);
             // 
             // label27
             // 
@@ -137,13 +138,13 @@
             this.label27.TabIndex = 148;
             this.label27.Text = "Email:";
             // 
-            // maskedTextBox27
+            // txtEmail
             // 
-            this.maskedTextBox27.Font = new System.Drawing.Font("Times New Roman", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.maskedTextBox27.Location = new System.Drawing.Point(32, 367);
-            this.maskedTextBox27.Name = "maskedTextBox27";
-            this.maskedTextBox27.Size = new System.Drawing.Size(181, 26);
-            this.maskedTextBox27.TabIndex = 9;
+            this.txtEmail.Font = new System.Drawing.Font("Times New Roman", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.txtEmail.Location = new System.Drawing.Point(32, 367);
+            this.txtEmail.Name = "txtEmail";
+            this.txtEmail.Size = new System.Drawing.Size(181, 26);
+            this.txtEmail.TabIndex = 9;
             // 
             // label26
             // 
@@ -155,29 +156,29 @@
             this.label26.TabIndex = 147;
             this.label26.Text = "Telefone:";
             // 
-            // maskedTextBox26
+            // txtTelefone
             // 
-            this.maskedTextBox26.Font = new System.Drawing.Font("Times New Roman", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.maskedTextBox26.Location = new System.Drawing.Point(30, 320);
-            this.maskedTextBox26.Name = "maskedTextBox26";
-            this.maskedTextBox26.Size = new System.Drawing.Size(181, 26);
-            this.maskedTextBox26.TabIndex = 8;
+            this.txtTelefone.Font = new System.Drawing.Font("Times New Roman", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.txtTelefone.Location = new System.Drawing.Point(30, 320);
+            this.txtTelefone.Name = "txtTelefone";
+            this.txtTelefone.Size = new System.Drawing.Size(181, 26);
+            this.txtTelefone.TabIndex = 8;
             // 
-            // maskedTextBox25
+            // txtEnderecoImage
             // 
-            this.maskedTextBox25.Location = new System.Drawing.Point(281, 190);
-            this.maskedTextBox25.Name = "maskedTextBox25";
-            this.maskedTextBox25.Size = new System.Drawing.Size(181, 20);
-            this.maskedTextBox25.TabIndex = 146;
+            this.txtEnderecoImage.Location = new System.Drawing.Point(281, 190);
+            this.txtEnderecoImage.Name = "txtEnderecoImage";
+            this.txtEnderecoImage.Size = new System.Drawing.Size(181, 20);
+            this.txtEnderecoImage.TabIndex = 146;
             // 
-            // pictureBox1
+            // picFoto
             // 
-            this.pictureBox1.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
-            this.pictureBox1.Location = new System.Drawing.Point(301, 22);
-            this.pictureBox1.Name = "pictureBox1";
-            this.pictureBox1.Size = new System.Drawing.Size(142, 162);
-            this.pictureBox1.TabIndex = 145;
-            this.pictureBox1.TabStop = false;
+            this.picFoto.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
+            this.picFoto.Location = new System.Drawing.Point(301, 22);
+            this.picFoto.Name = "picFoto";
+            this.picFoto.Size = new System.Drawing.Size(142, 162);
+            this.picFoto.TabIndex = 145;
+            this.picFoto.TabStop = false;
             // 
             // label25
             // 
@@ -189,29 +190,29 @@
             this.label25.TabIndex = 144;
             this.label25.Text = "Sexo:";
             // 
-            // radioButton2
+            // rbtMasculino
             // 
-            this.radioButton2.AutoSize = true;
-            this.radioButton2.Font = new System.Drawing.Font("Times New Roman", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.radioButton2.Location = new System.Drawing.Point(126, 272);
-            this.radioButton2.Name = "radioButton2";
-            this.radioButton2.Size = new System.Drawing.Size(89, 23);
-            this.radioButton2.TabIndex = 7;
-            this.radioButton2.TabStop = true;
-            this.radioButton2.Text = "Masculino";
-            this.radioButton2.UseVisualStyleBackColor = true;
+            this.rbtMasculino.AutoSize = true;
+            this.rbtMasculino.Font = new System.Drawing.Font("Times New Roman", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.rbtMasculino.Location = new System.Drawing.Point(126, 272);
+            this.rbtMasculino.Name = "rbtMasculino";
+            this.rbtMasculino.Size = new System.Drawing.Size(89, 23);
+            this.rbtMasculino.TabIndex = 7;
+            this.rbtMasculino.TabStop = true;
+            this.rbtMasculino.Text = "Masculino";
+            this.rbtMasculino.UseVisualStyleBackColor = true;
             // 
-            // radioButton1
+            // rbtFeminino
             // 
-            this.radioButton1.AutoSize = true;
-            this.radioButton1.Font = new System.Drawing.Font("Times New Roman", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.radioButton1.Location = new System.Drawing.Point(38, 272);
-            this.radioButton1.Name = "radioButton1";
-            this.radioButton1.Size = new System.Drawing.Size(82, 23);
-            this.radioButton1.TabIndex = 6;
-            this.radioButton1.TabStop = true;
-            this.radioButton1.Text = "Feminino";
-            this.radioButton1.UseVisualStyleBackColor = true;
+            this.rbtFeminino.AutoSize = true;
+            this.rbtFeminino.Font = new System.Drawing.Font("Times New Roman", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.rbtFeminino.Location = new System.Drawing.Point(38, 272);
+            this.rbtFeminino.Name = "rbtFeminino";
+            this.rbtFeminino.Size = new System.Drawing.Size(82, 23);
+            this.rbtFeminino.TabIndex = 6;
+            this.rbtFeminino.TabStop = true;
+            this.rbtFeminino.Text = "Feminino";
+            this.rbtFeminino.UseVisualStyleBackColor = true;
             // 
             // label20
             // 
@@ -243,47 +244,47 @@
             this.label24.TabIndex = 140;
             this.label24.Text = "Nome do funcionário:";
             // 
-            // maskedTextBox20
+            // txtCPF
             // 
-            this.maskedTextBox20.Font = new System.Drawing.Font("Times New Roman", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.maskedTextBox20.Location = new System.Drawing.Point(31, 188);
-            this.maskedTextBox20.Name = "maskedTextBox20";
-            this.maskedTextBox20.Size = new System.Drawing.Size(181, 26);
-            this.maskedTextBox20.TabIndex = 4;
+            this.txtCPF.Font = new System.Drawing.Font("Times New Roman", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.txtCPF.Location = new System.Drawing.Point(31, 188);
+            this.txtCPF.Name = "txtCPF";
+            this.txtCPF.Size = new System.Drawing.Size(181, 26);
+            this.txtCPF.TabIndex = 4;
             // 
-            // maskedTextBox22
+            // txtDataNasc
             // 
-            this.maskedTextBox22.Font = new System.Drawing.Font("Times New Roman", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.maskedTextBox22.Location = new System.Drawing.Point(30, 142);
-            this.maskedTextBox22.Name = "maskedTextBox22";
-            this.maskedTextBox22.Size = new System.Drawing.Size(181, 26);
-            this.maskedTextBox22.TabIndex = 3;
+            this.txtDataNasc.Font = new System.Drawing.Font("Times New Roman", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.txtDataNasc.Location = new System.Drawing.Point(30, 142);
+            this.txtDataNasc.Name = "txtDataNasc";
+            this.txtDataNasc.Size = new System.Drawing.Size(181, 26);
+            this.txtDataNasc.TabIndex = 3;
             // 
-            // maskedTextBox23
+            // txtCargo
             // 
-            this.maskedTextBox23.Font = new System.Drawing.Font("Times New Roman", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.maskedTextBox23.Location = new System.Drawing.Point(30, 93);
-            this.maskedTextBox23.Name = "maskedTextBox23";
-            this.maskedTextBox23.Size = new System.Drawing.Size(181, 26);
-            this.maskedTextBox23.TabIndex = 2;
+            this.txtCargo.Font = new System.Drawing.Font("Times New Roman", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.txtCargo.Location = new System.Drawing.Point(30, 93);
+            this.txtCargo.Name = "txtCargo";
+            this.txtCargo.Size = new System.Drawing.Size(181, 26);
+            this.txtCargo.TabIndex = 2;
             // 
-            // maskedTextBox24
+            // txtNome
             // 
-            this.maskedTextBox24.Font = new System.Drawing.Font("Times New Roman", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.maskedTextBox24.Location = new System.Drawing.Point(30, 44);
-            this.maskedTextBox24.Name = "maskedTextBox24";
-            this.maskedTextBox24.Size = new System.Drawing.Size(181, 26);
-            this.maskedTextBox24.TabIndex = 1;
+            this.txtNome.Font = new System.Drawing.Font("Times New Roman", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.txtNome.Location = new System.Drawing.Point(30, 44);
+            this.txtNome.Name = "txtNome";
+            this.txtNome.Size = new System.Drawing.Size(181, 26);
+            this.txtNome.TabIndex = 1;
             // 
             // panel1
             // 
             this.panel1.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
             this.panel1.Controls.Add(this.label2);
-            this.panel1.Controls.Add(this.maskedTextBox2);
-            this.panel1.Controls.Add(this.maskedTextBox4);
+            this.panel1.Controls.Add(this.txtSenhaNovamente);
+            this.panel1.Controls.Add(this.txtUsuario);
             this.panel1.Controls.Add(this.label3);
             this.panel1.Controls.Add(this.label4);
-            this.panel1.Controls.Add(this.maskedTextBox3);
+            this.panel1.Controls.Add(this.txtSenha);
             this.panel1.Location = new System.Drawing.Point(281, 265);
             this.panel1.Name = "panel1";
             this.panel1.Size = new System.Drawing.Size(151, 165);
@@ -299,21 +300,21 @@
             this.label2.TabIndex = 173;
             this.label2.Text = "Senha novamente:";
             // 
-            // maskedTextBox2
+            // txtSenhaNovamente
             // 
-            this.maskedTextBox2.Font = new System.Drawing.Font("Times New Roman", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.maskedTextBox2.Location = new System.Drawing.Point(18, 128);
-            this.maskedTextBox2.Name = "maskedTextBox2";
-            this.maskedTextBox2.Size = new System.Drawing.Size(118, 26);
-            this.maskedTextBox2.TabIndex = 3;
+            this.txtSenhaNovamente.Font = new System.Drawing.Font("Times New Roman", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.txtSenhaNovamente.Location = new System.Drawing.Point(18, 128);
+            this.txtSenhaNovamente.Name = "txtSenhaNovamente";
+            this.txtSenhaNovamente.Size = new System.Drawing.Size(118, 26);
+            this.txtSenhaNovamente.TabIndex = 3;
             // 
-            // maskedTextBox4
+            // txtUsuario
             // 
-            this.maskedTextBox4.Font = new System.Drawing.Font("Times New Roman", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.maskedTextBox4.Location = new System.Drawing.Point(18, 30);
-            this.maskedTextBox4.Name = "maskedTextBox4";
-            this.maskedTextBox4.Size = new System.Drawing.Size(118, 26);
-            this.maskedTextBox4.TabIndex = 1;
+            this.txtUsuario.Font = new System.Drawing.Font("Times New Roman", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.txtUsuario.Location = new System.Drawing.Point(18, 30);
+            this.txtUsuario.Name = "txtUsuario";
+            this.txtUsuario.Size = new System.Drawing.Size(118, 26);
+            this.txtUsuario.TabIndex = 1;
             // 
             // label3
             // 
@@ -335,13 +336,13 @@
             this.label4.TabIndex = 169;
             this.label4.Text = "Usuário:";
             // 
-            // maskedTextBox3
+            // txtSenha
             // 
-            this.maskedTextBox3.Font = new System.Drawing.Font("Times New Roman", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.maskedTextBox3.Location = new System.Drawing.Point(18, 76);
-            this.maskedTextBox3.Name = "maskedTextBox3";
-            this.maskedTextBox3.Size = new System.Drawing.Size(118, 26);
-            this.maskedTextBox3.TabIndex = 2;
+            this.txtSenha.Font = new System.Drawing.Font("Times New Roman", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.txtSenha.Location = new System.Drawing.Point(18, 76);
+            this.txtSenha.Name = "txtSenha";
+            this.txtSenha.Size = new System.Drawing.Size(118, 26);
+            this.txtSenha.TabIndex = 2;
             // 
             // FrmCadFuncionario
             // 
@@ -351,31 +352,31 @@
             this.ClientSize = new System.Drawing.Size(488, 478);
             this.Controls.Add(this.panel1);
             this.Controls.Add(this.label1);
-            this.Controls.Add(this.maskedTextBox1);
+            this.Controls.Add(this.txtRG);
             this.Controls.Add(this.btnSair);
             this.Controls.Add(this.btnSalvar);
             this.Controls.Add(this.label23);
-            this.Controls.Add(this.button1);
+            this.Controls.Add(this.btnInserirFoto);
             this.Controls.Add(this.label27);
-            this.Controls.Add(this.maskedTextBox27);
+            this.Controls.Add(this.txtEmail);
             this.Controls.Add(this.label26);
-            this.Controls.Add(this.maskedTextBox26);
-            this.Controls.Add(this.maskedTextBox25);
-            this.Controls.Add(this.pictureBox1);
+            this.Controls.Add(this.txtTelefone);
+            this.Controls.Add(this.txtEnderecoImage);
+            this.Controls.Add(this.picFoto);
             this.Controls.Add(this.label25);
-            this.Controls.Add(this.radioButton2);
-            this.Controls.Add(this.radioButton1);
+            this.Controls.Add(this.rbtMasculino);
+            this.Controls.Add(this.rbtFeminino);
             this.Controls.Add(this.label20);
             this.Controls.Add(this.label22);
             this.Controls.Add(this.label24);
-            this.Controls.Add(this.maskedTextBox20);
-            this.Controls.Add(this.maskedTextBox22);
-            this.Controls.Add(this.maskedTextBox23);
-            this.Controls.Add(this.maskedTextBox24);
+            this.Controls.Add(this.txtCPF);
+            this.Controls.Add(this.txtDataNasc);
+            this.Controls.Add(this.txtCargo);
+            this.Controls.Add(this.txtNome);
             this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
             this.Name = "FrmCadFuncionario";
             this.Text = "ADM - Cadastro de funcionário";
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.picFoto)).EndInit();
             this.panel1.ResumeLayout(false);
             this.panel1.PerformLayout();
             this.ResumeLayout(false);
@@ -386,33 +387,33 @@
         #endregion
 
         private System.Windows.Forms.Label label1;
-        private System.Windows.Forms.MaskedTextBox maskedTextBox1;
+        private System.Windows.Forms.MaskedTextBox txtRG;
         private System.Windows.Forms.Button btnSair;
         private System.Windows.Forms.Button btnSalvar;
         private System.Windows.Forms.Label label23;
-        private System.Windows.Forms.Button button1;
+        private System.Windows.Forms.Button btnInserirFoto;
         private System.Windows.Forms.Label label27;
-        private System.Windows.Forms.MaskedTextBox maskedTextBox27;
+        private System.Windows.Forms.MaskedTextBox txtEmail;
         private System.Windows.Forms.Label label26;
-        private System.Windows.Forms.MaskedTextBox maskedTextBox26;
-        private System.Windows.Forms.MaskedTextBox maskedTextBox25;
-        private System.Windows.Forms.PictureBox pictureBox1;
+        private System.Windows.Forms.MaskedTextBox txtTelefone;
+        private System.Windows.Forms.MaskedTextBox txtEnderecoImage;
+        private System.Windows.Forms.PictureBox picFoto;
         private System.Windows.Forms.Label label25;
-        private System.Windows.Forms.RadioButton radioButton2;
-        private System.Windows.Forms.RadioButton radioButton1;
+        private System.Windows.Forms.RadioButton rbtMasculino;
+        private System.Windows.Forms.RadioButton rbtFeminino;
         private System.Windows.Forms.Label label20;
         private System.Windows.Forms.Label label22;
         private System.Windows.Forms.Label label24;
-        private System.Windows.Forms.MaskedTextBox maskedTextBox20;
-        private System.Windows.Forms.MaskedTextBox maskedTextBox22;
-        private System.Windows.Forms.MaskedTextBox maskedTextBox23;
-        private System.Windows.Forms.MaskedTextBox maskedTextBox24;
+        private System.Windows.Forms.MaskedTextBox txtCPF;
+        private System.Windows.Forms.MaskedTextBox txtDataNasc;
+        private System.Windows.Forms.MaskedTextBox txtCargo;
+        private System.Windows.Forms.MaskedTextBox txtNome;
         private System.Windows.Forms.Panel panel1;
         private System.Windows.Forms.Label label2;
-        private System.Windows.Forms.MaskedTextBox maskedTextBox2;
-        private System.Windows.Forms.MaskedTextBox maskedTextBox4;
+        private System.Windows.Forms.MaskedTextBox txtSenhaNovamente;
+        private System.Windows.Forms.MaskedTextBox txtUsuario;
         private System.Windows.Forms.Label label3;
         private System.Windows.Forms.Label label4;
-        private System.Windows.Forms.MaskedTextBox maskedTextBox3;
+        private System.Windows.Forms.MaskedTextBox txtSenha;
     }
 }

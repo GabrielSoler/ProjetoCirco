@@ -32,7 +32,7 @@
             this.btnCad = new System.Windows.Forms.Button();
             this.btnTudo = new System.Windows.Forms.Button();
             this.pnlBuscar = new System.Windows.Forms.Panel();
-            this.textBox1 = new System.Windows.Forms.TextBox();
+            this.txtPesquisa = new System.Windows.Forms.TextBox();
             this.label1 = new System.Windows.Forms.Label();
             this.lstPesquisa = new System.Windows.Forms.ListBox();
             this.pnlBuscar.SuspendLayout();
@@ -75,7 +75,7 @@
             this.pnlBuscar.BackColor = System.Drawing.SystemColors.ButtonHighlight;
             this.pnlBuscar.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("pnlBuscar.BackgroundImage")));
             this.pnlBuscar.BackgroundImageLayout = System.Windows.Forms.ImageLayout.None;
-            this.pnlBuscar.Controls.Add(this.textBox1);
+            this.pnlBuscar.Controls.Add(this.txtPesquisa);
             this.pnlBuscar.Controls.Add(this.label1);
             this.pnlBuscar.Controls.Add(this.lstPesquisa);
             this.pnlBuscar.Location = new System.Drawing.Point(138, 63);
@@ -83,12 +83,12 @@
             this.pnlBuscar.Size = new System.Drawing.Size(324, 248);
             this.pnlBuscar.TabIndex = 34;
             // 
-            // textBox1
+            // txtPesquisa
             // 
-            this.textBox1.Location = new System.Drawing.Point(135, 67);
-            this.textBox1.Name = "textBox1";
-            this.textBox1.Size = new System.Drawing.Size(112, 20);
-            this.textBox1.TabIndex = 33;
+            this.txtPesquisa.Location = new System.Drawing.Point(135, 67);
+            this.txtPesquisa.Name = "txtPesquisa";
+            this.txtPesquisa.Size = new System.Drawing.Size(112, 20);
+            this.txtPesquisa.TabIndex = 33;
             // 
             // label1
             // 
@@ -144,7 +144,7 @@
         private System.Windows.Forms.Button btnCad;
         private System.Windows.Forms.Button btnTudo;
         private System.Windows.Forms.Panel pnlBuscar;
-        private System.Windows.Forms.TextBox textBox1;
+        private System.Windows.Forms.TextBox txtPesquisa;
         private System.Windows.Forms.Label label1;
         private System.Windows.Forms.ListBox lstPesquisa;
     }

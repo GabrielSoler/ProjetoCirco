@@ -25,9 +25,9 @@ namespace Projeto_Circo.FormsFigurino
 
    
 
-        private void btnSalvar_Click(object sender, EventArgs e)
+        private void btnEditar_Click(object sender, EventArgs e)
         {
-
+            limparFrmDelAltPec();
         }
 
         private void btnCostureira_Click(object sender, EventArgs e)
@@ -35,5 +35,23 @@ namespace Projeto_Circo.FormsFigurino
             FrmEmail form = new FrmEmail();
             form.Show();
         }
+
+        private void limparFrmDelAltPec()
+        {
+            txtEnderecoImage.Text = string.Empty;
+            txtNotas.Text = string.Empty;
+            txtCodPec.Text = string.Empty;
+            txtQtdComp.Text = string.Empty;
+
+
+            chkAtivo.Checked = false;
+            chkInativo.Checked = false;
+
+            rbtSim.Checked = false;
+            rbtNao.Checked = false;
+            lstColecao.Items.Clear();
+            picFoto.Image = null;
+        }
+
     }
 }
