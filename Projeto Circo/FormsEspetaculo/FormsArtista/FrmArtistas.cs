@@ -7,6 +7,7 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
+using Business;
 using Projeto_Circo.FormsArtista;
 
 
@@ -40,6 +41,15 @@ namespace Projeto_Circo.FormsArtista
         {
             FrmCadArtista Form = new FrmCadArtista();
             Form.Show();
+        }
+
+        private void btnTudo_Click(object sender, EventArgs e)
+        {
+            List<Artista> artistas = new Artista().Todos();
+            foreach (Artista a in artistas)
+            {
+                Console.WriteLine(a);
+            }
         }
     }
 }

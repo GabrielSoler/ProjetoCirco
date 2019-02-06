@@ -64,6 +64,7 @@
             this.btnTudo.Text = "Exibir Todos";
             this.btnTudo.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
             this.btnTudo.UseVisualStyleBackColor = false;
+            this.btnTudo.Click += new System.EventHandler(this.btnTudo_Click);
             // 
             // lstPesquisa
             // 

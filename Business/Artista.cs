@@ -96,7 +96,22 @@ namespace Business
 
         [OpcoesBase(UsarNoBancoDeDados = true)]
         public byte[] FotoArtista { get; set; }
-     
+
+        public new List<Artista> Todos()
+        {
+            var artista = new List<Artista>();
+            foreach (var ibase in base.Todos())
+            {
+                artista.Add((Artista)ibase);
+            }
+
+            return artista;
+        }
+
+        public override string ToString()
+        {
+            return this.Nome;
+        }
 
     }
 }
