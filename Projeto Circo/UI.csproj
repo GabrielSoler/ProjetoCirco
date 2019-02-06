@@ -310,6 +310,10 @@
       <Project>{8105cce9-176f-47b4-bb2b-82d036bb2742}</Project>
       <Name>Business</Name>
     </ProjectReference>
+    <ProjectReference Include="..\DataBase\Database.csproj">
+      <Project>{4F9141D6-D630-4F01-8407-D1D090A1FAD6}</Project>
+      <Name>Database</Name>
+    </ProjectReference>
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>

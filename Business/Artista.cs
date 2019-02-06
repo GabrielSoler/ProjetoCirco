@@ -32,6 +32,7 @@ namespace Business
 
         [OpcoesBase(UsarNoBancoDeDados = true)]
         public string Email { get; set; }
+
         ///////////////////////MEDIDAS/////////////////////////
         [OpcoesBase(UsarNoBancoDeDados = true)]
         public double OmbroAOmbro { get; set; }
@@ -77,6 +78,9 @@ namespace Business
 
         [OpcoesBase(UsarNoBancoDeDados = true)]
         public double ComprimentoBraço { get; set; }
+
+        [OpcoesBase(UsarNoBancoDeDados = true)]
+        public double LarguraBraço { get; set; }
 
         [OpcoesBase(UsarNoBancoDeDados = true)]
         public double Punho { get; set; }

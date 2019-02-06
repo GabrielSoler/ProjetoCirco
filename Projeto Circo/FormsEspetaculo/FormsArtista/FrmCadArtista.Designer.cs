@@ -39,7 +39,6 @@
             this.txtEmail = new System.Windows.Forms.MaskedTextBox();
             this.label26 = new System.Windows.Forms.Label();
             this.txtTel = new System.Windows.Forms.MaskedTextBox();
-            this.txtEnderecoImage = new System.Windows.Forms.MaskedTextBox();
             this.picFoto = new System.Windows.Forms.PictureBox();
             this.label25 = new System.Windows.Forms.Label();
             this.rbtMasc = new System.Windows.Forms.RadioButton();
@@ -145,7 +144,6 @@
             this.tbDadosPessoais.Controls.Add(this.txtEmail);
             this.tbDadosPessoais.Controls.Add(this.label26);
             this.tbDadosPessoais.Controls.Add(this.txtTel);
-            this.tbDadosPessoais.Controls.Add(this.txtEnderecoImage);
             this.tbDadosPessoais.Controls.Add(this.picFoto);
             this.tbDadosPessoais.Controls.Add(this.label25);
             this.tbDadosPessoais.Controls.Add(this.rbtMasc);
@@ -180,7 +178,7 @@
             this.btnInserirFoto.BackColor = System.Drawing.SystemColors.ButtonHighlight;
             this.btnInserirFoto.Cursor = System.Windows.Forms.Cursors.Hand;
             this.btnInserirFoto.Font = new System.Drawing.Font("Times New Roman", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnInserirFoto.Location = new System.Drawing.Point(302, 206);
+            this.btnInserirFoto.Location = new System.Drawing.Point(285, 221);
             this.btnInserirFoto.Name = "btnInserirFoto";
             this.btnInserirFoto.Size = new System.Drawing.Size(90, 33);
             this.btnInserirFoto.TabIndex = 81;
@@ -220,19 +218,12 @@
             this.txtTel.Size = new System.Drawing.Size(181, 26);
             this.txtTel.TabIndex = 34;
             // 
-            // txtEnderecoImage
-            // 
-            this.txtEnderecoImage.Location = new System.Drawing.Point(260, 174);
-            this.txtEnderecoImage.Name = "txtEnderecoImage";
-            this.txtEnderecoImage.Size = new System.Drawing.Size(181, 26);
-            this.txtEnderecoImage.TabIndex = 76;
-            // 
             // picFoto
             // 
             this.picFoto.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
-            this.picFoto.Location = new System.Drawing.Point(280, 6);
+            this.picFoto.Location = new System.Drawing.Point(247, 12);
             this.picFoto.Name = "picFoto";
-            this.picFoto.Size = new System.Drawing.Size(142, 162);
+            this.picFoto.Size = new System.Drawing.Size(179, 196);
             this.picFoto.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
             this.picFoto.TabIndex = 75;
             this.picFoto.TabStop = false;
@@ -807,7 +798,6 @@
         private System.Windows.Forms.MaskedTextBox txtDataNasc;
         private System.Windows.Forms.MaskedTextBox txtFunc;
         private System.Windows.Forms.MaskedTextBox txtNomeArt;
-        private System.Windows.Forms.MaskedTextBox txtEnderecoImage;
         private System.Windows.Forms.MaskedTextBox txtEmail;
         private System.Windows.Forms.MaskedTextBox txtTel;
         private System.Windows.Forms.PictureBox picFoto;

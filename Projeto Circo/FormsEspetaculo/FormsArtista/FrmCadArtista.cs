@@ -61,8 +61,14 @@ namespace Projeto_Circo.FormsArtista
 
         private void btnSalvar_Click(object sender, EventArgs e)
         {
-            
-            var U = new Usuario();
+
+            Artista artista = new Artista();
+
+            LoadArtista(artista);
+            LimparArtista();
+            artista.Salvar();
+
+            MessageBox.Show("Usuário salvo com sucesso!");
         }
 
         //Converte imagem para bytes
@@ -74,17 +80,58 @@ namespace Projeto_Circo.FormsArtista
             return foto;
         }
 
+        public void LoadArtista(Artista artista)
+        {
+            //////////////Carregar DADOS PESSOAIS///////////////////////////////////
+            artista.Nome = txtNomeArt.Text;
+            artista.Funcao = txtFunc.Text;
+            artista.DataNascimento = Convert.ToDateTime(txtDataNasc.Text);
+            artista.CPF = txtCpf.Text;
+            artista.Telefone = txtTel.Text;
+            artista.Email = txtEmail.Text;
 
+            if (rbtMasc.Checked)
+            {
+                artista.Sexo = 'M';
+            }
+            else
+            {
+                artista.Sexo = 'F';
+            }
+            artista.FotoArtista = ConverterImagemParaBytes();
+            //////////////Carregar MEDIDAS///////////////////////////////////
+            artista.OmbroAOmbro = Convert.ToDouble(txtOmbroAOmbro.Text);
+            artista.Ombro = Convert.ToDouble(txtOmbro.Text);
+            artista.Colarinho = Convert.ToDouble(txtColarinho.Text);
+            artista.EntreCavasFrente = Convert.ToDouble(txtEntreCavasFrente.Text);
+            artista.CentroCosta = Convert.ToDouble(txtCentroCosta.Text);
+            artista.Busto = Convert.ToDouble(txtBusto.Text);
+            artista.AlturaBusto = Convert.ToDouble(txtAlturaBusto.Text);
+            artista.EntreCavasFrente = Convert.ToDouble(txtEntreCavasFrente.Text);
+            artista.SeparacaoBusto = Convert.ToDouble(txtSeparacaoBusto.Text);
+            artista.Cintura = Convert.ToDouble(txtCintura.Text);
+            artista.Altura = Convert.ToDouble(txtAltura.Text);
+            artista.AlturaQuadril = Convert.ToDouble(txtAlturaQuadril.Text);
+            artista.Quadril = Convert.ToDouble(txtQuadril.Text);
+            artista.AlturaCinturaDoJoelho = Convert.ToDouble(txtAltCintDoJoelho.Text);
+            artista.AlturaCinturaAoTornozelo = Convert.ToDouble(txtAltCintAoTornozelo.Text);
+            artista.ComprimentoBraço = Convert.ToDouble(txtCompBraco.Text);
+            artista.LarguraBraço = Convert.ToDouble(txtLargBraco.Text);
+            artista.Punho = Convert.ToDouble(txtPunho.Text);
+            artista.AlturaManga = Convert.ToDouble(txtAltManga.Text);
+            artista.AlturaMangaCurta = Convert.ToDouble(txtAltMangaCurta.Text);
+            artista.AlturaDesejadaDaSaia = Convert.ToDouble(txtAltDesjDaSaia.Text);
+        }
         public void LimparArtista()
         {
-            //////////////LIMPAR DADDOS PESSOAIS///////////////////////////////////
+            //////////////LIMPAR DADOS PESSOAIS///////////////////////////////////
             txtNomeArt.Text = string.Empty;
             txtFunc.Text = string.Empty;
             txtDataNasc.Text = string.Empty;
             txtCpf.Text = string.Empty;
             txtTel.Text = string.Empty;
             txtEmail.Text = string.Empty;
-            txtEnderecoImage.Text = string.Empty;
+           
 
             rbtMasc.Checked = false;
             rbtFem.Checked = false;
