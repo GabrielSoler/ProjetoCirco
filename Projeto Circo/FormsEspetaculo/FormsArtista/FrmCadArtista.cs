@@ -75,9 +75,14 @@ namespace Projeto_Circo.FormsArtista
         public byte[] ConverterImagemParaBytes()
         {
             MemoryStream stream = new MemoryStream();
-            picFoto.Image.Save(stream, System.Drawing.Imaging.ImageFormat.Jpeg);
-            byte[] foto = stream.ToArray();
-            return foto;
+
+            if (picFoto.Image != null)
+            {
+                picFoto.Image.Save(stream, System.Drawing.Imaging.ImageFormat.Jpeg);
+                byte[] foto = stream.ToArray();
+                return foto;
+            }
+            return null;    
         }
 
         public void LoadArtista(Artista artista)
@@ -115,8 +120,8 @@ namespace Projeto_Circo.FormsArtista
             artista.Quadril = Convert.ToDouble(txtQuadril.Text);
             artista.AlturaCinturaDoJoelho = Convert.ToDouble(txtAltCintDoJoelho.Text);
             artista.AlturaCinturaAoTornozelo = Convert.ToDouble(txtAltCintAoTornozelo.Text);
-            artista.ComprimentoBraço = Convert.ToDouble(txtCompBraco.Text);
-            artista.LarguraBraço = Convert.ToDouble(txtLargBraco.Text);
+            artista.ComprimentoBraco = Convert.ToDouble(txtCompBraco.Text);
+            artista.LarguraBraco = Convert.ToDouble(txtLargBraco.Text);
             artista.Punho = Convert.ToDouble(txtPunho.Text);
             artista.AlturaManga = Convert.ToDouble(txtAltManga.Text);
             artista.AlturaMangaCurta = Convert.ToDouble(txtAltMangaCurta.Text);

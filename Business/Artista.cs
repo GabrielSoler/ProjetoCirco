@@ -77,10 +77,10 @@ namespace Business
         public double AlturaCinturaAoTornozelo { get; set; }
 
         [OpcoesBase(UsarNoBancoDeDados = true)]
-        public double ComprimentoBraço { get; set; }
+        public double ComprimentoBraco { get; set; }
 
         [OpcoesBase(UsarNoBancoDeDados = true)]
-        public double LarguraBraço { get; set; }
+        public double LarguraBraco { get; set; }
 
         [OpcoesBase(UsarNoBancoDeDados = true)]
         public double Punho { get; set; }

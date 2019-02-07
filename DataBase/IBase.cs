@@ -11,8 +11,9 @@ namespace Database
         int Key { get; }
         void Salvar();
         void Excluir();
-        void CriarTabela();
+        //busca todos
         List<IBase> Todos();
+        //busca todos com where usando o atirbuto q esta preenchido com chave primaria
         List<IBase> Busca();
     }
 }
