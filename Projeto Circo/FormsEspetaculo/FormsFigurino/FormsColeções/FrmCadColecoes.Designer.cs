@@ -247,6 +247,7 @@
             this.Controls.Add(this.label24);
             this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
             this.Name = "FrmCadColecoes";
+            this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "Cadastro da coleção";
             this.Load += new System.EventHandler(this.FrmCadColecoes_Load);
             this.ResumeLayout(false);

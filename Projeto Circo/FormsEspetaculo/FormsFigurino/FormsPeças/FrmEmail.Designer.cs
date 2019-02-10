@@ -128,6 +128,7 @@
             this.Controls.Add(this.btnSair);
             this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
             this.Name = "FrmEmail";
+            this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "Enviar email";
             this.Load += new System.EventHandler(this.FrmEmail_Load);
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView)).EndInit();

@@ -20,7 +20,8 @@ namespace Projeto_Circo.FormsArtista
         public FrmCadArtista()
         {
             InitializeComponent();
-            
+            rbtMasc.Checked = true;
+         
         }
 
         private void FrmCadArtista_Load(object sender, EventArgs e)
@@ -68,41 +69,14 @@ namespace Projeto_Circo.FormsArtista
             {
                 LimparArtista();
                 artista.Salvar();
-                MessageBox.Show("Usuário salvo com sucesso!");
+                MessageBox.Show("Usuário salvo com sucesso!","Mensagem do sistema");
             }
             
         }
 
-        //Converte imagem para bytes
-        public byte[] ConverterImagemParaBytes()
-        {
-            MemoryStream stream = new MemoryStream();
-
-            if (picFoto.Image != null)
-            {
-                picFoto.Image.Save(stream, System.Drawing.Imaging.ImageFormat.Jpeg);
-                byte[] foto = stream.ToArray();
-                return foto;
-            }
-            return null;    
-        }
-        //Inverte data para salvar no banco
-        public string InverteData(string dataBr)
-        {
-            string[] dateS = dataBr.Split('/');
-            string dataEUA = string.Empty;
-            for(int i=2; i >= 0; i--)
-            {
-                dataEUA += dateS[i] + '/';
-            }
-            dataEUA = dataEUA.Remove(dataEUA.Length - 1);
-            return dataEUA;
-        }
-
-
         public bool LoadArtista(Artista artista)
         {
-            if (txtNomeArt.Text != string.Empty && txtCpf.MaskFull) {
+            if (txtNomeArt.Text != string.Empty && txtCpf.MaskFull && txtDataNasc.MaskFull) {
                 //////////////Carregar DADOS PESSOAIS///////////////////////////////////
                 artista.Nome = txtNomeArt.Text;
                 artista.CPF = txtCpf.Text;
@@ -110,26 +84,24 @@ namespace Projeto_Circo.FormsArtista
                 artista.Email = txtEmail.Text;
                 if (txtDataNasc.MaskFull)
                 {
-                    string tempData = InverteData(txtDataNasc.Text);
-                    artista.DataNascimento = Convert.ToDateTime(tempData);
+                    artista.DataNascimento = txtDataNasc.Text;
+                    
                 }
-                else
-                {
-                    artista.DataNascimento = DateTime.Now;
-                }
+               
                 if (txtTel.MaskFull)
                 {
                     artista.Telefone = txtTel.Text;
                 }
                 if (rbtMasc.Checked)
                 {
-                    artista.Sexo = 'M';
+                    artista.Sexo = "M";
                 }
                 else if (rbtFem.Checked)
                 {
-                    artista.Sexo = 'F';
+                    artista.Sexo = "F";
                 }
-                artista.FotoArtista = ConverterImagemParaBytes();
+                //artista.FotoArtista = imageToByteArray(picFoto.Image);
+                
                 //////////////Carregar MEDIDAS///////////////////////////////////
                 if (txtOmbroAOmbro.MaskFull)
                 {
@@ -217,6 +189,11 @@ namespace Projeto_Circo.FormsArtista
                 }
                 return true;
             }
+            else if(!txtDataNasc.MaskFull)
+            {
+                MessageBox.Show("PREENCHA o campo Data de nascimento!!!");
+                return false;
+            }
             else
             {
                 MessageBox.Show("PREENCHA o campo NOME e/ou CPF!!!");
@@ -235,7 +212,7 @@ namespace Projeto_Circo.FormsArtista
             txtEmail.Text = string.Empty;
            
 
-            rbtMasc.Checked = false;
+            rbtMasc.Checked = true;
             rbtFem.Checked = false;
             picFoto.Image = null;
             //////////////LIMPAR MEDIDAS///////////////////////////////////
@@ -262,6 +239,16 @@ namespace Projeto_Circo.FormsArtista
 
         }
 
+        private void rbtMasc_KeyDown(object sender, KeyEventArgs e)
+        {
+            if ((Keys)e.KeyValue == Keys.Enter)
+            {
+                e.Handled = true;
+                rbtMasc.Checked = false;
+                rbtFem.Checked = true;
+            }
+        }
 
+        
     }
 }

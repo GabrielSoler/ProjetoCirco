@@ -33,8 +33,8 @@
             this.btnTudo = new System.Windows.Forms.Button();
             this.lstPesquisa = new System.Windows.Forms.ListBox();
             this.toolStrip1 = new System.Windows.Forms.ToolStrip();
-            this.toolStripButton1 = new System.Windows.Forms.ToolStripButton();
             this.toolStripTextBoxPesquisa = new System.Windows.Forms.ToolStripTextBox();
+            this.btnBusca = new System.Windows.Forms.ToolStripButton();
             this.btnCad = new System.Windows.Forms.Button();
             this.pnlBuscar.SuspendLayout();
             this.toolStrip1.SuspendLayout();
@@ -73,8 +73,6 @@
             this.lstPesquisa.ForeColor = System.Drawing.Color.Goldenrod;
             this.lstPesquisa.FormattingEnabled = true;
             this.lstPesquisa.ItemHeight = 17;
-            this.lstPesquisa.Items.AddRange(new object[] {
-            "Abre alterar deleta temp"});
             this.lstPesquisa.Location = new System.Drawing.Point(9, 7);
             this.lstPesquisa.Margin = new System.Windows.Forms.Padding(20, 3, 3, 3);
             this.lstPesquisa.Name = "lstPesquisa";
@@ -82,34 +80,34 @@
             this.lstPesquisa.Size = new System.Drawing.Size(194, 106);
             this.lstPesquisa.TabIndex = 7;
             this.lstPesquisa.Click += new System.EventHandler(this.lstPesquisa_Click);
-            this.lstPesquisa.SelectedIndexChanged += new System.EventHandler(this.lstPesquisa_SelectedIndexChanged);
             // 
             // toolStrip1
             // 
             this.toolStrip1.BackColor = System.Drawing.SystemColors.ButtonHighlight;
             this.toolStrip1.Items.AddRange(new System.Windows.Forms.ToolStripItem[] {
-            this.toolStripButton1,
-            this.toolStripTextBoxPesquisa});
+            this.toolStripTextBoxPesquisa,
+            this.btnBusca});
             this.toolStrip1.Location = new System.Drawing.Point(0, 0);
             this.toolStrip1.Name = "toolStrip1";
             this.toolStrip1.Size = new System.Drawing.Size(556, 25);
             this.toolStrip1.TabIndex = 27;
             this.toolStrip1.Text = "toolStrip1";
             // 
-            // toolStripButton1
-            // 
-            this.toolStripButton1.DisplayStyle = System.Windows.Forms.ToolStripItemDisplayStyle.Image;
-            this.toolStripButton1.Image = ((System.Drawing.Image)(resources.GetObject("toolStripButton1.Image")));
-            this.toolStripButton1.ImageTransparentColor = System.Drawing.Color.Magenta;
-            this.toolStripButton1.Name = "toolStripButton1";
-            this.toolStripButton1.Size = new System.Drawing.Size(23, 22);
-            this.toolStripButton1.Text = "toolStripButton1";
-            // 
             // toolStripTextBoxPesquisa
             // 
             this.toolStripTextBoxPesquisa.Name = "toolStripTextBoxPesquisa";
             this.toolStripTextBoxPesquisa.Size = new System.Drawing.Size(100, 25);
             this.toolStripTextBoxPesquisa.Text = "Buscar Artista";
+            // 
+            // btnBusca
+            // 
+            this.btnBusca.DisplayStyle = System.Windows.Forms.ToolStripItemDisplayStyle.Image;
+            this.btnBusca.Image = ((System.Drawing.Image)(resources.GetObject("btnBusca.Image")));
+            this.btnBusca.ImageTransparentColor = System.Drawing.Color.Magenta;
+            this.btnBusca.Name = "btnBusca";
+            this.btnBusca.Size = new System.Drawing.Size(23, 22);
+            this.btnBusca.Text = "toolStripButton1";
+            this.btnBusca.Click += new System.EventHandler(this.btnBusca_Click);
             // 
             // btnCad
             // 
@@ -140,6 +138,7 @@
             this.Controls.Add(this.pnlBuscar);
             this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
             this.Name = "FrmArtistas";
+            this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "Artistas";
             this.Load += new System.EventHandler(this.FrmArtistas_Load);
             this.pnlBuscar.ResumeLayout(false);
@@ -154,10 +153,10 @@
 
         private System.Windows.Forms.Panel pnlBuscar;
         private System.Windows.Forms.Button btnTudo;
-        private System.Windows.Forms.ListBox lstPesquisa;
         private System.Windows.Forms.ToolStrip toolStrip1;
-        private System.Windows.Forms.ToolStripButton toolStripButton1;
+        private System.Windows.Forms.ToolStripButton btnBusca;
         private System.Windows.Forms.ToolStripTextBox toolStripTextBoxPesquisa;
         private System.Windows.Forms.Button btnCad;
+        private System.Windows.Forms.ListBox lstPesquisa;
     }
 }

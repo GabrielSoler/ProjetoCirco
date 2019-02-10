@@ -342,6 +342,7 @@
             this.Controls.Add(this.label2);
             this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
             this.Name = "FrmBuscaAltFinanceiro";
+            this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "Busca Financeiro";
             this.panel2.ResumeLayout(false);
             this.panel2.PerformLayout();

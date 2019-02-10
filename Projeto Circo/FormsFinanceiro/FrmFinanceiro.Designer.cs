@@ -129,6 +129,7 @@
             this.Controls.Add(this.btnCad);
             this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
             this.Name = "FrmFinanceiro";
+            this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "Financeiro";
             this.pnlBuscar.ResumeLayout(false);
             this.pnlBuscar.PerformLayout();

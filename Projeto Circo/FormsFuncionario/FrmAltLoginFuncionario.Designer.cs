@@ -134,6 +134,7 @@
             this.Controls.Add(this.maskedTextBox24);
             this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
             this.Name = "FrmAltLoginFuncionario";
+            this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "Alterar senha";
             this.Load += new System.EventHandler(this.FrmAltLoginFuncionario_Load);
             this.ResumeLayout(false);

@@ -133,6 +133,7 @@
             this.Controls.Add(this.panel1);
             this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
             this.Name = "FrmLoginADM";
+            this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "Login ADM";
             this.Load += new System.EventHandler(this.FrmLoginADM_Load);
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();

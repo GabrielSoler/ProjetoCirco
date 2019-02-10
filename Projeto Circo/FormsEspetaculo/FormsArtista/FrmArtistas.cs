@@ -20,6 +20,8 @@ namespace Projeto_Circo.FormsArtista
             InitializeComponent();
         }
 
+        Artista artista = new Artista();
+
         private void FrmArtistas_Load(object sender, EventArgs e)
         {
             pnlBuscar.BackColor = Color.Transparent;
@@ -27,14 +29,14 @@ namespace Projeto_Circo.FormsArtista
 
         private void lstPesquisa_Click(object sender, EventArgs e)
         {
-            FrmDelAltArtista Form = new FrmDelAltArtista();
-            Form.Show();
-
-        }
-
-        private void lstPesquisa_SelectedIndexChanged(object sender, EventArgs e)
-        {
-
+            var artista = (Artista)lstPesquisa.SelectedItem;
+            if (artista != null)
+            {
+                this.Close();
+                FrmDelAltArtista Form = new FrmDelAltArtista(artista);
+                Form.Show();
+            }
+            
         }
 
         private void btnCad_Click(object sender, EventArgs e)
@@ -45,11 +47,25 @@ namespace Projeto_Circo.FormsArtista
 
         private void btnTudo_Click(object sender, EventArgs e)
         {
+            lstPesquisa.Items.Clear();
             List<Artista> artistas = new Artista().Todos();
             foreach (Artista a in artistas)
             {
-                Console.WriteLine(a);
+                lstPesquisa.Items.Add(a);
+            
             }
+    
+        }
+
+        private void btnBusca_Click(object sender, EventArgs e)
+        {
+            lstPesquisa.Items.Clear();
+            List<Artista> artistas = artista.BuscaNome(toolStripTextBoxPesquisa.Text);
+            foreach (Artista a in artistas)
+            {
+                lstPesquisa.Items.Add(a);
+            }
+           
         }
     }
 }

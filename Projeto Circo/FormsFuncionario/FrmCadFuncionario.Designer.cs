@@ -375,6 +375,7 @@
             this.Controls.Add(this.txtNome);
             this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
             this.Name = "FrmCadFuncionario";
+            this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "ADM - Cadastro de funcionário";
             ((System.ComponentModel.ISupportInitialize)(this.picFoto)).EndInit();
             this.panel1.ResumeLayout(false);

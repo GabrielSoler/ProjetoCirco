@@ -248,6 +248,7 @@
             this.rbtMasc.TabStop = true;
             this.rbtMasc.Text = "Masculino";
             this.rbtMasc.UseVisualStyleBackColor = true;
+            this.rbtMasc.KeyDown += new System.Windows.Forms.KeyEventHandler(this.rbtMasc_KeyDown);
             // 
             // rbtFem
             // 
@@ -374,6 +375,7 @@
             this.txtAltManga.Location = new System.Drawing.Point(248, 332);
             this.txtAltManga.Mask = "99.99";
             this.txtAltManga.Name = "txtAltManga";
+            this.txtAltManga.RightToLeft = System.Windows.Forms.RightToLeft.Yes;
             this.txtAltManga.Size = new System.Drawing.Size(169, 26);
             this.txtAltManga.TabIndex = 54;
             // 
@@ -391,6 +393,7 @@
             this.txtAltura.Location = new System.Drawing.Point(14, 425);
             this.txtAltura.Mask = "99.99";
             this.txtAltura.Name = "txtAltura";
+            this.txtAltura.RightToLeft = System.Windows.Forms.RightToLeft.Yes;
             this.txtAltura.Size = new System.Drawing.Size(155, 26);
             this.txtAltura.TabIndex = 46;
             // 
@@ -408,6 +411,7 @@
             this.txtAltCintDoJoelho.Location = new System.Drawing.Point(248, 127);
             this.txtAltCintDoJoelho.Mask = "99.99";
             this.txtAltCintDoJoelho.Name = "txtAltCintDoJoelho";
+            this.txtAltCintDoJoelho.RightToLeft = System.Windows.Forms.RightToLeft.Yes;
             this.txtAltCintDoJoelho.Size = new System.Drawing.Size(169, 26);
             this.txtAltCintDoJoelho.TabIndex = 49;
             // 
@@ -578,6 +582,7 @@
             this.txtAltMangaCurta.Location = new System.Drawing.Point(247, 380);
             this.txtAltMangaCurta.Mask = "99.99";
             this.txtAltMangaCurta.Name = "txtAltMangaCurta";
+            this.txtAltMangaCurta.RightToLeft = System.Windows.Forms.RightToLeft.Yes;
             this.txtAltMangaCurta.Size = new System.Drawing.Size(169, 26);
             this.txtAltMangaCurta.TabIndex = 55;
             // 
@@ -586,6 +591,7 @@
             this.txtPunho.Location = new System.Drawing.Point(248, 296);
             this.txtPunho.Mask = "99.99";
             this.txtPunho.Name = "txtPunho";
+            this.txtPunho.RightToLeft = System.Windows.Forms.RightToLeft.Yes;
             this.txtPunho.Size = new System.Drawing.Size(169, 26);
             this.txtPunho.TabIndex = 53;
             // 
@@ -594,6 +600,7 @@
             this.txtLargBraco.Location = new System.Drawing.Point(247, 253);
             this.txtLargBraco.Mask = "99.99";
             this.txtLargBraco.Name = "txtLargBraco";
+            this.txtLargBraco.RightToLeft = System.Windows.Forms.RightToLeft.Yes;
             this.txtLargBraco.Size = new System.Drawing.Size(169, 26);
             this.txtLargBraco.TabIndex = 52;
             // 
@@ -602,6 +609,7 @@
             this.txtCompBraco.Location = new System.Drawing.Point(247, 209);
             this.txtCompBraco.Mask = "99.99";
             this.txtCompBraco.Name = "txtCompBraco";
+            this.txtCompBraco.RightToLeft = System.Windows.Forms.RightToLeft.Yes;
             this.txtCompBraco.Size = new System.Drawing.Size(169, 26);
             this.txtCompBraco.TabIndex = 51;
             // 
@@ -610,6 +618,7 @@
             this.txtAltCintAoTornozelo.Location = new System.Drawing.Point(247, 169);
             this.txtAltCintAoTornozelo.Mask = "99.99";
             this.txtAltCintAoTornozelo.Name = "txtAltCintAoTornozelo";
+            this.txtAltCintAoTornozelo.RightToLeft = System.Windows.Forms.RightToLeft.Yes;
             this.txtAltCintAoTornozelo.Size = new System.Drawing.Size(169, 26);
             this.txtAltCintAoTornozelo.TabIndex = 50;
             // 
@@ -618,6 +627,7 @@
             this.txtQuadril.Location = new System.Drawing.Point(247, 83);
             this.txtQuadril.Mask = "99.99";
             this.txtQuadril.Name = "txtQuadril";
+            this.txtQuadril.RightToLeft = System.Windows.Forms.RightToLeft.Yes;
             this.txtQuadril.Size = new System.Drawing.Size(169, 26);
             this.txtQuadril.TabIndex = 48;
             // 
@@ -626,6 +636,7 @@
             this.txtAlturaQuadril.Location = new System.Drawing.Point(247, 34);
             this.txtAlturaQuadril.Mask = "99.99";
             this.txtAlturaQuadril.Name = "txtAlturaQuadril";
+            this.txtAlturaQuadril.RightToLeft = System.Windows.Forms.RightToLeft.Yes;
             this.txtAlturaQuadril.Size = new System.Drawing.Size(169, 26);
             this.txtAlturaQuadril.TabIndex = 47;
             // 
@@ -634,6 +645,7 @@
             this.txtAltDesjDaSaia.Location = new System.Drawing.Point(247, 425);
             this.txtAltDesjDaSaia.Mask = "99.99";
             this.txtAltDesjDaSaia.Name = "txtAltDesjDaSaia";
+            this.txtAltDesjDaSaia.RightToLeft = System.Windows.Forms.RightToLeft.Yes;
             this.txtAltDesjDaSaia.Size = new System.Drawing.Size(169, 26);
             this.txtAltDesjDaSaia.TabIndex = 56;
             // 
@@ -642,6 +654,7 @@
             this.txtCintura.Location = new System.Drawing.Point(14, 380);
             this.txtCintura.Mask = "99.99";
             this.txtCintura.Name = "txtCintura";
+            this.txtCintura.RightToLeft = System.Windows.Forms.RightToLeft.Yes;
             this.txtCintura.Size = new System.Drawing.Size(154, 26);
             this.txtCintura.TabIndex = 45;
             // 
@@ -650,6 +663,7 @@
             this.txtSeparacaoBusto.Location = new System.Drawing.Point(14, 336);
             this.txtSeparacaoBusto.Mask = "99.99";
             this.txtSeparacaoBusto.Name = "txtSeparacaoBusto";
+            this.txtSeparacaoBusto.RightToLeft = System.Windows.Forms.RightToLeft.Yes;
             this.txtSeparacaoBusto.Size = new System.Drawing.Size(154, 26);
             this.txtSeparacaoBusto.TabIndex = 44;
             // 
@@ -658,6 +672,7 @@
             this.txtAlturaBusto.Location = new System.Drawing.Point(15, 296);
             this.txtAlturaBusto.Mask = "99.99";
             this.txtAlturaBusto.Name = "txtAlturaBusto";
+            this.txtAlturaBusto.RightToLeft = System.Windows.Forms.RightToLeft.Yes;
             this.txtAlturaBusto.Size = new System.Drawing.Size(154, 26);
             this.txtAlturaBusto.TabIndex = 43;
             // 
@@ -666,6 +681,7 @@
             this.txtBusto.Location = new System.Drawing.Point(17, 253);
             this.txtBusto.Mask = "99.99";
             this.txtBusto.Name = "txtBusto";
+            this.txtBusto.RightToLeft = System.Windows.Forms.RightToLeft.Yes;
             this.txtBusto.Size = new System.Drawing.Size(154, 26);
             this.txtBusto.TabIndex = 42;
             // 
@@ -674,6 +690,7 @@
             this.txtCentroCosta.Location = new System.Drawing.Point(14, 209);
             this.txtCentroCosta.Mask = "99.99";
             this.txtCentroCosta.Name = "txtCentroCosta";
+            this.txtCentroCosta.RightToLeft = System.Windows.Forms.RightToLeft.Yes;
             this.txtCentroCosta.Size = new System.Drawing.Size(154, 26);
             this.txtCentroCosta.TabIndex = 41;
             // 
@@ -682,6 +699,7 @@
             this.txtEntreCavasFrente.Location = new System.Drawing.Point(15, 169);
             this.txtEntreCavasFrente.Mask = "99.99";
             this.txtEntreCavasFrente.Name = "txtEntreCavasFrente";
+            this.txtEntreCavasFrente.RightToLeft = System.Windows.Forms.RightToLeft.Yes;
             this.txtEntreCavasFrente.Size = new System.Drawing.Size(156, 26);
             this.txtEntreCavasFrente.TabIndex = 40;
             // 
@@ -690,6 +708,7 @@
             this.txtColarinho.Location = new System.Drawing.Point(16, 127);
             this.txtColarinho.Mask = "99.99";
             this.txtColarinho.Name = "txtColarinho";
+            this.txtColarinho.RightToLeft = System.Windows.Forms.RightToLeft.Yes;
             this.txtColarinho.Size = new System.Drawing.Size(155, 26);
             this.txtColarinho.TabIndex = 39;
             // 
@@ -698,6 +717,7 @@
             this.txtOmbro.Location = new System.Drawing.Point(14, 83);
             this.txtOmbro.Mask = "99.99";
             this.txtOmbro.Name = "txtOmbro";
+            this.txtOmbro.RightToLeft = System.Windows.Forms.RightToLeft.Yes;
             this.txtOmbro.Size = new System.Drawing.Size(157, 26);
             this.txtOmbro.TabIndex = 38;
             // 
@@ -706,6 +726,7 @@
             this.txtOmbroAOmbro.Location = new System.Drawing.Point(15, 34);
             this.txtOmbroAOmbro.Mask = "99.99";
             this.txtOmbroAOmbro.Name = "txtOmbroAOmbro";
+            this.txtOmbroAOmbro.RightToLeft = System.Windows.Forms.RightToLeft.Yes;
             this.txtOmbroAOmbro.Size = new System.Drawing.Size(156, 26);
             this.txtOmbroAOmbro.TabIndex = 37;
             // 
@@ -748,6 +769,7 @@
             this.Controls.Add(this.btnNext);
             this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
             this.Name = "FrmCadArtista";
+            this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "Cadastro do Artista";
             this.Load += new System.EventHandler(this.FrmCadArtista_Load);
             this.tabControl.ResumeLayout(false);

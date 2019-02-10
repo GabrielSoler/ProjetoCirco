@@ -349,6 +349,7 @@
             this.Controls.Add(this.panel1);
             this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
             this.Name = "FrmDelAltPec";
+            this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "Peças - Consultas";
             this.panel2.ResumeLayout(false);
             this.panel2.PerformLayout();

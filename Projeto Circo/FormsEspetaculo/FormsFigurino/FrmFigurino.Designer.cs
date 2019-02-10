@@ -77,6 +77,7 @@
             this.Controls.Add(this.btnColecao);
             this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
             this.Name = "FrmFigurino";
+            this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "Figurino";
             this.ResumeLayout(false);
 

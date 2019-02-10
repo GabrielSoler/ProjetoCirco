@@ -269,6 +269,7 @@
             this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
             this.MinimizeBox = false;
             this.Name = "FrmRelatorio";
+            this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "Relatório";
             this.panel1.ResumeLayout(false);
             this.panel1.PerformLayout();

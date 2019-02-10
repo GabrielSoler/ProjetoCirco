@@ -132,6 +132,7 @@
             this.Name = "FrmPec";
             this.RightToLeft = System.Windows.Forms.RightToLeft.No;
             this.RightToLeftLayout = true;
+            this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "Peças";
             this.Load += new System.EventHandler(this.FrmPec_Load);
             this.pnlBuscar.ResumeLayout(false);

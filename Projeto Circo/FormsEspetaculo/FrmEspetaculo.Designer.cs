@@ -275,6 +275,7 @@
             this.Controls.Add(this.panel3);
             this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
             this.Name = "FrmEspetaculo";
+            this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "Gerar Espetáculo";
             this.Load += new System.EventHandler(this.FrmEspetaculo_Load);
             this.panel1.ResumeLayout(false);

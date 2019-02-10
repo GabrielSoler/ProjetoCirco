@@ -129,6 +129,7 @@
             this.Controls.Add(this.pnlBuscar);
             this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
             this.Name = "FrmColecoes";
+            this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "Coleções";
             this.pnlBuscar.ResumeLayout(false);
             this.pnlBuscar.PerformLayout();

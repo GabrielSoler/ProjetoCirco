@@ -326,6 +326,7 @@
             this.ForeColor = System.Drawing.SystemColors.ControlText;
             this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
             this.Name = "FrmDelAltFuncionario";
+            this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "ADM-Funcionário - Consulta";
             ((System.ComponentModel.ISupportInitialize)(this.picFoto)).EndInit();
             this.ResumeLayout(false);

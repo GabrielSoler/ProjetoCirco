@@ -1,12 +1,18 @@
 ﻿using Database;
 using System.Collections.Generic;
 using System;
-
+using System.Data.SqlClient;
+using System.Reflection;
+using System.Runtime.Serialization.Formatters.Binary;
+using System.IO;
+using System.Configuration;
+using System.Data;
 
 namespace Business
 {
     public class Artista : Base
     {
+        private string connectionString = ConfigurationManager.AppSettings["SqlConnection"];
 
         ///////////////////////DADOS PESSOAIS/////////////////////////
         [OpcoesBase(UsarNoBancoDeDados = true, ChavePrimaria = true, AutoIncrementar = true)]
@@ -19,13 +25,13 @@ namespace Business
         public string Funcao { get; set; }
 
         [OpcoesBase(UsarNoBancoDeDados = true)]
-        public DateTime DataNascimento { get; set; }
+        public string DataNascimento { get; set; }
 
         [OpcoesBase(UsarNoBancoDeDados = true)]
         public string CPF { get; set; }
 
         [OpcoesBase(UsarNoBancoDeDados = true)]
-        public char Sexo { get; set; }
+        public string Sexo { get; set; }
 
         [OpcoesBase(UsarNoBancoDeDados = true)]
         public string Telefone { get; set; }
@@ -99,19 +105,138 @@ namespace Business
 
         public new List<Artista> Todos()
         {
-            var artista = new List<Artista>();
+            var artistas = new List<Artista>();
             foreach (var ibase in base.Todos())
             {
-                artista.Add((Artista)ibase);
+                artistas.Add((Artista)ibase);
             }
+            return artistas;
 
-            return artista;
         }
 
         public override string ToString()
         {
             return this.Nome;
         }
+     
+        public static byte[] ConvertToBytes(object obj)
+        {
+            if (obj == null)
+                return null;
+            BinaryFormatter bf = new BinaryFormatter();
+            MemoryStream ms = new MemoryStream();
+            bf.Serialize(ms, obj);
+            return ms.ToArray();
+        }
 
+        public override void Salvar()
+        {
+            using (SqlConnection connection = new SqlConnection(
+              connectionString))
+            {
+                List<string> campos = new List<string>();
+                List<string> valores = new List<string>();
+
+                foreach (PropertyInfo pi in this.GetType().GetProperties(BindingFlags.Public | BindingFlags.Instance))
+                {
+                    OpcoesBase pOpcoesBase = (OpcoesBase)pi.GetCustomAttribute(typeof(OpcoesBase));
+                    if (pOpcoesBase != null && pOpcoesBase.UsarNoBancoDeDados && !pOpcoesBase.AutoIncrementar)
+                    {
+                        if (this.Key == 0)
+                        {
+                            if (!pOpcoesBase.ChavePrimaria)
+                            {
+        
+                                campos.Add(pi.Name);
+
+                                if (pi.PropertyType.Name == "Double")
+                                {
+                                    valores.Add("'" + pi.GetValue(this).ToString().Replace(",", ".") + "'");             
+                                }         
+                                else
+                                {
+                                    valores.Add("'" + pi.GetValue(this) + "'");
+                                }
+                            }
+                        }
+                        else
+                        {
+                              if (pi.PropertyType.Name == "Double")
+                              {
+                                  valores.Add(" " + pi.Name + " = '" + pi.GetValue(this).ToString().Replace(",", ".") + "'");
+
+                              }
+                              else
+                              {
+                                  valores.Add(" " + pi.Name + " = '" + pi.GetValue(this) + "'");
+                              }
+                       }
+                    }
+                }
+
+                string queryString = string.Empty;
+            
+
+                if (this.Key == 0)
+                {
+                    queryString = "insert into " + this.GetType().Name + "s (" + string.Join(", ", campos.ToArray()) + ")values(" + string.Join(", ", valores.ToArray()) + ");";
+                }
+                else
+                {
+                    queryString = "update " + this.GetType().Name + "s  set " + string.Join(", ", valores.ToArray()) + " where id = " + this.Key + ";";
+                }
+                SqlCommand command = new SqlCommand(queryString, connection);
+                command.Connection.Open();
+                command.ExecuteNonQuery();
+                
+            }
+        }
+
+        public byte[] BuscarFotoId(int Id)
+        {
+            using (SqlConnection connection = new SqlConnection(
+                 connectionString))
+            {
+
+                string queryString = "SELECT FotoArtista FROM artistas WHERE id = " + Id;
+                SqlCommand command = new SqlCommand(queryString, connection);
+                command.Connection.Open();
+                SqlDataReader reader = command.ExecuteReader();
+                while (reader.Read())
+                {
+
+                    Console.WriteLine(reader.GetName(0));
+                    byte[] buffer = new byte[reader.GetBytes(reader.GetOrdinal("FotoArtista"), 0, null, 0, int.MaxValue)];
+                    reader.GetBytes(reader.GetOrdinal("FotoArtista"), 0, buffer, 0, int.MaxValue);
+                    return buffer;
+                }
+                return null;
+            }
+
+        }
+
+        public  List<Artista> BuscaNome(string name)
+        {
+
+            List<Artista> list = new List<Artista>();
+
+            using (SqlConnection connection = new SqlConnection(connectionString))
+            {
+               
+                string queryString = "SELECT * FROM Artistas WHERE UPPER(NOME) LIKE '%"+ name +"%' ";
+               
+                SqlCommand command = new SqlCommand(queryString, connection);
+                command.Connection.Open();
+                SqlDataReader reader = command.ExecuteReader();
+                while (reader.Read())
+                {              
+                    var obj = (IBase)Activator.CreateInstance(this.GetType());
+                    setProperty(ref obj, reader);
+                    list.Add((Artista)obj);
+                    
+                }              
+            }
+            return list;
+        }
     }
 }

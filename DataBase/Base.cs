@@ -30,9 +30,6 @@ namespace Database
             }
         }
 
-        
-
-
         public virtual void Salvar()
         {
             using (SqlConnection connection = new SqlConnection(
@@ -51,11 +48,11 @@ namespace Database
                             if (!pOpcoesBase.ChavePrimaria)
                             {
                                 campos.Add(pi.Name);
-
+                               
                                 if (pi.PropertyType.Name == "Double")
                                 {
                                     valores.Add("'" + pi.GetValue(this).ToString().Replace(".", "").Replace(",", ".") + "'");
-                                }
+                                }                                                         
                                 else
                                 {
                                     valores.Add("'" + pi.GetValue(this) + "'");
@@ -65,8 +62,16 @@ namespace Database
                         else
                         {
                             if (!pOpcoesBase.ChavePrimaria)
-                            {
-                                valores.Add(" " + pi.Name + " = '" + pi.GetValue(this) + "'");
+                            {                                
+                                if (pi.PropertyType.Name == "Double")
+                                {
+                                    valores.Add(" " + pi.Name + " = '" + (pi.GetValue(this).ToString().Replace(".", "").Replace(",", ".")) + "'");
+
+                                }
+                                else
+                                {  
+                                    valores.Add(" " + pi.Name + " = '" + pi.GetValue(this) + "'");
+                                }
                             }
                         }
                     }
@@ -88,16 +93,16 @@ namespace Database
             }
         }
 
-        public virtual void Excluir()
+       public virtual void Excluir()
         {
-            using (SqlConnection connection = new SqlConnection(
-              connectionString))
-            {
-                string queryString = "delete from " + this.GetType().Name + "s where id = " + this.Key + "; ";
-                SqlCommand command = new SqlCommand(queryString, connection);
-                command.Connection.Open();
-                command.ExecuteNonQuery();
-            }
+              using (SqlConnection connection = new SqlConnection(
+                 connectionString))
+               {
+                   string queryString = "delete from " + this.GetType().Name + "s where id = " + this.Key + "; ";
+                   SqlCommand command = new SqlCommand(queryString, connection);
+                   command.Connection.Open();
+                   command.ExecuteNonQuery();
+               }
         }
 
         public virtual List<IBase> Todos()
@@ -119,7 +124,8 @@ namespace Database
                 }
             }
             return list;
-        }
+        }   
+
 
         public virtual List<IBase> Busca()
         {
@@ -170,16 +176,26 @@ namespace Database
             return list;
         }
 
-        private void setProperty(ref IBase obj, SqlDataReader reader)
+        protected void setProperty(ref IBase obj, SqlDataReader reader)
         {
             foreach (PropertyInfo pi in obj.GetType().GetProperties(BindingFlags.Public | BindingFlags.Instance))
             {
                 OpcoesBase pOpcoesBase = (OpcoesBase)pi.GetCustomAttribute(typeof(OpcoesBase));
                 if (pOpcoesBase != null && pOpcoesBase.UsarNoBancoDeDados)
                 {
-                    pi.SetValue(obj, reader[pi.Name]);
+                    if (pi.PropertyType.Name == "Double")
+                    {                       
+                        pi.SetValue(obj, Convert.ToDouble(reader[pi.Name].ToString()));
+                    }
+                    else
+                    {
+                        pi.SetValue(obj, reader[pi.Name]);
+                    }
+                    
                 }
             }
         }
+
+        
     }
 }
