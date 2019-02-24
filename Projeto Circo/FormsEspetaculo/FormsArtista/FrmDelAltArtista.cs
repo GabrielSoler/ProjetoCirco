@@ -234,12 +234,8 @@ namespace Projeto_Circo.FormsArtista
                     rbtFem.Checked = true;
                     rbtMasc.Checked = false;
                 }
-                if (artista.FotoArtista != null)
-                {
-                    //artista.BuscarFotoId(artista.Id);
-                    //picFoto.Image = byteArrayToImage(artista.BuscarFotoId(artista.Id));
-                    // picFoto.Image = byteArrayToImage(artista.FotoArtista);
-                }
+
+				picFoto.ImageLocation = artista.CaminhoFotoArtista;          
 
                 //////////////INJETAR MEDIDAS///////////////////////////////////
                 txtOmbroAOmbro.Text = artista.OmbroAOmbro.ToString();
@@ -302,5 +298,15 @@ namespace Projeto_Circo.FormsArtista
             txtAltDesjDaSaia.Text = string.Empty;
 
         }
-    }
+
+		private void btnInserirFoto_Click_1(object sender, EventArgs e)
+		{
+			OpenFileDialog file = new OpenFileDialog();
+			file.Filter = "jpg|*.jpg";
+			if (file.ShowDialog() == DialogResult.OK)
+			{
+				picFoto.ImageLocation = file.FileName;
+			}
+		}
+	}
 }

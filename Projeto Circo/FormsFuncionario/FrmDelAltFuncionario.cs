@@ -38,5 +38,20 @@ namespace Projeto_Circo.FormsFuncionario
             picFoto.Image = null;
         }
 
-    }
+		private void btnMudaSenha_Click(object sender, EventArgs e)
+		{
+			FrmAltLoginFuncionario Form = new FrmAltLoginFuncionario();
+			Form.Show();
+		}
+
+		private void btnInserirFoto_Click(object sender, EventArgs e)
+		{
+			OpenFileDialog file = new OpenFileDialog();
+			file.Filter = "jpg|*.jpg";
+			if (file.ShowDialog() == DialogResult.OK)
+			{
+				picFoto.ImageLocation = file.FileName;
+			}
+		}
+	}
 }

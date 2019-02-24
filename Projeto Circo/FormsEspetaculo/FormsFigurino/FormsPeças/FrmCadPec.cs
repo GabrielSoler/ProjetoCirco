@@ -43,5 +43,15 @@ namespace Projeto_Circo.FormsFigurino
         {
             limparFrmCadPec();
         }
-    }
+
+		private void btnInserirImage_Click(object sender, EventArgs e)
+		{
+			OpenFileDialog file = new OpenFileDialog();
+			file.Filter = "jpg|*.jpg";
+			if (file.ShowDialog() == DialogResult.OK)
+			{
+				picFoto.ImageLocation = file.FileName;
+			}
+		}
+	}
 }

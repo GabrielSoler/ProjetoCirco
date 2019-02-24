@@ -101,7 +101,7 @@ namespace Business
         public double AlturaDesejadaDaSaia { get; set; }
 
         [OpcoesBase(UsarNoBancoDeDados = true)]
-        public byte[] FotoArtista { get; set; }
+        public string CaminhoFotoArtista { get; set; }
 
         public new List<Artista> Todos()
         {
@@ -117,17 +117,7 @@ namespace Business
         public override string ToString()
         {
             return this.Nome;
-        }
-     
-        public static byte[] ConvertToBytes(object obj)
-        {
-            if (obj == null)
-                return null;
-            BinaryFormatter bf = new BinaryFormatter();
-            MemoryStream ms = new MemoryStream();
-            bf.Serialize(ms, obj);
-            return ms.ToArray();
-        }
+        }    
 
         public override void Salvar()
         {
@@ -192,7 +182,7 @@ namespace Business
             }
         }
 
-        public byte[] BuscarFotoId(int Id)
+     /*   public byte[] BuscarFotoId(int Id)
         {
             using (SqlConnection connection = new SqlConnection(
                  connectionString))
@@ -213,7 +203,7 @@ namespace Business
                 return null;
             }
 
-        }
+        }*/
 
         public  List<Artista> BuscaNome(string name)
         {

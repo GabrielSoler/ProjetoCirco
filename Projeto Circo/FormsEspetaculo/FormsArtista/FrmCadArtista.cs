@@ -100,7 +100,7 @@ namespace Projeto_Circo.FormsArtista
                 {
                     artista.Sexo = "F";
                 }
-                //artista.FotoArtista = imageToByteArray(picFoto.Image);
+                artista.CaminhoFotoArtista = picFoto.ImageLocation;
                 
                 //////////////Carregar MEDIDAS///////////////////////////////////
                 if (txtOmbroAOmbro.MaskFull)

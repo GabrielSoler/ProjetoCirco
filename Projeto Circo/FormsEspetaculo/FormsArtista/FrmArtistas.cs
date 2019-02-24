@@ -67,5 +67,7 @@ namespace Projeto_Circo.FormsArtista
             }
            
         }
-    }
+
+		
+	}
 }

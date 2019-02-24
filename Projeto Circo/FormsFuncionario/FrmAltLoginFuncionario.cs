@@ -19,8 +19,10 @@ namespace Projeto_Circo.FormsFuncionario
 
         private void FrmAltLoginFuncionario_Load(object sender, EventArgs e)
         {
+			txtSenha.PasswordChar = '*';
+			txtSenhaNovamente.PasswordChar = '*';
 
-        }
+		}
 
         private void btnSair_Click(object sender, EventArgs e)
         {

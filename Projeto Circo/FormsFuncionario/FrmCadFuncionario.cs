@@ -49,7 +49,20 @@ namespace Projeto_Circo.FormsFuncionario
 
         private void btnInserirFoto_Click(object sender, EventArgs e)
         {
-          
-        }
-    }
+			OpenFileDialog file = new OpenFileDialog();
+			file.Filter = "jpg|*.jpg";
+			if (file.ShowDialog() == DialogResult.OK)
+			{
+				picFoto.ImageLocation = file.FileName;
+			}
+		}
+
+		private void FrmCadFuncionario_Load(object sender, EventArgs e)
+		{
+			txtSenha.PasswordChar = '*';
+			txtSenhaNovamente.PasswordChar = '*';
+		}
+
+	
+	}
 }
