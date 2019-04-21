@@ -80,7 +80,6 @@
 			this.lstPesquisa.Size = new System.Drawing.Size(194, 106);
 			this.lstPesquisa.TabIndex = 7;
 			this.lstPesquisa.Click += new System.EventHandler(this.lstPesquisa_Click);
-			
 			// 
 			// toolStrip1
 			// 
@@ -115,6 +114,7 @@
 			this.btnCad.BackColor = System.Drawing.SystemColors.ButtonHighlight;
 			this.btnCad.Cursor = System.Windows.Forms.Cursors.Hand;
 			this.btnCad.Font = new System.Drawing.Font("Times New Roman", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+			this.btnCad.Image = ((System.Drawing.Image)(resources.GetObject("btnCad.Image")));
 			this.btnCad.ImageAlign = System.Drawing.ContentAlignment.BottomCenter;
 			this.btnCad.Location = new System.Drawing.Point(428, 46);
 			this.btnCad.Name = "btnCad";

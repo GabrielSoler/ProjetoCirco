@@ -5,10 +5,6 @@ VisualStudioVersion = 15.0.28307.271
 MinimumVisualStudioVersion = 10.0.40219.1
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "UI", "Projeto Circo\UI.csproj", "{E18ECF9B-2247-4FF3-96DA-29B7C4A7AFBD}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Business", "Business\Business.csproj", "{8105CCE9-176F-47B4-BB2B-82D036BB2742}"
-EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Database", "DataBase\Database.csproj", "{4F9141D6-D630-4F01-8407-D1D090A1FAD6}"
-EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -19,14 +15,6 @@ Global
 		{E18ECF9B-2247-4FF3-96DA-29B7C4A7AFBD}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{E18ECF9B-2247-4FF3-96DA-29B7C4A7AFBD}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{E18ECF9B-2247-4FF3-96DA-29B7C4A7AFBD}.Release|Any CPU.Build.0 = Release|Any CPU
-		{8105CCE9-176F-47B4-BB2B-82D036BB2742}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
-		{8105CCE9-176F-47B4-BB2B-82D036BB2742}.Debug|Any CPU.Build.0 = Debug|Any CPU
-		{8105CCE9-176F-47B4-BB2B-82D036BB2742}.Release|Any CPU.ActiveCfg = Release|Any CPU
-		{8105CCE9-176F-47B4-BB2B-82D036BB2742}.Release|Any CPU.Build.0 = Release|Any CPU
-		{4F9141D6-D630-4F01-8407-D1D090A1FAD6}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
-		{4F9141D6-D630-4F01-8407-D1D090A1FAD6}.Debug|Any CPU.Build.0 = Debug|Any CPU
-		{4F9141D6-D630-4F01-8407-D1D090A1FAD6}.Release|Any CPU.ActiveCfg = Release|Any CPU
-		{4F9141D6-D630-4F01-8407-D1D090A1FAD6}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE

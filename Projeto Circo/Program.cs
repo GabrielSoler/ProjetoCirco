@@ -18,7 +18,6 @@ namespace Projeto_Circo
             Application.EnableVisualStyles();
             Application.SetCompatibleTextRenderingDefault(false);
             Application.Run(new FrmMain());
-    
-        }
+		}
     }
 }

@@ -36,8 +36,17 @@
     <ApplicationIcon>circoIcone.ico</ApplicationIcon>
   </PropertyGroup>
   <ItemGroup>
+    <Reference Include="EntityFramework, Version=6.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089, processorArchitecture=MSIL">
+      <HintPath>..\packages\EntityFramework.6.2.0\lib\net45\EntityFramework.dll</HintPath>
+    </Reference>
+    <Reference Include="EntityFramework.SqlServer, Version=6.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089, processorArchitecture=MSIL">
+      <HintPath>..\packages\EntityFramework.6.2.0\lib\net45\EntityFramework.SqlServer.dll</HintPath>
+    </Reference>
     <Reference Include="System" />
+    <Reference Include="System.ComponentModel.DataAnnotations" />
     <Reference Include="System.Core" />
+    <Reference Include="System.Runtime.Serialization" />
+    <Reference Include="System.Security" />
     <Reference Include="System.Xml.Linq" />
     <Reference Include="System.Data.DataSetExtensions" />
     <Reference Include="Microsoft.CSharp" />
@@ -49,6 +58,33 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="Artistas.cs">
+      <DependentUpon>DataBaseFirstCirco.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Coleções.cs">
+      <DependentUpon>DataBaseFirstCirco.tt</DependentUpon>
+    </Compile>
+    <Compile Include="DataBaseFirstCirco.Context.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>DataBaseFirstCirco.Context.tt</DependentUpon>
+    </Compile>
+    <Compile Include="DataBaseFirstCirco.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>DataBaseFirstCirco.tt</DependentUpon>
+    </Compile>
+    <Compile Include="DataBaseFirstCirco.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>DataBaseFirstCirco.edmx</DependentUpon>
+    </Compile>
+    <Compile Include="Espetaculos.cs">
+      <DependentUpon>DataBaseFirstCirco.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Financeiro.cs">
+      <DependentUpon>DataBaseFirstCirco.tt</DependentUpon>
+    </Compile>
     <Compile Include="FormsEspetaculo\FormsArtista\FrmArtistas.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -199,8 +235,20 @@
     <Compile Include="FrmMenuADM.Designer.cs">
       <DependentUpon>FrmMenuADM.cs</DependentUpon>
     </Compile>
+    <Compile Include="Funcionario.cs">
+      <DependentUpon>DataBaseFirstCirco.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Local.cs">
+      <DependentUpon>DataBaseFirstCirco.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Peças.cs">
+      <DependentUpon>DataBaseFirstCirco.tt</DependentUpon>
+    </Compile>
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="sysdiagrams.cs">
+      <DependentUpon>DataBaseFirstCirco.tt</DependentUpon>
+    </Compile>
     <EmbeddedResource Include="FormsEspetaculo\FormsArtista\FrmArtistas.resx">
       <DependentUpon>FrmArtistas.cs</DependentUpon>
     </EmbeddedResource>
@@ -286,6 +334,14 @@
       <DependentUpon>Resources.resx</DependentUpon>
       <DesignTime>True</DesignTime>
     </Compile>
+    <EntityDeploy Include="DataBaseFirstCirco.edmx">
+      <Generator>EntityModelCodeGenerator</Generator>
+      <LastGenOutput>DataBaseFirstCirco.Designer.cs</LastGenOutput>
+    </EntityDeploy>
+    <None Include="DataBaseFirstCirco.edmx.diagram">
+      <DependentUpon>DataBaseFirstCirco.edmx</DependentUpon>
+    </None>
+    <None Include="packages.config" />
     <None Include="Properties\Settings.settings">
       <Generator>SettingsSingleFileGenerator</Generator>
       <LastGenOutput>Settings.Designer.cs</LastGenOutput>
@@ -301,19 +357,22 @@
   </ItemGroup>
   <ItemGroup>
     <Content Include="circoIcone.ico" />
+    <Content Include="DataBaseFirstCirco.Context.tt">
+      <Generator>TextTemplatingFileGenerator</Generator>
+      <DependentUpon>DataBaseFirstCirco.edmx</DependentUpon>
+      <LastGenOutput>DataBaseFirstCirco.Context.cs</LastGenOutput>
+    </Content>
+    <Content Include="DataBaseFirstCirco.tt">
+      <Generator>TextTemplatingFileGenerator</Generator>
+      <DependentUpon>DataBaseFirstCirco.edmx</DependentUpon>
+      <LastGenOutput>DataBaseFirstCirco.cs</LastGenOutput>
+    </Content>
   </ItemGroup>
   <ItemGroup>
     <None Include="Resources\mostrarBitmap.bmp" />
   </ItemGroup>
   <ItemGroup>
-    <ProjectReference Include="..\Business\Business.csproj">
-      <Project>{8105cce9-176f-47b4-bb2b-82d036bb2742}</Project>
-      <Name>Business</Name>
-    </ProjectReference>
-    <ProjectReference Include="..\DataBase\Database.csproj">
-      <Project>{4F9141D6-D630-4F01-8407-D1D090A1FAD6}</Project>
-      <Name>Database</Name>
-    </ProjectReference>
+    <Service Include="{508349B6-6B84-4DF5-91F0-309BEEBAD82D}" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>

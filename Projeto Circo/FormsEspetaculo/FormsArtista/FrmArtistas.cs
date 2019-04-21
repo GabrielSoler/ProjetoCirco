@@ -1,73 +1,69 @@
 ﻿using System;
 using System.Collections.Generic;
-using System.ComponentModel;
-using System.Data;
 using System.Drawing;
 using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
 using System.Windows.Forms;
-using Business;
-using Projeto_Circo.FormsArtista;
 
 
 namespace Projeto_Circo.FormsArtista
 {
-    public partial class FrmArtistas : Form
-    {
-        public FrmArtistas()
-        {
-            InitializeComponent();
-        }
+	public partial class FrmArtistas : Form
+	{
+		ProjetoCircoEntities db = new ProjetoCircoEntities();
 
-        Artista artista = new Artista();
+		public FrmArtistas()
+		{
+			InitializeComponent();
+		}
 
-        private void FrmArtistas_Load(object sender, EventArgs e)
-        {
-            pnlBuscar.BackColor = Color.Transparent;
-        }
+		Artistas artista = new Artistas();
 
-        private void lstPesquisa_Click(object sender, EventArgs e)
-        {
-            var artista = (Artista)lstPesquisa.SelectedItem;
-            if (artista != null)
-            {
-                this.Close();
-                FrmDelAltArtista Form = new FrmDelAltArtista(artista);
-                Form.Show();
-            }
-            
-        }
+		private void FrmArtistas_Load(object sender, EventArgs e)
+		{
+			pnlBuscar.BackColor = Color.Transparent;
+		}
 
-        private void btnCad_Click(object sender, EventArgs e)
-        {
-            FrmCadArtista Form = new FrmCadArtista();
-            Form.Show();
-        }
+		private void lstPesquisa_Click(object sender, EventArgs e)
+		{
+			var artista = (Artistas)lstPesquisa.SelectedItem;
+			if (artista != null)
+			{
+				this.Close();
+				FrmDelAltArtista Form = new FrmDelAltArtista(artista);
+				Form.Show();
+			}
 
-        private void btnTudo_Click(object sender, EventArgs e)
-        {
-            lstPesquisa.Items.Clear();
-            List<Artista> artistas = new Artista().Todos();
-            foreach (Artista a in artistas)
-            {
-                lstPesquisa.Items.Add(a);
-            
-            }
-    
-        }
+		}
 
-        private void btnBusca_Click(object sender, EventArgs e)
-        {
-            lstPesquisa.Items.Clear();
-            List<Artista> artistas = artista.BuscaNome(toolStripTextBoxPesquisa.Text);
-            foreach (Artista a in artistas)
-            {
-                lstPesquisa.Items.Add(a);
-            }
-           
-        }
+		private void btnCad_Click(object sender, EventArgs e)
+		{
+			FrmCadArtista Form = new FrmCadArtista();
+			Form.Show();
+		}
 
-		
+		private void btnTudo_Click(object sender, EventArgs e)
+		{
+			lstPesquisa.Items.Clear();
+
+			var artistas = db.Artistas.Where(s => s.Id > 0);
+
+			foreach (Artistas a in artistas)
+			{
+				lstPesquisa.Items.Add(a);
+			}
+		}
+
+		private void btnBusca_Click(object sender, EventArgs e)
+		{
+			lstPesquisa.Items.Clear();
+
+			var artistas = db.Artistas.Where(x=>x.Nome.Contains(toolStripTextBoxPesquisa.Text));
+			foreach (Artistas a in artistas)
+			{
+				lstPesquisa.Items.Add(a);
+			}
+
+		}
+
 	}
 }

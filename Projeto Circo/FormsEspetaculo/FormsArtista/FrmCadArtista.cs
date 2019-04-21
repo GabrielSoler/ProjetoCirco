@@ -1,13 +1,4 @@
-﻿using Business;
-using System;
-using System.Collections.Generic;
-using System.ComponentModel;
-using System.Data;
-using System.Drawing;
-using System.IO;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
+﻿using System;
 using System.Windows.Forms;
 
 
@@ -15,9 +6,12 @@ using System.Windows.Forms;
 
 namespace Projeto_Circo.FormsArtista
 {
-    public  partial class FrmCadArtista : Form
+	public  partial class FrmCadArtista : Form
     {
-        public FrmCadArtista()
+
+		ProjetoCircoEntities db = new ProjetoCircoEntities();
+		
+		public FrmCadArtista()
         {
             InitializeComponent();
             rbtMasc.Checked = true;
@@ -63,18 +57,19 @@ namespace Projeto_Circo.FormsArtista
         private void btnSalvar_Click(object sender, EventArgs e)
         {
 
-            Artista artista = new Artista();
+            Artistas artista = new Artistas();
 
             if (LoadArtista(artista))
             {
                 LimparArtista();
-                artista.Salvar();
+				db.Artistas.Add(artista);
+				db.SaveChanges();
                 MessageBox.Show("Usuário salvo com sucesso!","Mensagem do sistema");
             }
             
         }
 
-        public bool LoadArtista(Artista artista)
+        public bool LoadArtista(Artistas artista)
         {
             if (txtNomeArt.Text != string.Empty && txtCpf.MaskFull && txtDataNasc.MaskFull) {
                 //////////////Carregar DADOS PESSOAIS///////////////////////////////////
@@ -105,89 +100,90 @@ namespace Projeto_Circo.FormsArtista
                 //////////////Carregar MEDIDAS///////////////////////////////////
                 if (txtOmbroAOmbro.MaskFull)
                 {
-                    artista.OmbroAOmbro = Convert.ToDouble(txtOmbroAOmbro.Text);
-                }
+					artista.OmbroAOmbro = decimal.TryParse(txtOmbroAOmbro.Text, out var tempVal) ? tempVal : (decimal?)null;
+				}
                 if (txtOmbro.MaskFull)
                 {
-                    artista.Ombro = Convert.ToDouble(txtOmbro.Text);
-                }
-                if (txtColarinho.MaskFull)
+					artista.Ombro = decimal.TryParse(txtOmbro.Text, out var tempVal) ? tempVal : (decimal?)null;
+				}
+				if (txtColarinho.MaskFull)
                 {
-                    artista.Colarinho = Convert.ToDouble(txtColarinho.Text);
-                }
-                if (txtEntreCavasFrente.MaskFull)
+					artista.Colarinho = decimal.TryParse(txtColarinho.Text, out var tempVal) ? tempVal : (decimal?)null;
+				}
+				if (txtEntreCavasFrente.MaskFull)
                 {
-                    artista.EntreCavasFrente = Convert.ToDouble(txtEntreCavasFrente.Text);
-                }
-                if (txtCentroCosta.MaskFull)
+					artista.EntreCavasFrente = decimal.TryParse(txtEntreCavasFrente.Text, out var tempVal) ? tempVal : (decimal?)null;
+				}
+				if (txtCentroCosta.MaskFull)
                 {
-                    artista.CentroCosta = Convert.ToDouble(txtCentroCosta.Text);
-                }
-                if (txtBusto.MaskFull)
+					artista.CentroCosta = decimal.TryParse(txtCentroCosta.Text, out var tempVal) ? tempVal : (decimal?)null;
+				}
+				if (txtBusto.MaskFull)
                 {
-                    artista.Busto = Convert.ToDouble(txtBusto.Text);
-                }
-                if (txtAlturaBusto.MaskFull)
+					artista.Busto = decimal.TryParse(txtBusto.Text, out var tempVal) ? tempVal : (decimal?)null;
+				}
+				if (txtAlturaBusto.MaskFull)
                 {
-                    artista.AlturaBusto = Convert.ToDouble(txtAlturaBusto.Text);
-                }
-                if (txtEntreCavasFrente.MaskFull)
+					artista.AlturaBusto = decimal.TryParse(txtAlturaBusto.Text, out var tempVal) ? tempVal : (decimal?)null;
+				}
+				if (txtEntreCavasFrente.MaskFull)
                 {
-                    artista.EntreCavasFrente = Convert.ToDouble(txtEntreCavasFrente.Text);
-                }
-                if (txtSeparacaoBusto.MaskFull)
+					artista.EntreCavasFrente = decimal.TryParse(txtEntreCavasFrente.Text, out var tempVal) ? tempVal : (decimal?)null;
+				}
+				if (txtSeparacaoBusto.MaskFull)
                 {
-                    artista.SeparacaoBusto = Convert.ToDouble(txtSeparacaoBusto.Text);
-                }
-                if (txtCintura.MaskFull)
+					artista.SeparacaoBusto = decimal.TryParse(txtSeparacaoBusto.Text, out var tempVal) ? tempVal : (decimal?)null;
+				}
+				if (txtCintura.MaskFull)
                 {
-                    artista.Cintura = Convert.ToDouble(txtCintura.Text);
-                }
-                if (txtAltura.MaskFull)
+					artista.Cintura = decimal.TryParse(txtCintura.Text, out var tempVal) ? tempVal : (decimal?)null;
+				}
+				if (txtAltura.MaskFull)
                 {
-                    artista.Altura = Convert.ToDouble(txtAltura.Text);
-                }
-                if (txtAlturaQuadril.MaskFull)
+					artista.Altura = decimal.TryParse(txtAltura.Text, out var tempVal) ? tempVal : (decimal?)null;
+				}
+				if (txtAlturaQuadril.MaskFull)
                 {
-                    artista.AlturaQuadril = Convert.ToDouble(txtAlturaQuadril.Text);
-                }
-                if (txtQuadril.MaskFull)
+					artista.AlturaQuadril = decimal.TryParse(txtAlturaQuadril.Text, out var tempVal) ? tempVal : (decimal?)null;
+
+				}
+				if (txtQuadril.MaskFull)
                 {
-                    artista.Quadril = Convert.ToDouble(txtQuadril.Text);
-                }
-                if (txtAltCintDoJoelho.MaskFull)
+					artista.Quadril = decimal.TryParse(txtQuadril.Text, out var tempVal) ? tempVal : (decimal?)null;
+				}
+				if (txtAltCintDoJoelho.MaskFull)
                 {
-                    artista.AlturaCinturaDoJoelho = Convert.ToDouble(txtAltCintDoJoelho.Text);
-                }
-                if (txtAltCintAoTornozelo.MaskFull)
+					artista.AlturaCinturaDoJoelho = decimal.TryParse(txtAltCintDoJoelho.Text, out var tempVal) ? tempVal : (decimal?)null;
+				}
+				if (txtAltCintAoTornozelo.MaskFull)
                 {
-                    artista.AlturaCinturaAoTornozelo = Convert.ToDouble(txtAltCintAoTornozelo.Text);
-                }
-                if (txtCompBraco.MaskFull)
+					artista.AlturaCinturaAoTornozelo = decimal.TryParse(txtAltCintAoTornozelo.Text, out var tempVal) ? tempVal : (decimal?)null;
+				}
+				if (txtCompBraco.MaskFull)
                 {
-                    artista.ComprimentoBraco = Convert.ToDouble(txtCompBraco.Text);
-                }
-                if (txtLargBraco.MaskFull)
+					artista.ComprimentoBraco = decimal.TryParse(txtCompBraco.Text, out var tempVal) ? tempVal : (decimal?)null;
+				}
+				if (txtLargBraco.MaskFull)
                 {
-                    artista.LarguraBraco = Convert.ToDouble(txtLargBraco.Text);
-                }
-                if (txtPunho.MaskFull)
+					artista.LarguraBraco = decimal.TryParse(txtLargBraco.Text, out var tempVal) ? tempVal : (decimal?)null;
+				}
+				if (txtPunho.MaskFull)
                 {
-                    artista.Punho = Convert.ToDouble(txtPunho.Text);
-                }
-                if (txtAltManga.MaskFull)
+					artista.Punho = decimal.TryParse(txtPunho.Text, out var tempVal) ? tempVal : (decimal?)null;
+				}
+				if (txtAltManga.MaskFull)
                 {
-                    artista.AlturaManga = Convert.ToDouble(txtAltManga.Text);
-                }
-                if (txtAltMangaCurta.MaskFull)
+					artista.AlturaManga = decimal.TryParse(txtAltManga.Text, out var tempVal) ? tempVal : (decimal?)null;
+				}
+				if (txtAltMangaCurta.MaskFull)
                 {
-                    artista.AlturaMangaCurta = Convert.ToDouble(txtAltMangaCurta.Text);
-                }
-                if (txtAltDesjDaSaia.MaskFull)
+					artista.AlturaMangaCurta = decimal.TryParse(txtAltMangaCurta.Text, out var tempVal) ? tempVal : (decimal?)null;
+				}
+				if (txtAltDesjDaSaia.MaskFull)
                 {
-                    artista.AlturaDesejadaDaSaia = Convert.ToDouble(txtAltDesjDaSaia.Text);
-                }
-                return true;
+					artista.AlturaDesejadaDaSaia = decimal.TryParse(txtAltDesjDaSaia.Text, out var tempVal) ? tempVal : (decimal?)null;
+				}
+				return true;
             }
             else if(!txtDataNasc.MaskFull)
             {
