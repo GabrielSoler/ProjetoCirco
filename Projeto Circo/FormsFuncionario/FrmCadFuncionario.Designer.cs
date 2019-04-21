@@ -39,7 +39,6 @@
 			this.txtEmail = new System.Windows.Forms.MaskedTextBox();
 			this.label26 = new System.Windows.Forms.Label();
 			this.txtTelefone = new System.Windows.Forms.MaskedTextBox();
-			this.txtEnderecoImage = new System.Windows.Forms.MaskedTextBox();
 			this.picFoto = new System.Windows.Forms.PictureBox();
 			this.label25 = new System.Windows.Forms.Label();
 			this.rbtMasculino = new System.Windows.Forms.RadioButton();
@@ -105,6 +104,7 @@
 			this.btnSalvar.TabIndex = 12;
 			this.btnSalvar.Text = "Salvar";
 			this.btnSalvar.UseVisualStyleBackColor = false;
+			this.btnSalvar.Click += new System.EventHandler(this.btnSalvar_Click);
 			// 
 			// label23
 			// 
@@ -164,13 +164,6 @@
 			this.txtTelefone.Name = "txtTelefone";
 			this.txtTelefone.Size = new System.Drawing.Size(181, 26);
 			this.txtTelefone.TabIndex = 8;
-			// 
-			// txtEnderecoImage
-			// 
-			this.txtEnderecoImage.Location = new System.Drawing.Point(281, 190);
-			this.txtEnderecoImage.Name = "txtEnderecoImage";
-			this.txtEnderecoImage.Size = new System.Drawing.Size(181, 20);
-			this.txtEnderecoImage.TabIndex = 146;
 			// 
 			// picFoto
 			// 
@@ -365,7 +358,6 @@
 			this.Controls.Add(this.txtEmail);
 			this.Controls.Add(this.label26);
 			this.Controls.Add(this.txtTelefone);
-			this.Controls.Add(this.txtEnderecoImage);
 			this.Controls.Add(this.picFoto);
 			this.Controls.Add(this.label25);
 			this.Controls.Add(this.rbtMasculino);
@@ -402,7 +394,6 @@
         private System.Windows.Forms.MaskedTextBox txtEmail;
         private System.Windows.Forms.Label label26;
         private System.Windows.Forms.MaskedTextBox txtTelefone;
-        private System.Windows.Forms.MaskedTextBox txtEnderecoImage;
         private System.Windows.Forms.PictureBox picFoto;
         private System.Windows.Forms.Label label25;
         private System.Windows.Forms.RadioButton rbtMasculino;

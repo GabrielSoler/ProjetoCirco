@@ -29,9 +29,9 @@ namespace Projeto_Circo
         public virtual DbSet<Coleções> Coleções { get; set; }
         public virtual DbSet<Espetaculos> Espetaculos { get; set; }
         public virtual DbSet<Financeiro> Financeiro { get; set; }
-        public virtual DbSet<Funcionario> Funcionario { get; set; }
         public virtual DbSet<Local> Local { get; set; }
         public virtual DbSet<Peças> Peças { get; set; }
         public virtual DbSet<sysdiagrams> sysdiagrams { get; set; }
+        public virtual DbSet<Funcionario> Funcionario { get; set; }
     }
 }

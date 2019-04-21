@@ -92,6 +92,7 @@ namespace Projeto_Circo.FormsArtista
                 {
                     artista.Sexo = "F";
                 }
+
                 artista.CaminhoFotoArtista = picFoto.ImageLocation;
                 
                 //////////////Carregar MEDIDAS///////////////////////////////////

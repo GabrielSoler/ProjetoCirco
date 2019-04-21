@@ -80,18 +80,18 @@
           <Key>
             <PropertyRef Name="IDFuncionario" />
           </Key>
-          <Property Name="IDFuncionario" Type="int" Nullable="false" />
+          <Property Name="IDFuncionario" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
           <Property Name="CPF" Type="varchar" MaxLength="50" />
           <Property Name="NMFuncionario" Type="varchar" MaxLength="50" />
-          <Property Name="Sexo" Type="bit" />
+          <Property Name="Sexo" Type="nchar" MaxLength="10" />
           <Property Name="RG" Type="varchar" MaxLength="50" />
-          <Property Name="DTNascimento" Type="int" />
+          <Property Name="DTNascimento" Type="varchar" MaxLength="50" />
           <Property Name="Cargo" Type="varchar" MaxLength="50" />
           <Property Name="Telefone" Type="varchar" MaxLength="50" />
           <Property Name="Email" Type="varchar" MaxLength="50" />
-          <Property Name="Foto" Type="varchar(max)" />
           <Property Name="Usuario" Type="varchar" MaxLength="50" />
           <Property Name="Senha" Type="varchar" MaxLength="50" />
+          <Property Name="CaminhoImagem" Type="varchar(max)" />
         </EntityType>
         <EntityType Name="Local">
           <Key>
@@ -296,23 +296,6 @@
           <Property Name="IDEspetaculo" Type="Int32" />
           <NavigationProperty Name="Espetaculos" Relationship="Self.FK_Financeiro_Financeiro" FromRole="Financeiro" ToRole="Espetaculos" />
         </EntityType>
-        <EntityType Name="Funcionario">
-          <Key>
-            <PropertyRef Name="IDFuncionario" />
-          </Key>
-          <Property Name="IDFuncionario" Type="Int32" Nullable="false" />
-          <Property Name="CPF" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
-          <Property Name="NMFuncionario" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
-          <Property Name="Sexo" Type="Boolean" />
-          <Property Name="RG" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
-          <Property Name="DTNascimento" Type="Int32" />
-          <Property Name="Cargo" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
-          <Property Name="Telefone" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
-          <Property Name="Email" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
-          <Property Name="Foto" Type="String" MaxLength="Max" FixedLength="false" Unicode="false" />
-          <Property Name="Usuario" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
-          <Property Name="Senha" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
-        </EntityType>
         <EntityType Name="Local">
           <Key>
             <PropertyRef Name="IDLocal" />
@@ -410,7 +393,6 @@
           <EntitySet Name="Coleções" EntityType="Self.Coleções" />
           <EntitySet Name="Espetaculos" EntityType="Self.Espetaculos" />
           <EntitySet Name="Financeiro" EntityType="Self.Financeiro" />
-          <EntitySet Name="Funcionario" EntityType="Self.Funcionario" />
           <EntitySet Name="Local" EntityType="Self.Local" />
           <EntitySet Name="Peças" EntityType="Self.Peças" />
           <EntitySet Name="sysdiagrams" EntityType="Self.sysdiagrams" />
@@ -434,7 +416,25 @@
             <End Role="Espetaculos" EntitySet="Espetaculos" />
             <End Role="Local" EntitySet="Local" />
           </AssociationSet>
+          <EntitySet Name="Funcionario" EntityType="ProjetoCircoModel.Funcionario" />
         </EntityContainer>
+        <EntityType Name="Funcionario">
+          <Key>
+            <PropertyRef Name="IDFuncionario" />
+          </Key>
+          <Property Name="IDFuncionario" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+          <Property Name="CPF" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+          <Property Name="NMFuncionario" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+          <Property Name="Sexo" Type="String" MaxLength="10" FixedLength="true" Unicode="true" />
+          <Property Name="RG" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+          <Property Name="DTNascimento" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+          <Property Name="Cargo" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+          <Property Name="Telefone" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+          <Property Name="Email" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+          <Property Name="Usuario" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+          <Property Name="Senha" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+          <Property Name="CaminhoImagem" Type="String" MaxLength="Max" FixedLength="false" Unicode="false" />
+        </EntityType>
       </Schema>
     </edmx:ConceptualModels>
     <!-- C-S mapping content -->
@@ -516,24 +516,6 @@
               </MappingFragment>
             </EntityTypeMapping>
           </EntitySetMapping>
-          <EntitySetMapping Name="Funcionario">
-            <EntityTypeMapping TypeName="ProjetoCircoModel.Funcionario">
-              <MappingFragment StoreEntitySet="Funcionario">
-                <ScalarProperty Name="IDFuncionario" ColumnName="IDFuncionario" />
-                <ScalarProperty Name="CPF" ColumnName="CPF" />
-                <ScalarProperty Name="NMFuncionario" ColumnName="NMFuncionario" />
-                <ScalarProperty Name="Sexo" ColumnName="Sexo" />
-                <ScalarProperty Name="RG" ColumnName="RG" />
-                <ScalarProperty Name="DTNascimento" ColumnName="DTNascimento" />
-                <ScalarProperty Name="Cargo" ColumnName="Cargo" />
-                <ScalarProperty Name="Telefone" ColumnName="Telefone" />
-                <ScalarProperty Name="Email" ColumnName="Email" />
-                <ScalarProperty Name="Foto" ColumnName="Foto" />
-                <ScalarProperty Name="Usuario" ColumnName="Usuario" />
-                <ScalarProperty Name="Senha" ColumnName="Senha" />
-              </MappingFragment>
-            </EntityTypeMapping>
-          </EntitySetMapping>
           <EntitySetMapping Name="Local">
             <EntityTypeMapping TypeName="ProjetoCircoModel.Local">
               <MappingFragment StoreEntitySet="Local">
@@ -564,6 +546,24 @@
                 <ScalarProperty Name="diagram_id" ColumnName="diagram_id" />
                 <ScalarProperty Name="version" ColumnName="version" />
                 <ScalarProperty Name="definition" ColumnName="definition" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="Funcionario">
+            <EntityTypeMapping TypeName="ProjetoCircoModel.Funcionario">
+              <MappingFragment StoreEntitySet="Funcionario">
+                <ScalarProperty Name="CaminhoImagem" ColumnName="CaminhoImagem" />
+                <ScalarProperty Name="Senha" ColumnName="Senha" />
+                <ScalarProperty Name="Usuario" ColumnName="Usuario" />
+                <ScalarProperty Name="Email" ColumnName="Email" />
+                <ScalarProperty Name="Telefone" ColumnName="Telefone" />
+                <ScalarProperty Name="Cargo" ColumnName="Cargo" />
+                <ScalarProperty Name="DTNascimento" ColumnName="DTNascimento" />
+                <ScalarProperty Name="RG" ColumnName="RG" />
+                <ScalarProperty Name="Sexo" ColumnName="Sexo" />
+                <ScalarProperty Name="NMFuncionario" ColumnName="NMFuncionario" />
+                <ScalarProperty Name="CPF" ColumnName="CPF" />
+                <ScalarProperty Name="IDFuncionario" ColumnName="IDFuncionario" />
               </MappingFragment>
             </EntityTypeMapping>
           </EntitySetMapping>

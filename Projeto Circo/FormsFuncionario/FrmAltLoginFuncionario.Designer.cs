@@ -30,7 +30,7 @@
         {
 			System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(FrmAltLoginFuncionario));
 			this.label24 = new System.Windows.Forms.Label();
-			this.maskedTextBox24 = new System.Windows.Forms.MaskedTextBox();
+			this.txtUsuario = new System.Windows.Forms.MaskedTextBox();
 			this.label1 = new System.Windows.Forms.Label();
 			this.txtSenha = new System.Windows.Forms.MaskedTextBox();
 			this.label2 = new System.Windows.Forms.Label();
@@ -49,13 +49,13 @@
 			this.label24.TabIndex = 92;
 			this.label24.Text = "Usuário:";
 			// 
-			// maskedTextBox24
+			// txtUsuario
 			// 
-			this.maskedTextBox24.Font = new System.Drawing.Font("Times New Roman", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-			this.maskedTextBox24.Location = new System.Drawing.Point(35, 53);
-			this.maskedTextBox24.Name = "maskedTextBox24";
-			this.maskedTextBox24.Size = new System.Drawing.Size(181, 26);
-			this.maskedTextBox24.TabIndex = 1;
+			this.txtUsuario.Font = new System.Drawing.Font("Times New Roman", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+			this.txtUsuario.Location = new System.Drawing.Point(35, 53);
+			this.txtUsuario.Name = "txtUsuario";
+			this.txtUsuario.Size = new System.Drawing.Size(181, 26);
+			this.txtUsuario.TabIndex = 1;
 			// 
 			// label1
 			// 
@@ -117,6 +117,7 @@
 			this.btnEditar.TabIndex = 4;
 			this.btnEditar.Text = "Editar";
 			this.btnEditar.UseVisualStyleBackColor = false;
+			this.btnEditar.Click += new System.EventHandler(this.btnEditar_Click);
 			// 
 			// FrmAltLoginFuncionario
 			// 
@@ -131,7 +132,7 @@
 			this.Controls.Add(this.label1);
 			this.Controls.Add(this.txtSenha);
 			this.Controls.Add(this.label24);
-			this.Controls.Add(this.maskedTextBox24);
+			this.Controls.Add(this.txtUsuario);
 			this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
 			this.Name = "FrmAltLoginFuncionario";
 			this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
@@ -145,7 +146,7 @@
         #endregion
 
         private System.Windows.Forms.Label label24;
-        private System.Windows.Forms.MaskedTextBox maskedTextBox24;
+        private System.Windows.Forms.MaskedTextBox txtUsuario;
         private System.Windows.Forms.Label label1;
         private System.Windows.Forms.MaskedTextBox txtSenha;
         private System.Windows.Forms.Label label2;

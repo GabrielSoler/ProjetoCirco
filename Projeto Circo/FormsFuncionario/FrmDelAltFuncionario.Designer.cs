@@ -41,7 +41,6 @@
 			this.txtEmail = new System.Windows.Forms.MaskedTextBox();
 			this.label26 = new System.Windows.Forms.Label();
 			this.txtTelefone = new System.Windows.Forms.MaskedTextBox();
-			this.txtEnderecoImagem = new System.Windows.Forms.MaskedTextBox();
 			this.picFoto = new System.Windows.Forms.PictureBox();
 			this.label25 = new System.Windows.Forms.Label();
 			this.rbtMasculino = new System.Windows.Forms.RadioButton();
@@ -99,6 +98,7 @@
 			this.btnExcluir.TabIndex = 13;
 			this.btnExcluir.Text = "Excluir";
 			this.btnExcluir.UseVisualStyleBackColor = false;
+			this.btnExcluir.Click += new System.EventHandler(this.btnExcluir_Click);
 			// 
 			// btnEditar
 			// 
@@ -111,6 +111,7 @@
 			this.btnEditar.TabIndex = 12;
 			this.btnEditar.Text = "Editar";
 			this.btnEditar.UseVisualStyleBackColor = false;
+			this.btnEditar.Click += new System.EventHandler(this.btnEditar_Click);
 			// 
 			// btnMudaSenha
 			// 
@@ -183,13 +184,6 @@
 			this.txtTelefone.Name = "txtTelefone";
 			this.txtTelefone.Size = new System.Drawing.Size(181, 26);
 			this.txtTelefone.TabIndex = 8;
-			// 
-			// txtEnderecoImagem
-			// 
-			this.txtEnderecoImagem.Location = new System.Drawing.Point(274, 207);
-			this.txtEnderecoImagem.Name = "txtEnderecoImagem";
-			this.txtEnderecoImagem.Size = new System.Drawing.Size(181, 20);
-			this.txtEnderecoImagem.TabIndex = 122;
 			// 
 			// picFoto
 			// 
@@ -317,7 +311,6 @@
 			this.Controls.Add(this.txtEmail);
 			this.Controls.Add(this.label26);
 			this.Controls.Add(this.txtTelefone);
-			this.Controls.Add(this.txtEnderecoImagem);
 			this.Controls.Add(this.picFoto);
 			this.Controls.Add(this.label25);
 			this.Controls.Add(this.rbtMasculino);
@@ -354,7 +347,6 @@
         private System.Windows.Forms.MaskedTextBox txtEmail;
         private System.Windows.Forms.Label label26;
         private System.Windows.Forms.MaskedTextBox txtTelefone;
-        private System.Windows.Forms.MaskedTextBox txtEnderecoImagem;
         private System.Windows.Forms.PictureBox picFoto;
         private System.Windows.Forms.Label label25;
         private System.Windows.Forms.RadioButton rbtMasculino;

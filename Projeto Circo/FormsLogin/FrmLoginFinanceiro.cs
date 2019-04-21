@@ -34,12 +34,9 @@ namespace Projeto_Circo.FormsLogin
 
         private void btnLogar_Click(object sender, EventArgs e)
         {
-            MessageBox.Show("FAlta fazer :( \n estou fazendo o possivel");
             this.Close();
-
             FrmFinanceiro form = new FrmFinanceiro();
             form.Show();
-
         }
     }
 }

@@ -35,18 +35,6 @@ namespace Projeto_Circo.FormsArtista
 		}
 
 
-
-		public Image byteArrayToImage(byte[] imageByteArray)
-		{
-			Image image;
-			using (MemoryStream stream = new MemoryStream(imageByteArray, 0, imageByteArray.Length))
-			{
-				stream.Write(imageByteArray, 0, imageByteArray.Length);
-				image = Image.FromStream(stream, true);
-			}
-			return image;
-		}
-
 		private void btnExcluir_Click(object sender, EventArgs e)
 		{
 			DialogResult result = MessageBox.Show("Tem certeza que deseja excluir? ", "Mensagem do Sistema", MessageBoxButtons.YesNo, MessageBoxIcon.Question);
@@ -68,10 +56,12 @@ namespace Projeto_Circo.FormsArtista
 			if (result == DialogResult.Yes)
 			{
 				Artistas x = db.Artistas.Single(s => s.Id == a.Id);
-				LoadArtista(x);
+				if (LoadArtista(x))
+				{
+					db.SaveChanges();
+					MessageBox.Show("CADASTRO DO ARTISTA ALTERADO COM SUCESSO", "Mensagem do Sistema", MessageBoxButtons.OK, MessageBoxIcon.Information);				
+				}
 
-				db.SaveChanges();
-				MessageBox.Show("CADASTRO DO ARTISTA ALTERADO COM SUCESSO", "Mensagem do Sistema", MessageBoxButtons.OK, MessageBoxIcon.Information);
 			}
 		}
 
@@ -294,7 +284,7 @@ namespace Projeto_Circo.FormsArtista
 
 		}
 
-		private void btnInserirFoto_Click_1(object sender, EventArgs e)
+		private void btnInserirFoto_Click(object sender, EventArgs e)
 		{
 			OpenFileDialog file = new OpenFileDialog();
 			file.Filter = "jpg|*.jpg";

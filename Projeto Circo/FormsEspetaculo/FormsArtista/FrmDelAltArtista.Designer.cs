@@ -158,7 +158,6 @@
 			this.btnInserirFoto.TabIndex = 81;
 			this.btnInserirFoto.Text = "Inserir foto";
 			this.btnInserirFoto.UseVisualStyleBackColor = false;
-			this.btnInserirFoto.Click += new System.EventHandler(this.btnInserirFoto_Click_1);
 			// 
 			// label27
 			// 

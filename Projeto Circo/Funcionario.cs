@@ -17,14 +17,14 @@ namespace Projeto_Circo
         public int IDFuncionario { get; set; }
         public string CPF { get; set; }
         public string NMFuncionario { get; set; }
-        public Nullable<bool> Sexo { get; set; }
+        public string Sexo { get; set; }
         public string RG { get; set; }
-        public Nullable<int> DTNascimento { get; set; }
+        public string DTNascimento { get; set; }
         public string Cargo { get; set; }
         public string Telefone { get; set; }
         public string Email { get; set; }
-        public string Foto { get; set; }
         public string Usuario { get; set; }
         public string Senha { get; set; }
+        public string CaminhoImagem { get; set; }
     }
 }

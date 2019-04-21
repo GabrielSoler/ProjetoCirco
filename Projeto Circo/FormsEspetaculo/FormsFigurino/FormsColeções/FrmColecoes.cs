@@ -38,7 +38,7 @@ namespace Projeto_Circo.FormsFigurino
 		{
 			lstPesquisa.Items.Clear();
 
-			var colecoes = db.Coleções.Where(x => x.NMColecao.Contains(txtPesquisa.Text));
+			var colecoes = db.Coleções.Where(x => x.NMColecao.Contains(toolStripTextBoxPesquisa.Text));
 			foreach (Coleções a in colecoes)
 			{
 				lstPesquisa.Items.Add(a);
@@ -46,7 +46,7 @@ namespace Projeto_Circo.FormsFigurino
 
 		}
 
-		private void btnTudos_Click(object sender, EventArgs e)
+		private void btnTudo_Click(object sender, EventArgs e)
 		{
 			lstPesquisa.Items.Clear();
 
