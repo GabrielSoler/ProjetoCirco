@@ -34,5 +34,10 @@ namespace Projeto_Circo
         public virtual ICollection<Espetaculos> Espetaculos { get; set; }
         [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Usage", "CA2227:CollectionPropertiesShouldBeReadOnly")]
         public virtual ICollection<Peças> Peças { get; set; }
-    }
+
+		public override string ToString()
+		{
+			return NMColecao;
+		}
+	}
 }

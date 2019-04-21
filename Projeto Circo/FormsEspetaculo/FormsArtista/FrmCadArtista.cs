@@ -1,9 +1,6 @@
 ﻿using System;
 using System.Windows.Forms;
 
-
-
-
 namespace Projeto_Circo.FormsArtista
 {
 	public  partial class FrmCadArtista : Form

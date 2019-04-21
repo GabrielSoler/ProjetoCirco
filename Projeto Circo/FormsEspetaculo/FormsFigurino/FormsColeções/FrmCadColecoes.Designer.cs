@@ -205,7 +205,6 @@
 			this.btnCancelar.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageAboveText;
 			this.btnCancelar.UseVisualStyleBackColor = false;
 			this.btnCancelar.Click += new System.EventHandler(this.btnCancelar_Click);
-			this.btnCancelar.Enter += new System.EventHandler(this.btnCancelar_Enter);
 			// 
 			// btnSalvar
 			// 
@@ -250,7 +249,6 @@
 			this.Name = "FrmCadColecoes";
 			this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
 			this.Text = "Cadastro da coleção";
-			this.Load += new System.EventHandler(this.FrmCadColecoes_Load);
 			this.ResumeLayout(false);
 			this.PerformLayout();
 

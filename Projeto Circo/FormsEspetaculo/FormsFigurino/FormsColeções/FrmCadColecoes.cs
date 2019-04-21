@@ -1,31 +1,19 @@
 ﻿using System;
-using System.Collections.Generic;
-using System.ComponentModel;
-using System.Data;
-using System.Drawing;
 using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
 using System.Windows.Forms;
 
 namespace Projeto_Circo.FormsFigurino
 {
     public partial class FrmCadColecoes : Form
     {
-        public FrmCadColecoes()
+		ProjetoCircoEntities db = new ProjetoCircoEntities();
+
+
+		public FrmCadColecoes()
         {
             InitializeComponent();
         }
 
-        private void FrmCadColecoes_Load(object sender, EventArgs e)
-        {
-
-        }
-
-        private void btnCancelar_Enter(object sender, EventArgs e)
-        {
-            
-        }
 
         private void btnCancelar_Click(object sender, EventArgs e)
         {
@@ -48,9 +36,50 @@ namespace Projeto_Circo.FormsFigurino
 
         }
 
-        private void btnSalvar_Click(object sender, EventArgs e)
-        {
-            limparFrmCadColecoes();
-        }
-    }
+		private void btnSalvar_Click(object sender, EventArgs e)
+		{
+
+			Coleções col = new Coleções();
+
+			if (LoadCol(col))
+			{
+				limparFrmCadColecoes();
+				db.Coleções.Add(col);
+				db.SaveChanges();
+				MessageBox.Show("Coleção salva com sucesso!", "Mensagem do sistema");
+			}
+
+		}
+
+		public bool LoadCol(Coleções colecao)
+		{
+			if (txtNomeCole.Text != string.Empty)
+			{
+				colecao.NMColecao = txtNomeCole.Text;
+				colecao.DTCricao = txtDataCria.Text;
+				colecao.CostureiraResponsavel = cboCostu.Text;
+				colecao.TecidosEAviamentos = txtTeciAvi.Text;
+				colecao.QtdPeçasUnicas = int.TryParse(txtQtdPecUnic.Text, out var tempVal) ? tempVal : (int?)null;
+
+				colecao.Notas = txtNotas.Text;
+
+				if (rbtAtivo.Checked)
+				{
+					colecao.Situacao = true;
+
+				}
+				else if (rbtInativo.Checked)
+				{
+					colecao.Situacao = false;
+				}
+				return true;
+			}
+			else
+			{
+				MessageBox.Show("PREENCHA o campo NOME COLEÇÃO!!!");
+				return false;
+			}
+
+		}
+	}
 }

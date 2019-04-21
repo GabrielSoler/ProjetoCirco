@@ -4,7 +4,7 @@
   <edmx:Runtime>
     <!-- SSDL content -->
     <edmx:StorageModels>
-      <Schema Namespace="ProjetoCircoModel.Store" Provider="System.Data.SqlClient" ProviderManifestToken="2012" Alias="Self" xmlns:store="http://schemas.microsoft.com/ado/2007/12/edm/EntityStoreSchemaGenerator" xmlns:customannotation="http://schemas.microsoft.com/ado/2013/11/edm/customannotation" xmlns="http://schemas.microsoft.com/ado/2009/11/edm/ssdl">
+    <Schema Namespace="ProjetoCircoModel.Store" Provider="System.Data.SqlClient" ProviderManifestToken="2012" Alias="Self" xmlns:store="http://schemas.microsoft.com/ado/2007/12/edm/EntityStoreSchemaGenerator" xmlns:customannotation="http://schemas.microsoft.com/ado/2013/11/edm/customannotation" xmlns="http://schemas.microsoft.com/ado/2009/11/edm/ssdl">
         <EntityType Name="Artistas">
           <Key>
             <PropertyRef Name="Id" />
@@ -43,7 +43,7 @@
           <Key>
             <PropertyRef Name="IDColecao" />
           </Key>
-          <Property Name="IDColecao" Type="int" Nullable="false" />
+          <Property Name="IDColecao" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
           <Property Name="NMColecao" Type="nvarchar" MaxLength="50" />
           <Property Name="QtdPeçasUnicas" Type="int" />
           <Property Name="DTCricao" Type="varchar" MaxLength="50" />
@@ -101,13 +101,6 @@
           <Property Name="IDEspetaculo" Type="int" Nullable="false" />
           <Property Name="NMLocal" Type="varchar" MaxLength="50" />
         </EntityType>
-        <!--Errors Found During Generation:
-warning 6013: The table/view 'ProjetoCirco.dbo.Pagos' does not have a primary key defined and no valid primary key could be inferred. This table/view has been excluded. To use the entity, you will need to review your schema, add the correct keys, and uncomment it.
-        <EntityType Name="Pagos">
-          <Property Name="IDArtista" Type="int" />
-          <Property Name="IDEspetaculo" Type="int" />
-          <Property Name="Pago" Type="bit" />
-        </EntityType>-->
         <EntityType Name="Peças">
           <Key>
             <PropertyRef Name="CDPeças" />
@@ -178,12 +171,6 @@ warning 6013: The table/view 'ProjetoCirco.dbo.Pagos' does not have a primary ke
             </Dependent>
           </ReferentialConstraint>
         </Association>
-        <!--Errors Found During Generation:
-error 6004: The table 'ProjetoCirco.dbo.Pagos' is referenced by a relationship, but cannot be found.
-        <Association Name="FK_Pagos_Artistas" />-->
-        <!--Errors Found During Generation:
-error 6004: The table 'ProjetoCirco.dbo.Pagos' is referenced by a relationship, but cannot be found.
-        <Association Name="FK_Pagos_Espetaculos" />-->
         <Association Name="FK_Peças_Coleções">
           <End Role="Coleções" Type="Self.Coleções" Multiplicity="1" />
           <End Role="Peças" Type="Self.Peças" Multiplicity="*" />
@@ -226,8 +213,7 @@ error 6004: The table 'ProjetoCirco.dbo.Pagos' is referenced by a relationship, 
             <End Role="Peças" EntitySet="Peças" />
           </AssociationSet>
         </EntityContainer>
-      </Schema>
-    </edmx:StorageModels>
+      </Schema></edmx:StorageModels>
     <!-- CSDL content -->
     <edmx:ConceptualModels>
       <Schema Namespace="ProjetoCircoModel" Alias="Self" annotation:UseStrongSpatialTypes="false" xmlns:annotation="http://schemas.microsoft.com/ado/2009/02/edm/annotation" xmlns:customannotation="http://schemas.microsoft.com/ado/2013/11/edm/customannotation" xmlns="http://schemas.microsoft.com/ado/2009/11/edm">

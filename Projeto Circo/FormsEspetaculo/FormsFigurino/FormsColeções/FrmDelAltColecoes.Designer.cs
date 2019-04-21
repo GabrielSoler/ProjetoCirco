@@ -72,6 +72,7 @@
 			this.btnEditar.BackColor = System.Drawing.SystemColors.ButtonHighlight;
 			this.btnEditar.Cursor = System.Windows.Forms.Cursors.Hand;
 			this.btnEditar.Font = new System.Drawing.Font("Times New Roman", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+			this.btnEditar.Image = ((System.Drawing.Image)(resources.GetObject("btnEditar.Image")));
 			this.btnEditar.Location = new System.Drawing.Point(32, 380);
 			this.btnEditar.Name = "btnEditar";
 			this.btnEditar.Size = new System.Drawing.Size(88, 58);

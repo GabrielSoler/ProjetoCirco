@@ -67,8 +67,10 @@ namespace Projeto_Circo.FormsArtista
 			DialogResult result = MessageBox.Show("Tem certeza que deseja alterar? ", "Mensagem do Sistema", MessageBoxButtons.YesNo, MessageBoxIcon.Question);
 			if (result == DialogResult.Yes)
 			{
-				//LoadArtista(artista);
-				//artista.Salvar();
+				Artistas x = db.Artistas.Single(s => s.Id == a.Id);
+				LoadArtista(x);
+
+				db.SaveChanges();
 				MessageBox.Show("CADASTRO DO ARTISTA ALTERADO COM SUCESSO", "Mensagem do Sistema", MessageBoxButtons.OK, MessageBoxIcon.Information);
 			}
 		}
@@ -101,7 +103,7 @@ namespace Projeto_Circo.FormsArtista
 					artista.Sexo = "F";
 				}
 
-				//artista.FotoArtista = imageToByteArray(picFoto.Image);
+				artista.CaminhoFotoArtista = picFoto.ImageLocation;
 
 				//////////////Carregar MEDIDAS///////////////////////////////////
 				if (txtOmbroAOmbro.MaskFull)

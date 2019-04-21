@@ -1,32 +1,61 @@
 ﻿using System;
-using System.Collections.Generic;
-using System.ComponentModel;
-using System.Data;
-using System.Drawing;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
 using System.Windows.Forms;
+using System.Linq;
 
 namespace Projeto_Circo.FormsFigurino
 {
-    public partial class FrmColecoes : Form
+	public partial class FrmColecoes : Form
     {
-        public FrmColecoes()
+
+		ProjetoCircoEntities db = new ProjetoCircoEntities();
+
+		public FrmColecoes()
         {
             InitializeComponent();
         }
 
-        private void lstPesquisa_Click(object sender, EventArgs e)
+		Coleções colecoes = new Coleções();
+
+		private void lstPesquisa_Click(object sender, EventArgs e)
         {
-            FrmDelAltColecoes Form = new FrmDelAltColecoes();
-            Form.Show();
-        }
+
+			var colecoes = (Coleções)lstPesquisa.SelectedItem;
+			if (colecoes != null)
+			{
+				this.Close();
+				FrmDelAltColecoes Form = new FrmDelAltColecoes(colecoes);
+				Form.Show();
+			}
+		}
 
         private void btnCad_Click(object sender, EventArgs e)
         {
             FrmCadColecoes Form = new FrmCadColecoes();
             Form.Show();
         }
-    }
+
+		private void btnBusca_Click(object sender, EventArgs e)
+		{
+			lstPesquisa.Items.Clear();
+
+			var colecoes = db.Coleções.Where(x => x.NMColecao.Contains(txtPesquisa.Text));
+			foreach (Coleções a in colecoes)
+			{
+				lstPesquisa.Items.Add(a);
+			}
+
+		}
+
+		private void btnTudos_Click(object sender, EventArgs e)
+		{
+			lstPesquisa.Items.Clear();
+
+			var colecoes = db.Coleções.Where(s => s.IDColecao > 0);
+
+			foreach (Coleções a in colecoes)
+			{
+				lstPesquisa.Items.Add(a);
+			}
+		}
+	}
 }
