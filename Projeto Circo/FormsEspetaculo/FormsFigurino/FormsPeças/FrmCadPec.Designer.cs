@@ -30,8 +30,9 @@
         {
 			System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(FrmCadPec));
 			this.panel1 = new System.Windows.Forms.Panel();
-			this.chkInativo = new System.Windows.Forms.CheckBox();
-			this.chkAtivo = new System.Windows.Forms.CheckBox();
+			this.panel3 = new System.Windows.Forms.Panel();
+			this.rbtInativo = new System.Windows.Forms.RadioButton();
+			this.rbtAtivo = new System.Windows.Forms.RadioButton();
 			this.txtNotas = new System.Windows.Forms.TextBox();
 			this.label6 = new System.Windows.Forms.Label();
 			this.label5 = new System.Windows.Forms.Label();
@@ -46,12 +47,12 @@
 			this.label1 = new System.Windows.Forms.Label();
 			this.panel2 = new System.Windows.Forms.Panel();
 			this.btnInserirImage = new System.Windows.Forms.Button();
-			this.txtEnderecoImage = new System.Windows.Forms.TextBox();
 			this.picFoto = new System.Windows.Forms.PictureBox();
 			this.label7 = new System.Windows.Forms.Label();
 			this.btnSair = new System.Windows.Forms.Button();
 			this.btnSalvar = new System.Windows.Forms.Button();
 			this.panel1.SuspendLayout();
+			this.panel3.SuspendLayout();
 			this.panel2.SuspendLayout();
 			((System.ComponentModel.ISupportInitialize)(this.picFoto)).BeginInit();
 			this.SuspendLayout();
@@ -59,8 +60,7 @@
 			// panel1
 			// 
 			this.panel1.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
-			this.panel1.Controls.Add(this.chkInativo);
-			this.panel1.Controls.Add(this.chkAtivo);
+			this.panel1.Controls.Add(this.panel3);
 			this.panel1.Controls.Add(this.txtNotas);
 			this.panel1.Controls.Add(this.label6);
 			this.panel1.Controls.Add(this.label5);
@@ -78,27 +78,38 @@
 			this.panel1.Size = new System.Drawing.Size(266, 385);
 			this.panel1.TabIndex = 0;
 			// 
-			// chkInativo
+			// panel3
 			// 
-			this.chkInativo.AutoSize = true;
-			this.chkInativo.Font = new System.Drawing.Font("Times New Roman", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-			this.chkInativo.Location = new System.Drawing.Point(126, 275);
-			this.chkInativo.Name = "chkInativo";
-			this.chkInativo.Size = new System.Drawing.Size(67, 21);
-			this.chkInativo.TabIndex = 7;
-			this.chkInativo.Text = "Inativo";
-			this.chkInativo.UseVisualStyleBackColor = true;
+			this.panel3.Controls.Add(this.rbtInativo);
+			this.panel3.Controls.Add(this.rbtAtivo);
+			this.panel3.Location = new System.Drawing.Point(17, 275);
+			this.panel3.Name = "panel3";
+			this.panel3.Size = new System.Drawing.Size(200, 30);
+			this.panel3.TabIndex = 14;
 			// 
-			// chkAtivo
+			// rbtInativo
 			// 
-			this.chkAtivo.AutoSize = true;
-			this.chkAtivo.Font = new System.Drawing.Font("Times New Roman", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-			this.chkAtivo.Location = new System.Drawing.Point(20, 275);
-			this.chkAtivo.Name = "chkAtivo";
-			this.chkAtivo.Size = new System.Drawing.Size(59, 21);
-			this.chkAtivo.TabIndex = 6;
-			this.chkAtivo.Text = "Ativo";
-			this.chkAtivo.UseVisualStyleBackColor = true;
+			this.rbtInativo.AutoSize = true;
+			this.rbtInativo.Font = new System.Drawing.Font("Times New Roman", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+			this.rbtInativo.Location = new System.Drawing.Point(123, 4);
+			this.rbtInativo.Name = "rbtInativo";
+			this.rbtInativo.Size = new System.Drawing.Size(68, 23);
+			this.rbtInativo.TabIndex = 12;
+			this.rbtInativo.TabStop = true;
+			this.rbtInativo.Text = "Inativo";
+			this.rbtInativo.UseVisualStyleBackColor = true;
+			// 
+			// rbtAtivo
+			// 
+			this.rbtAtivo.AutoSize = true;
+			this.rbtAtivo.Font = new System.Drawing.Font("Times New Roman", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+			this.rbtAtivo.Location = new System.Drawing.Point(14, 4);
+			this.rbtAtivo.Name = "rbtAtivo";
+			this.rbtAtivo.Size = new System.Drawing.Size(60, 23);
+			this.rbtAtivo.TabIndex = 11;
+			this.rbtAtivo.TabStop = true;
+			this.rbtAtivo.Text = "Ativo";
+			this.rbtAtivo.UseVisualStyleBackColor = true;
 			// 
 			// txtNotas
 			// 
@@ -134,7 +145,7 @@
 			// 
 			this.rbtNao.AutoSize = true;
 			this.rbtNao.Font = new System.Drawing.Font("Times New Roman", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-			this.rbtNao.Location = new System.Drawing.Point(126, 232);
+			this.rbtNao.Location = new System.Drawing.Point(142, 232);
 			this.rbtNao.Name = "rbtNao";
 			this.rbtNao.Size = new System.Drawing.Size(54, 23);
 			this.rbtNao.TabIndex = 5;
@@ -146,7 +157,7 @@
 			// 
 			this.rbtSim.AutoSize = true;
 			this.rbtSim.Font = new System.Drawing.Font("Times New Roman", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-			this.rbtSim.Location = new System.Drawing.Point(17, 232);
+			this.rbtSim.Location = new System.Drawing.Point(33, 232);
 			this.rbtSim.Name = "rbtSim";
 			this.rbtSim.Size = new System.Drawing.Size(50, 23);
 			this.rbtSim.TabIndex = 4;
@@ -226,7 +237,6 @@
 			// 
 			this.panel2.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
 			this.panel2.Controls.Add(this.btnInserirImage);
-			this.panel2.Controls.Add(this.txtEnderecoImage);
 			this.panel2.Controls.Add(this.picFoto);
 			this.panel2.Controls.Add(this.label7);
 			this.panel2.Location = new System.Drawing.Point(336, 19);
@@ -249,15 +259,6 @@
 			this.btnInserirImage.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
 			this.btnInserirImage.UseVisualStyleBackColor = false;
 			this.btnInserirImage.Click += new System.EventHandler(this.btnInserirImage_Click);
-			// 
-			// txtEnderecoImage
-			// 
-			this.txtEnderecoImage.Font = new System.Drawing.Font("Times New Roman", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-			this.txtEnderecoImage.Location = new System.Drawing.Point(22, 270);
-			this.txtEnderecoImage.Name = "txtEnderecoImage";
-			this.txtEnderecoImage.Size = new System.Drawing.Size(192, 26);
-			this.txtEnderecoImage.TabIndex = 14;
-			this.txtEnderecoImage.TabStop = false;
 			// 
 			// picFoto
 			// 
@@ -292,7 +293,7 @@
 			this.btnSair.TabIndex = 13;
 			this.btnSair.Text = "Sair";
 			this.btnSair.UseVisualStyleBackColor = false;
-			this.btnSair.Click += new System.EventHandler(this.btnSair_Click_1);
+			this.btnSair.Click += new System.EventHandler(this.btnSair_Click);
 			// 
 			// btnSalvar
 			// 
@@ -325,6 +326,8 @@
 			this.Text = "Cadastro de peça unica";
 			this.panel1.ResumeLayout(false);
 			this.panel1.PerformLayout();
+			this.panel3.ResumeLayout(false);
+			this.panel3.PerformLayout();
 			this.panel2.ResumeLayout(false);
 			this.panel2.PerformLayout();
 			((System.ComponentModel.ISupportInitialize)(this.picFoto)).EndInit();
@@ -348,13 +351,13 @@
         private System.Windows.Forms.Label label2;
         private System.Windows.Forms.ListBox lstColecao;
         private System.Windows.Forms.Label label1;
-        private System.Windows.Forms.TextBox txtEnderecoImage;
         private System.Windows.Forms.PictureBox picFoto;
         private System.Windows.Forms.Label label7;
         private System.Windows.Forms.Button btnInserirImage;
         private System.Windows.Forms.Button btnSair;
         private System.Windows.Forms.Button btnSalvar;
-        private System.Windows.Forms.CheckBox chkInativo;
-        private System.Windows.Forms.CheckBox chkAtivo;
-    }
+		private System.Windows.Forms.RadioButton rbtInativo;
+		private System.Windows.Forms.RadioButton rbtAtivo;
+		private System.Windows.Forms.Panel panel3;
+	}
 }

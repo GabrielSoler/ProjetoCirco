@@ -12,16 +12,25 @@ namespace Projeto_Circo.FormsFigurino
 {
     public partial class FrmPec : Form
     {
-        public FrmPec()
+		ProjetoCircoEntities db = new ProjetoCircoEntities();
+		Peças pec = new Peças();
+
+
+		public FrmPec()
         {
             InitializeComponent();
         }
 
         private void lstPesquisa_Click(object sender, EventArgs e)
         {
-            FrmDelAltPec Form = new FrmDelAltPec();
-            Form.Show();
-        }
+			var pec = (Peças)lstPesquisa.SelectedItem;
+			if (pec != null)
+			{
+				this.Close();
+				FrmDelAltPec Form = new FrmDelAltPec(pec);
+				Form.Show();
+			}
+		}
 
         private void btnCad_Click(object sender, EventArgs e)
         {
@@ -33,5 +42,31 @@ namespace Projeto_Circo.FormsFigurino
         {
 
         }
-    }
+
+		private void btnTudo_Click(object sender, EventArgs e)
+		{
+			lstPesquisa.Items.Clear();
+
+			var pecs = db.Peças.Where(s => s.CDPeças > 0);
+
+			foreach (Peças a in pecs)
+			{
+				lstPesquisa.Items.Add(a);
+			}
+		}
+
+		private void btnBusca_Click(object sender, EventArgs e)
+		{
+			lstPesquisa.Items.Clear();
+
+			toolStripTextBoxPesquisa.Text = toolStripTextBoxPesquisa.Text.Replace(".", "");
+
+			int? cdPec =int.TryParse(toolStripTextBoxPesquisa.Text, out var tempVal) ? tempVal : (int?)null;
+			var pecs = db.Peças.Where(x => x.CDPeças == cdPec);
+			foreach (Peças a in pecs)
+			{
+				lstPesquisa.Items.Add(a);
+			}
+		}
+	}
 }

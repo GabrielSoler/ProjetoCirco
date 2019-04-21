@@ -31,12 +31,12 @@
 			System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(FrmDelAltPec));
 			this.panel2 = new System.Windows.Forms.Panel();
 			this.btnInserirImage = new System.Windows.Forms.Button();
-			this.txtEnderecoImage = new System.Windows.Forms.TextBox();
 			this.picFoto = new System.Windows.Forms.PictureBox();
 			this.label7 = new System.Windows.Forms.Label();
 			this.panel1 = new System.Windows.Forms.Panel();
-			this.chkInativo = new System.Windows.Forms.CheckBox();
-			this.chkAtivo = new System.Windows.Forms.CheckBox();
+			this.panel3 = new System.Windows.Forms.Panel();
+			this.rbtInativo = new System.Windows.Forms.RadioButton();
+			this.rbtAtivo = new System.Windows.Forms.RadioButton();
 			this.txtNotas = new System.Windows.Forms.TextBox();
 			this.label6 = new System.Windows.Forms.Label();
 			this.label5 = new System.Windows.Forms.Label();
@@ -56,13 +56,13 @@
 			this.panel2.SuspendLayout();
 			((System.ComponentModel.ISupportInitialize)(this.picFoto)).BeginInit();
 			this.panel1.SuspendLayout();
+			this.panel3.SuspendLayout();
 			this.SuspendLayout();
 			// 
 			// panel2
 			// 
 			this.panel2.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
 			this.panel2.Controls.Add(this.btnInserirImage);
-			this.panel2.Controls.Add(this.txtEnderecoImage);
 			this.panel2.Controls.Add(this.picFoto);
 			this.panel2.Controls.Add(this.label7);
 			this.panel2.Location = new System.Drawing.Point(333, 12);
@@ -85,15 +85,6 @@
 			this.btnInserirImage.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
 			this.btnInserirImage.UseVisualStyleBackColor = false;
 			this.btnInserirImage.Click += new System.EventHandler(this.btnInserirImage_Click);
-			// 
-			// txtEnderecoImage
-			// 
-			this.txtEnderecoImage.Font = new System.Drawing.Font("Times New Roman", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-			this.txtEnderecoImage.Location = new System.Drawing.Point(22, 270);
-			this.txtEnderecoImage.Name = "txtEnderecoImage";
-			this.txtEnderecoImage.Size = new System.Drawing.Size(192, 26);
-			this.txtEnderecoImage.TabIndex = 14;
-			this.txtEnderecoImage.TabStop = false;
 			// 
 			// picFoto
 			// 
@@ -118,8 +109,7 @@
 			// panel1
 			// 
 			this.panel1.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
-			this.panel1.Controls.Add(this.chkInativo);
-			this.panel1.Controls.Add(this.chkAtivo);
+			this.panel1.Controls.Add(this.panel3);
 			this.panel1.Controls.Add(this.txtNotas);
 			this.panel1.Controls.Add(this.label6);
 			this.panel1.Controls.Add(this.label5);
@@ -137,27 +127,38 @@
 			this.panel1.Size = new System.Drawing.Size(266, 385);
 			this.panel1.TabIndex = 14;
 			// 
-			// chkInativo
+			// panel3
 			// 
-			this.chkInativo.AutoSize = true;
-			this.chkInativo.Font = new System.Drawing.Font("Times New Roman", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-			this.chkInativo.Location = new System.Drawing.Point(126, 275);
-			this.chkInativo.Name = "chkInativo";
-			this.chkInativo.Size = new System.Drawing.Size(67, 21);
-			this.chkInativo.TabIndex = 7;
-			this.chkInativo.Text = "Inativo";
-			this.chkInativo.UseVisualStyleBackColor = true;
+			this.panel3.Controls.Add(this.rbtInativo);
+			this.panel3.Controls.Add(this.rbtAtivo);
+			this.panel3.Location = new System.Drawing.Point(17, 276);
+			this.panel3.Name = "panel3";
+			this.panel3.Size = new System.Drawing.Size(200, 30);
+			this.panel3.TabIndex = 15;
 			// 
-			// chkAtivo
+			// rbtInativo
 			// 
-			this.chkAtivo.AutoSize = true;
-			this.chkAtivo.Font = new System.Drawing.Font("Times New Roman", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-			this.chkAtivo.Location = new System.Drawing.Point(20, 275);
-			this.chkAtivo.Name = "chkAtivo";
-			this.chkAtivo.Size = new System.Drawing.Size(59, 21);
-			this.chkAtivo.TabIndex = 6;
-			this.chkAtivo.Text = "Ativo";
-			this.chkAtivo.UseVisualStyleBackColor = true;
+			this.rbtInativo.AutoSize = true;
+			this.rbtInativo.Font = new System.Drawing.Font("Times New Roman", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+			this.rbtInativo.Location = new System.Drawing.Point(123, 4);
+			this.rbtInativo.Name = "rbtInativo";
+			this.rbtInativo.Size = new System.Drawing.Size(68, 23);
+			this.rbtInativo.TabIndex = 12;
+			this.rbtInativo.TabStop = true;
+			this.rbtInativo.Text = "Inativo";
+			this.rbtInativo.UseVisualStyleBackColor = true;
+			// 
+			// rbtAtivo
+			// 
+			this.rbtAtivo.AutoSize = true;
+			this.rbtAtivo.Font = new System.Drawing.Font("Times New Roman", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+			this.rbtAtivo.Location = new System.Drawing.Point(14, 4);
+			this.rbtAtivo.Name = "rbtAtivo";
+			this.rbtAtivo.Size = new System.Drawing.Size(60, 23);
+			this.rbtAtivo.TabIndex = 11;
+			this.rbtAtivo.TabStop = true;
+			this.rbtAtivo.Text = "Ativo";
+			this.rbtAtivo.UseVisualStyleBackColor = true;
 			// 
 			// txtNotas
 			// 
@@ -243,6 +244,7 @@
 			// 
 			// txtCodPec
 			// 
+			this.txtCodPec.Enabled = false;
 			this.txtCodPec.Font = new System.Drawing.Font("Times New Roman", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
 			this.txtCodPec.Location = new System.Drawing.Point(18, 143);
 			this.txtCodPec.Mask = "00,00000";
@@ -323,6 +325,7 @@
 			this.btnExcluir.TabIndex = 19;
 			this.btnExcluir.Text = "Excluir";
 			this.btnExcluir.UseVisualStyleBackColor = false;
+			this.btnExcluir.Click += new System.EventHandler(this.btnExcluir_Click);
 			// 
 			// btnCostureira
 			// 
@@ -359,6 +362,8 @@
 			((System.ComponentModel.ISupportInitialize)(this.picFoto)).EndInit();
 			this.panel1.ResumeLayout(false);
 			this.panel1.PerformLayout();
+			this.panel3.ResumeLayout(false);
+			this.panel3.PerformLayout();
 			this.ResumeLayout(false);
 
         }
@@ -369,12 +374,9 @@
         private System.Windows.Forms.Button btnEditar;
         private System.Windows.Forms.Panel panel2;
         private System.Windows.Forms.Button btnInserirImage;
-        private System.Windows.Forms.TextBox txtEnderecoImage;
         private System.Windows.Forms.PictureBox picFoto;
         private System.Windows.Forms.Label label7;
         private System.Windows.Forms.Panel panel1;
-        private System.Windows.Forms.CheckBox chkInativo;
-        private System.Windows.Forms.CheckBox chkAtivo;
         private System.Windows.Forms.TextBox txtNotas;
         private System.Windows.Forms.Label label6;
         private System.Windows.Forms.Label label5;
@@ -389,5 +391,8 @@
         private System.Windows.Forms.Label label1;
         private System.Windows.Forms.Button btnExcluir;
         private System.Windows.Forms.Button btnCostureira;
-    }
+		private System.Windows.Forms.Panel panel3;
+		private System.Windows.Forms.RadioButton rbtInativo;
+		private System.Windows.Forms.RadioButton rbtAtivo;
+	}
 }

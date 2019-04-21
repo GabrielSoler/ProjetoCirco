@@ -15,19 +15,27 @@ namespace Projeto_Circo.FormsFigurino.FormsPeças
         public FrmEmail()
         {
             InitializeComponent();
-        }
+			webBrowser.Url = new Uri("https://google.com/gmail/");
+		}
 
       
 
         private void FrmEmail_Load(object sender, EventArgs e)
         {
-            dataGridView.ColumnCount = 2;
-            dataGridView.Columns[0].Name = "Nome";
-            dataGridView.Columns[1].Name = "Email";
-            dataGridView.Rows.Add("Gabriel","Gabriel@email.com");
-        }
 
-        private void btnGmail_Click_1(object sender, EventArgs e)
+			ProjetoCircoEntities db = new ProjetoCircoEntities();
+
+
+			var consulta = from p in db.Funcionario select new { p.NMFuncionario, p.Email,p.Cargo};
+
+			consulta = consulta.Where(x => x.Cargo.Contains("Costureira") || x.Cargo.Contains("Costureiro"));
+
+			dataGridView.DataSource = consulta.ToList();
+
+
+		}
+
+		private void btnGmail_Click_1(object sender, EventArgs e)
         {
             webBrowser.Url = new Uri("https://google.com/gmail/");
         }
@@ -41,5 +49,7 @@ namespace Projeto_Circo.FormsFigurino.FormsPeças
         {
             this.Close();
         }
-    }
+
+	
+	}
 }
