@@ -59,31 +59,19 @@
   </ItemGroup>
   <ItemGroup>
     <Compile Include="Artistas.cs">
-      <DependentUpon>DataBaseFirstCirco.tt</DependentUpon>
+      <DependentUpon>ProjetoCircoEntities.tt</DependentUpon>
     </Compile>
     <Compile Include="Coleções.cs">
-      <DependentUpon>DataBaseFirstCirco.tt</DependentUpon>
-    </Compile>
-    <Compile Include="DataBaseFirstCirco.Context.cs">
-      <AutoGen>True</AutoGen>
-      <DesignTime>True</DesignTime>
-      <DependentUpon>DataBaseFirstCirco.Context.tt</DependentUpon>
-    </Compile>
-    <Compile Include="DataBaseFirstCirco.cs">
-      <AutoGen>True</AutoGen>
-      <DesignTime>True</DesignTime>
-      <DependentUpon>DataBaseFirstCirco.tt</DependentUpon>
-    </Compile>
-    <Compile Include="DataBaseFirstCirco.Designer.cs">
-      <AutoGen>True</AutoGen>
-      <DesignTime>True</DesignTime>
-      <DependentUpon>DataBaseFirstCirco.edmx</DependentUpon>
+      <DependentUpon>ProjetoCircoEntities.tt</DependentUpon>
     </Compile>
     <Compile Include="Espetaculos.cs">
-      <DependentUpon>DataBaseFirstCirco.tt</DependentUpon>
+      <DependentUpon>ProjetoCircoEntities.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Figurino.cs">
+      <DependentUpon>ProjetoCircoEntities.tt</DependentUpon>
     </Compile>
     <Compile Include="Financeiro.cs">
-      <DependentUpon>DataBaseFirstCirco.tt</DependentUpon>
+      <DependentUpon>ProjetoCircoEntities.tt</DependentUpon>
     </Compile>
     <Compile Include="FormsEspetaculo\FormsArtista\FrmArtistas.cs">
       <SubType>Form</SubType>
@@ -150,6 +138,12 @@
     </Compile>
     <Compile Include="FormsEspetaculo\FormsFigurino\FormsPeças\FrmPec.Designer.cs">
       <DependentUpon>FrmPec.cs</DependentUpon>
+    </Compile>
+    <Compile Include="FormsEspetaculo\FrmLocal.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FormsEspetaculo\FrmLocal.Designer.cs">
+      <DependentUpon>FrmLocal.cs</DependentUpon>
     </Compile>
     <Compile Include="FormsFinanceiro\FrmBuscaAltFinanceiro.cs">
       <SubType>Form</SubType>
@@ -236,18 +230,39 @@
       <DependentUpon>FrmMenuADM.cs</DependentUpon>
     </Compile>
     <Compile Include="Funcionario.cs">
-      <DependentUpon>DataBaseFirstCirco.tt</DependentUpon>
+      <DependentUpon>ProjetoCircoEntities.tt</DependentUpon>
     </Compile>
     <Compile Include="Local.cs">
-      <DependentUpon>DataBaseFirstCirco.tt</DependentUpon>
+      <DependentUpon>ProjetoCircoEntities.tt</DependentUpon>
+    </Compile>
+    <Compile Include="LocalEspetaculo.cs">
+      <DependentUpon>ProjetoCircoEntities.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Pagos.cs">
+      <DependentUpon>ProjetoCircoEntities.tt</DependentUpon>
     </Compile>
     <Compile Include="Peças.cs">
-      <DependentUpon>DataBaseFirstCirco.tt</DependentUpon>
+      <DependentUpon>ProjetoCircoEntities.tt</DependentUpon>
     </Compile>
     <Compile Include="Program.cs" />
+    <Compile Include="ProjetoCircoEntities.Context.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>ProjetoCircoEntities.Context.tt</DependentUpon>
+    </Compile>
+    <Compile Include="ProjetoCircoEntities.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>ProjetoCircoEntities.tt</DependentUpon>
+    </Compile>
+    <Compile Include="ProjetoCircoEntities.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>ProjetoCircoEntities.edmx</DependentUpon>
+    </Compile>
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="sysdiagrams.cs">
-      <DependentUpon>DataBaseFirstCirco.tt</DependentUpon>
+      <DependentUpon>ProjetoCircoEntities.tt</DependentUpon>
     </Compile>
     <EmbeddedResource Include="FormsEspetaculo\FormsArtista\FrmArtistas.resx">
       <DependentUpon>FrmArtistas.cs</DependentUpon>
@@ -284,6 +299,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="FormsEspetaculo\FrmEspetaculo.resx">
       <DependentUpon>FrmEspetaculo.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FormsEspetaculo\FrmLocal.resx">
+      <DependentUpon>FrmLocal.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="FormsEspetaculo\FrmMenuEspetaculo.resx">
       <DependentUpon>FrmMenuEspetaculo.cs</DependentUpon>
@@ -334,14 +352,14 @@
       <DependentUpon>Resources.resx</DependentUpon>
       <DesignTime>True</DesignTime>
     </Compile>
-    <EntityDeploy Include="DataBaseFirstCirco.edmx">
-      <Generator>EntityModelCodeGenerator</Generator>
-      <LastGenOutput>DataBaseFirstCirco.Designer.cs</LastGenOutput>
-    </EntityDeploy>
-    <None Include="DataBaseFirstCirco.edmx.diagram">
-      <DependentUpon>DataBaseFirstCirco.edmx</DependentUpon>
-    </None>
     <None Include="packages.config" />
+    <EntityDeploy Include="ProjetoCircoEntities.edmx">
+      <Generator>EntityModelCodeGenerator</Generator>
+      <LastGenOutput>ProjetoCircoEntities.Designer.cs</LastGenOutput>
+    </EntityDeploy>
+    <None Include="ProjetoCircoEntities.edmx.diagram">
+      <DependentUpon>ProjetoCircoEntities.edmx</DependentUpon>
+    </None>
     <None Include="Properties\Settings.settings">
       <Generator>SettingsSingleFileGenerator</Generator>
       <LastGenOutput>Settings.Designer.cs</LastGenOutput>
@@ -357,15 +375,15 @@
   </ItemGroup>
   <ItemGroup>
     <Content Include="circoIcone.ico" />
-    <Content Include="DataBaseFirstCirco.Context.tt">
+    <Content Include="ProjetoCircoEntities.Context.tt">
       <Generator>TextTemplatingFileGenerator</Generator>
-      <DependentUpon>DataBaseFirstCirco.edmx</DependentUpon>
-      <LastGenOutput>DataBaseFirstCirco.Context.cs</LastGenOutput>
+      <DependentUpon>ProjetoCircoEntities.edmx</DependentUpon>
+      <LastGenOutput>ProjetoCircoEntities.Context.cs</LastGenOutput>
     </Content>
-    <Content Include="DataBaseFirstCirco.tt">
+    <Content Include="ProjetoCircoEntities.tt">
       <Generator>TextTemplatingFileGenerator</Generator>
-      <DependentUpon>DataBaseFirstCirco.edmx</DependentUpon>
-      <LastGenOutput>DataBaseFirstCirco.cs</LastGenOutput>
+      <DependentUpon>ProjetoCircoEntities.edmx</DependentUpon>
+      <LastGenOutput>ProjetoCircoEntities.cs</LastGenOutput>
     </Content>
   </ItemGroup>
   <ItemGroup>

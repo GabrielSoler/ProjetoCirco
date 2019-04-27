@@ -39,6 +39,7 @@ namespace Projeto_Circo.FormsFigurino
 		private void btnSalvar_Click(object sender, EventArgs e)
 		{
 
+
 			Coleções col = new Coleções();
 
 			if (LoadCol(col))

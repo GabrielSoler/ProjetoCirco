@@ -17,21 +17,25 @@ namespace Projeto_Circo
         [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Usage", "CA2214:DoNotCallOverridableMethodsInConstructors")]
         public Espetaculos()
         {
-            this.Financeiro = new HashSet<Financeiro>();
-            this.Local = new HashSet<Local>();
+            this.Figurino = new HashSet<Figurino>();
+            this.LocalEspetaculo = new HashSet<LocalEspetaculo>();
+            this.Pagos = new HashSet<Pagos>();
         }
     
         public int IDEspetaculo { get; set; }
         public string NMEspetaculo { get; set; }
         public string DTEspetaculo { get; set; }
-        public Nullable<int> IDColecao { get; set; }
-        public Nullable<int> IDArtista { get; set; }
     
-        public virtual Artistas Artistas { get; set; }
-        public virtual Coleções Coleções { get; set; }
         [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Usage", "CA2227:CollectionPropertiesShouldBeReadOnly")]
-        public virtual ICollection<Financeiro> Financeiro { get; set; }
+        public virtual ICollection<Figurino> Figurino { get; set; }
         [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Usage", "CA2227:CollectionPropertiesShouldBeReadOnly")]
-        public virtual ICollection<Local> Local { get; set; }
-    }
+        public virtual ICollection<LocalEspetaculo> LocalEspetaculo { get; set; }
+        [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Usage", "CA2227:CollectionPropertiesShouldBeReadOnly")]
+        public virtual ICollection<Pagos> Pagos { get; set; }
+
+		public override string ToString()
+		{
+			return NMEspetaculo + "";
+		}
+	}
 }

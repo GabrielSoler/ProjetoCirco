@@ -14,10 +14,21 @@ namespace Projeto_Circo
     
     public partial class Local
     {
+        [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Usage", "CA2214:DoNotCallOverridableMethodsInConstructors")]
+        public Local()
+        {
+            this.LocalEspetaculo = new HashSet<LocalEspetaculo>();
+        }
+    
         public int IDLocal { get; set; }
-        public int IDEspetaculo { get; set; }
         public string NMLocal { get; set; }
     
-        public virtual Espetaculos Espetaculos { get; set; }
-    }
+        [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Usage", "CA2227:CollectionPropertiesShouldBeReadOnly")]
+        public virtual ICollection<LocalEspetaculo> LocalEspetaculo { get; set; }
+
+		public override string ToString()
+		{
+			return NMLocal + "";
+		}
+	}
 }

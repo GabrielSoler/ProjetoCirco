@@ -17,7 +17,7 @@ namespace Projeto_Circo
         [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Usage", "CA2214:DoNotCallOverridableMethodsInConstructors")]
         public Artistas()
         {
-            this.Espetaculos = new HashSet<Espetaculos>();
+            this.Pagos = new HashSet<Pagos>();
         }
     
         public int Id { get; set; }
@@ -51,6 +51,11 @@ namespace Projeto_Circo
         public string CaminhoFotoArtista { get; set; }
     
         [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Usage", "CA2227:CollectionPropertiesShouldBeReadOnly")]
-        public virtual ICollection<Espetaculos> Espetaculos { get; set; }
-    }
+        public virtual ICollection<Pagos> Pagos { get; set; }
+
+		public override string ToString()
+		{
+			return Nome + "";
+		}
+	}
 }

@@ -40,7 +40,7 @@
 			this.btnFuncionario.Font = new System.Drawing.Font("Times New Roman", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
 			this.btnFuncionario.Image = ((System.Drawing.Image)(resources.GetObject("btnFuncionario.Image")));
 			this.btnFuncionario.ImageAlign = System.Drawing.ContentAlignment.BottomCenter;
-			this.btnFuncionario.Location = new System.Drawing.Point(72, 64);
+			this.btnFuncionario.Location = new System.Drawing.Point(12, 9);
 			this.btnFuncionario.Name = "btnFuncionario";
 			this.btnFuncionario.Size = new System.Drawing.Size(116, 90);
 			this.btnFuncionario.TabIndex = 4;
@@ -56,7 +56,7 @@
 			this.btnFinanceiro.Font = new System.Drawing.Font("Times New Roman", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
 			this.btnFinanceiro.Image = ((System.Drawing.Image)(resources.GetObject("btnFinanceiro.Image")));
 			this.btnFinanceiro.ImageAlign = System.Drawing.ContentAlignment.BottomCenter;
-			this.btnFinanceiro.Location = new System.Drawing.Point(239, 64);
+			this.btnFinanceiro.Location = new System.Drawing.Point(156, 9);
 			this.btnFinanceiro.Name = "btnFinanceiro";
 			this.btnFinanceiro.Size = new System.Drawing.Size(116, 90);
 			this.btnFinanceiro.TabIndex = 5;
@@ -70,7 +70,7 @@
 			this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
 			this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
 			this.BackColor = System.Drawing.SystemColors.ButtonHighlight;
-			this.ClientSize = new System.Drawing.Size(431, 208);
+			this.ClientSize = new System.Drawing.Size(284, 111);
 			this.Controls.Add(this.btnFinanceiro);
 			this.Controls.Add(this.btnFuncionario);
 			this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedSingle;

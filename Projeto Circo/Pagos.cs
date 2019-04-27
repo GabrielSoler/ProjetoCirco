@@ -12,15 +12,14 @@ namespace Projeto_Circo
     using System;
     using System.Collections.Generic;
     
-    public partial class Financeiro
+    public partial class Pagos
     {
-        public int IDFinanceiro { get; set; }
-        public string Contratante { get; set; }
-        public Nullable<double> TotalReceber { get; set; }
-        public Nullable<double> CacheArtista { get; set; }
-        public string FormaPagamento { get; set; }
-        public string PrevisaoPagamento { get; set; }
-        public string Status { get; set; }
-        public Nullable<bool> Realizado { get; set; }
+        public int IDArtista { get; set; }
+        public int IDEspetaculo { get; set; }
+        public bool Pago { get; set; }
+        public int IDPago { get; set; }
+    
+        public virtual Artistas Artistas { get; set; }
+        public virtual Espetaculos Espetaculos { get; set; }
     }
 }

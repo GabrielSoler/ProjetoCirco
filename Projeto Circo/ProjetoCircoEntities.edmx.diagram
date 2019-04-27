@@ -1,0 +1,29 @@
+<?xml version="1.0" encoding="utf-8"?>
+<edmx:Edmx Version="3.0" xmlns:edmx="http://schemas.microsoft.com/ado/2009/11/edmx">
+ <!-- EF Designer content (DO NOT EDIT MANUALLY BELOW HERE) -->
+  <edmx:Designer xmlns="http://schemas.microsoft.com/ado/2009/11/edmx">
+    <!-- Diagram content (shape and connector positions) -->
+    <edmx:Diagrams>
+      <Diagram DiagramId="12ed70be4aa5470f811e4162452172d5" Name="Diagram1">
+        <EntityTypeShape EntityType="ProjetoCircoModel.Artistas" Width="1.5" PointX="0.75" PointY="9.5" />
+        <EntityTypeShape EntityType="ProjetoCircoModel.Coleções" Width="1.5" PointX="1.5" PointY="21.625" />
+        <EntityTypeShape EntityType="ProjetoCircoModel.Espetaculos" Width="1.5" PointX="0.75" PointY="3.875" />
+        <EntityTypeShape EntityType="ProjetoCircoModel.Figurino" Width="1.5" PointX="3" PointY="7" />
+        <EntityTypeShape EntityType="ProjetoCircoModel.Financeiro" Width="1.5" PointX="5.75" PointY="0.75" />
+        <EntityTypeShape EntityType="ProjetoCircoModel.Funcionario" Width="1.5" PointX="5.75" PointY="4.75" />
+        <EntityTypeShape EntityType="ProjetoCircoModel.Local" Width="1.5" PointX="0.75" PointY="1.25" />
+        <EntityTypeShape EntityType="ProjetoCircoModel.LocalEspetaculo" Width="1.5" PointX="3" PointY="4" />
+        <EntityTypeShape EntityType="ProjetoCircoModel.Pagos" Width="1.5" PointX="3" PointY="0.875" />
+        <EntityTypeShape EntityType="ProjetoCircoModel.Peças" Width="1.5" PointX="0.75" PointY="17.625" />
+        <EntityTypeShape EntityType="ProjetoCircoModel.sysdiagrams" Width="1.5" PointX="7.75" PointY="0.75" />
+        <AssociationConnector Association="ProjetoCircoModel.FK_Pagos_Artistas" />
+        <AssociationConnector Association="ProjetoCircoModel.FK_Peças_Coleções" />
+        <AssociationConnector Association="ProjetoCircoModel.FK_Figurino_Espetaculos1" />
+        <AssociationConnector Association="ProjetoCircoModel.FK_LocalEspetaculo_Espetaculos" />
+        <AssociationConnector Association="ProjetoCircoModel.FK_Pagos_Espetaculos" />
+        <AssociationConnector Association="ProjetoCircoModel.FK_Figurino_Peças" />
+        <AssociationConnector Association="ProjetoCircoModel.FK_LocalEspetaculo_Local" />
+      </Diagram>
+    </edmx:Diagrams>
+  </edmx:Designer>
+</edmx:Edmx>

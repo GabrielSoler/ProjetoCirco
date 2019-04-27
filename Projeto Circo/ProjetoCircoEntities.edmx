@@ -1,0 +1,733 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<edmx:Edmx Version="3.0" xmlns:edmx="http://schemas.microsoft.com/ado/2009/11/edmx">
+  <!-- EF Runtime content -->
+  <edmx:Runtime>
+    <!-- SSDL content -->
+    <edmx:StorageModels>
+    <Schema Namespace="ProjetoCircoModel.Store" Provider="System.Data.SqlClient" ProviderManifestToken="2012" Alias="Self" xmlns:store="http://schemas.microsoft.com/ado/2007/12/edm/EntityStoreSchemaGenerator" xmlns:customannotation="http://schemas.microsoft.com/ado/2013/11/edm/customannotation" xmlns="http://schemas.microsoft.com/ado/2009/11/edm/ssdl">
+        <EntityType Name="Artistas">
+          <Key>
+            <PropertyRef Name="Id" />
+          </Key>
+          <Property Name="Id" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+          <Property Name="Nome" Type="varchar" MaxLength="100" Nullable="false" />
+          <Property Name="Funcao" Type="varchar" MaxLength="100" />
+          <Property Name="DataNascimento" Type="varchar" MaxLength="30" />
+          <Property Name="CPF" Type="varchar" MaxLength="100" Nullable="false" />
+          <Property Name="Sexo" Type="nchar" MaxLength="1" />
+          <Property Name="Telefone" Type="varchar" MaxLength="255" />
+          <Property Name="Email" Type="varchar" MaxLength="255" />
+          <Property Name="OmbroAOmbro" Type="decimal" Precision="9" Scale="2" />
+          <Property Name="Ombro" Type="decimal" Precision="9" Scale="2" />
+          <Property Name="Colarinho" Type="decimal" Precision="9" Scale="2" />
+          <Property Name="EntreCavasFrente" Type="decimal" Precision="9" Scale="2" />
+          <Property Name="CentroCosta" Type="decimal" Precision="9" Scale="2" />
+          <Property Name="Busto" Type="decimal" Precision="9" Scale="2" />
+          <Property Name="AlturaBusto" Type="decimal" Precision="9" Scale="2" />
+          <Property Name="SeparacaoBusto" Type="decimal" Precision="9" Scale="2" />
+          <Property Name="Cintura" Type="decimal" Precision="9" Scale="2" />
+          <Property Name="Altura" Type="decimal" Precision="9" Scale="2" />
+          <Property Name="AlturaQuadril" Type="decimal" Precision="9" Scale="2" />
+          <Property Name="Quadril" Type="decimal" Precision="9" Scale="2" />
+          <Property Name="AlturaCinturaDoJoelho" Type="decimal" Precision="9" Scale="2" />
+          <Property Name="AlturaCinturaAoTornozelo" Type="decimal" Precision="9" Scale="2" />
+          <Property Name="ComprimentoBraco" Type="decimal" Precision="9" Scale="2" />
+          <Property Name="LarguraBraco" Type="decimal" Precision="9" Scale="2" />
+          <Property Name="Punho" Type="decimal" Precision="9" Scale="2" />
+          <Property Name="AlturaManga" Type="decimal" Precision="9" Scale="2" />
+          <Property Name="AlturaMangaCurta" Type="decimal" Precision="9" Scale="2" />
+          <Property Name="AlturaDesejadaDaSaia" Type="decimal" Precision="9" Scale="2" />
+          <Property Name="CaminhoFotoArtista" Type="varchar(max)" />
+        </EntityType>
+        <EntityType Name="Coleções">
+          <Key>
+            <PropertyRef Name="IDColecao" />
+          </Key>
+          <Property Name="IDColecao" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+          <Property Name="NMColecao" Type="nvarchar" MaxLength="50" />
+          <Property Name="QtdPeçasUnicas" Type="int" />
+          <Property Name="DTCricao" Type="varchar" MaxLength="50" />
+          <Property Name="CostureiraResponsavel" Type="varchar" MaxLength="50" />
+          <Property Name="TecidosEAviamentos" Type="varchar(max)" />
+          <Property Name="Situacao" Type="bit" />
+          <Property Name="Notas" Type="varchar" MaxLength="50" />
+        </EntityType>
+        <EntityType Name="Espetaculos">
+          <Key>
+            <PropertyRef Name="IDEspetaculo" />
+          </Key>
+          <Property Name="IDEspetaculo" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+          <Property Name="NMEspetaculo" Type="varchar" MaxLength="50" />
+          <Property Name="DTEspetaculo" Type="nchar" MaxLength="30" />
+        </EntityType>
+        <EntityType Name="Figurino">
+          <Key>
+            <PropertyRef Name="IDFigurino" />
+          </Key>
+          <Property Name="IDPec" Type="int" Nullable="false" />
+          <Property Name="IDEspetaculo" Type="int" Nullable="false" />
+          <Property Name="IDFigurino" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+        </EntityType>
+        <EntityType Name="Financeiro">
+          <Key>
+            <PropertyRef Name="IDFinanceiro" />
+          </Key>
+          <Property Name="IDFinanceiro" Type="int" Nullable="false" />
+          <Property Name="Contratante" Type="varchar" MaxLength="50" />
+          <Property Name="TotalReceber" Type="float" />
+          <Property Name="CacheArtista" Type="float" />
+          <Property Name="FormaPagamento" Type="varchar" MaxLength="50" />
+          <Property Name="PrevisaoPagamento" Type="varchar" MaxLength="50" />
+          <Property Name="Status" Type="varchar" MaxLength="50" />
+          <Property Name="Realizado" Type="bit" />
+        </EntityType>
+        <EntityType Name="Funcionario">
+          <Key>
+            <PropertyRef Name="IDFuncionario" />
+          </Key>
+          <Property Name="IDFuncionario" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+          <Property Name="CPF" Type="varchar" MaxLength="50" />
+          <Property Name="NMFuncionario" Type="varchar" MaxLength="50" />
+          <Property Name="Sexo" Type="nchar" MaxLength="10" />
+          <Property Name="RG" Type="varchar" MaxLength="50" />
+          <Property Name="DTNascimento" Type="varchar" MaxLength="50" />
+          <Property Name="Cargo" Type="varchar" MaxLength="50" />
+          <Property Name="Telefone" Type="varchar" MaxLength="50" />
+          <Property Name="Email" Type="varchar" MaxLength="50" />
+          <Property Name="Usuario" Type="varchar" MaxLength="50" />
+          <Property Name="Senha" Type="varchar" MaxLength="50" />
+          <Property Name="CaminhoImagem" Type="varchar(max)" />
+        </EntityType>
+        <EntityType Name="Local">
+          <Key>
+            <PropertyRef Name="IDLocal" />
+          </Key>
+          <Property Name="IDLocal" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+          <Property Name="NMLocal" Type="varchar" MaxLength="50" />
+        </EntityType>
+        <EntityType Name="LocalEspetaculo">
+          <Key>
+            <PropertyRef Name="IDLocalEspetaculo" />
+          </Key>
+          <Property Name="IDLocal" Type="int" Nullable="false" />
+          <Property Name="IDEspetaculo" Type="int" Nullable="false" />
+          <Property Name="IDLocalEspetaculo" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+        </EntityType>
+        <EntityType Name="Pagos">
+          <Key>
+            <PropertyRef Name="IDPago" />
+          </Key>
+          <Property Name="IDArtista" Type="int" Nullable="false" />
+          <Property Name="IDEspetaculo" Type="int" Nullable="false" />
+          <Property Name="Pago" Type="bit" Nullable="false" />
+          <Property Name="IDPago" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+        </EntityType>
+        <EntityType Name="Peças">
+          <Key>
+            <PropertyRef Name="CDPeças" />
+          </Key>
+          <Property Name="CDPeças" Type="int" Nullable="false" />
+          <Property Name="QtdComponentes" Type="int" />
+          <Property Name="Reparo" Type="bit" />
+          <Property Name="Situacao" Type="bit" />
+          <Property Name="Notas" Type="varchar(max)" />
+          <Property Name="AnexoCroquis" Type="varchar(max)" />
+          <Property Name="IDColecao" Type="int" Nullable="false" />
+        </EntityType>
+        <EntityType Name="sysdiagrams">
+          <Key>
+            <PropertyRef Name="diagram_id" />
+          </Key>
+          <Property Name="name" Type="nvarchar" MaxLength="128" Nullable="false" />
+          <Property Name="principal_id" Type="int" Nullable="false" />
+          <Property Name="diagram_id" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+          <Property Name="version" Type="int" />
+          <Property Name="definition" Type="varbinary(max)" />
+        </EntityType>
+        <Association Name="FK_Figurino_Espetaculos1">
+          <End Role="Espetaculos" Type="Self.Espetaculos" Multiplicity="1" />
+          <End Role="Figurino" Type="Self.Figurino" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="Espetaculos">
+              <PropertyRef Name="IDEspetaculo" />
+            </Principal>
+            <Dependent Role="Figurino">
+              <PropertyRef Name="IDEspetaculo" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK_Figurino_Peças">
+          <End Role="Peças" Type="Self.Peças" Multiplicity="1" />
+          <End Role="Figurino" Type="Self.Figurino" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="Peças">
+              <PropertyRef Name="CDPeças" />
+            </Principal>
+            <Dependent Role="Figurino">
+              <PropertyRef Name="IDPec" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK_LocalEspetaculo_Espetaculos">
+          <End Role="Espetaculos" Type="Self.Espetaculos" Multiplicity="1" />
+          <End Role="LocalEspetaculo" Type="Self.LocalEspetaculo" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="Espetaculos">
+              <PropertyRef Name="IDEspetaculo" />
+            </Principal>
+            <Dependent Role="LocalEspetaculo">
+              <PropertyRef Name="IDEspetaculo" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK_LocalEspetaculo_Local">
+          <End Role="Local" Type="Self.Local" Multiplicity="1" />
+          <End Role="LocalEspetaculo" Type="Self.LocalEspetaculo" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="Local">
+              <PropertyRef Name="IDLocal" />
+            </Principal>
+            <Dependent Role="LocalEspetaculo">
+              <PropertyRef Name="IDLocal" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK_Pagos_Artistas">
+          <End Role="Artistas" Type="Self.Artistas" Multiplicity="1" />
+          <End Role="Pagos" Type="Self.Pagos" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="Artistas">
+              <PropertyRef Name="Id" />
+            </Principal>
+            <Dependent Role="Pagos">
+              <PropertyRef Name="IDArtista" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK_Pagos_Espetaculos">
+          <End Role="Espetaculos" Type="Self.Espetaculos" Multiplicity="1" />
+          <End Role="Pagos" Type="Self.Pagos" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="Espetaculos">
+              <PropertyRef Name="IDEspetaculo" />
+            </Principal>
+            <Dependent Role="Pagos">
+              <PropertyRef Name="IDEspetaculo" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK_Peças_Coleções">
+          <End Role="Coleções" Type="Self.Coleções" Multiplicity="1" />
+          <End Role="Peças" Type="Self.Peças" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="Coleções">
+              <PropertyRef Name="IDColecao" />
+            </Principal>
+            <Dependent Role="Peças">
+              <PropertyRef Name="IDColecao" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <EntityContainer Name="ProjetoCircoModelStoreContainer">
+          <EntitySet Name="Artistas" EntityType="Self.Artistas" Schema="dbo" store:Type="Tables" />
+          <EntitySet Name="Coleções" EntityType="Self.Coleções" Schema="dbo" store:Type="Tables" />
+          <EntitySet Name="Espetaculos" EntityType="Self.Espetaculos" Schema="dbo" store:Type="Tables" />
+          <EntitySet Name="Figurino" EntityType="Self.Figurino" Schema="dbo" store:Type="Tables" />
+          <EntitySet Name="Financeiro" EntityType="Self.Financeiro" Schema="dbo" store:Type="Tables" />
+          <EntitySet Name="Funcionario" EntityType="Self.Funcionario" Schema="dbo" store:Type="Tables" />
+          <EntitySet Name="Local" EntityType="Self.Local" Schema="dbo" store:Type="Tables" />
+          <EntitySet Name="LocalEspetaculo" EntityType="Self.LocalEspetaculo" Schema="dbo" store:Type="Tables" />
+          <EntitySet Name="Pagos" EntityType="Self.Pagos" Schema="dbo" store:Type="Tables" />
+          <EntitySet Name="Peças" EntityType="Self.Peças" Schema="dbo" store:Type="Tables" />
+          <EntitySet Name="sysdiagrams" EntityType="Self.sysdiagrams" Schema="dbo" store:Type="Tables" />
+          <AssociationSet Name="FK_Figurino_Espetaculos1" Association="Self.FK_Figurino_Espetaculos1">
+            <End Role="Espetaculos" EntitySet="Espetaculos" />
+            <End Role="Figurino" EntitySet="Figurino" />
+          </AssociationSet>
+          <AssociationSet Name="FK_Figurino_Peças" Association="Self.FK_Figurino_Peças">
+            <End Role="Peças" EntitySet="Peças" />
+            <End Role="Figurino" EntitySet="Figurino" />
+          </AssociationSet>
+          <AssociationSet Name="FK_LocalEspetaculo_Espetaculos" Association="Self.FK_LocalEspetaculo_Espetaculos">
+            <End Role="Espetaculos" EntitySet="Espetaculos" />
+            <End Role="LocalEspetaculo" EntitySet="LocalEspetaculo" />
+          </AssociationSet>
+          <AssociationSet Name="FK_LocalEspetaculo_Local" Association="Self.FK_LocalEspetaculo_Local">
+            <End Role="Local" EntitySet="Local" />
+            <End Role="LocalEspetaculo" EntitySet="LocalEspetaculo" />
+          </AssociationSet>
+          <AssociationSet Name="FK_Pagos_Artistas" Association="Self.FK_Pagos_Artistas">
+            <End Role="Artistas" EntitySet="Artistas" />
+            <End Role="Pagos" EntitySet="Pagos" />
+          </AssociationSet>
+          <AssociationSet Name="FK_Pagos_Espetaculos" Association="Self.FK_Pagos_Espetaculos">
+            <End Role="Espetaculos" EntitySet="Espetaculos" />
+            <End Role="Pagos" EntitySet="Pagos" />
+          </AssociationSet>
+          <AssociationSet Name="FK_Peças_Coleções" Association="Self.FK_Peças_Coleções">
+            <End Role="Coleções" EntitySet="Coleções" />
+            <End Role="Peças" EntitySet="Peças" />
+          </AssociationSet>
+        </EntityContainer>
+      </Schema></edmx:StorageModels>
+    <!-- CSDL content -->
+    <edmx:ConceptualModels>
+      <Schema Namespace="ProjetoCircoModel" Alias="Self" annotation:UseStrongSpatialTypes="false" xmlns:annotation="http://schemas.microsoft.com/ado/2009/02/edm/annotation" xmlns:customannotation="http://schemas.microsoft.com/ado/2013/11/edm/customannotation" xmlns="http://schemas.microsoft.com/ado/2009/11/edm">
+        <EntityContainer Name="ProjetoCircoEntities" annotation:LazyLoadingEnabled="true">
+          <EntitySet Name="Artistas" EntityType="ProjetoCircoModel.Artistas" />
+          <EntitySet Name="Coleções" EntityType="ProjetoCircoModel.Coleções" />
+          <EntitySet Name="Espetaculos" EntityType="ProjetoCircoModel.Espetaculos" />
+          <EntitySet Name="Figurino" EntityType="ProjetoCircoModel.Figurino" />
+          <EntitySet Name="Financeiro" EntityType="ProjetoCircoModel.Financeiro" />
+          <EntitySet Name="Funcionario" EntityType="ProjetoCircoModel.Funcionario" />
+          <EntitySet Name="Local" EntityType="ProjetoCircoModel.Local" />
+          <EntitySet Name="LocalEspetaculo" EntityType="ProjetoCircoModel.LocalEspetaculo" />
+          <EntitySet Name="Pagos" EntityType="ProjetoCircoModel.Pagos" />
+          <EntitySet Name="Peças" EntityType="ProjetoCircoModel.Peças" />
+          <EntitySet Name="sysdiagrams" EntityType="ProjetoCircoModel.sysdiagrams" />
+          <AssociationSet Name="FK_Pagos_Artistas" Association="ProjetoCircoModel.FK_Pagos_Artistas">
+            <End Role="Artistas" EntitySet="Artistas" />
+            <End Role="Pagos" EntitySet="Pagos" />
+          </AssociationSet>
+          <AssociationSet Name="FK_Peças_Coleções" Association="ProjetoCircoModel.FK_Peças_Coleções">
+            <End Role="Coleções" EntitySet="Coleções" />
+            <End Role="Peças" EntitySet="Peças" />
+          </AssociationSet>
+          <AssociationSet Name="FK_Figurino_Espetaculos1" Association="ProjetoCircoModel.FK_Figurino_Espetaculos1">
+            <End Role="Espetaculos" EntitySet="Espetaculos" />
+            <End Role="Figurino" EntitySet="Figurino" />
+          </AssociationSet>
+          <AssociationSet Name="FK_LocalEspetaculo_Espetaculos" Association="ProjetoCircoModel.FK_LocalEspetaculo_Espetaculos">
+            <End Role="Espetaculos" EntitySet="Espetaculos" />
+            <End Role="LocalEspetaculo" EntitySet="LocalEspetaculo" />
+          </AssociationSet>
+          <AssociationSet Name="FK_Pagos_Espetaculos" Association="ProjetoCircoModel.FK_Pagos_Espetaculos">
+            <End Role="Espetaculos" EntitySet="Espetaculos" />
+            <End Role="Pagos" EntitySet="Pagos" />
+          </AssociationSet>
+          <AssociationSet Name="FK_Figurino_Peças" Association="ProjetoCircoModel.FK_Figurino_Peças">
+            <End Role="Peças" EntitySet="Peças" />
+            <End Role="Figurino" EntitySet="Figurino" />
+          </AssociationSet>
+          <AssociationSet Name="FK_LocalEspetaculo_Local" Association="ProjetoCircoModel.FK_LocalEspetaculo_Local">
+            <End Role="Local" EntitySet="Local" />
+            <End Role="LocalEspetaculo" EntitySet="LocalEspetaculo" />
+          </AssociationSet>
+        </EntityContainer>
+        <EntityType Name="Artistas">
+          <Key>
+            <PropertyRef Name="Id" />
+          </Key>
+          <Property Name="Id" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+          <Property Name="Nome" Type="String" Nullable="false" MaxLength="100" FixedLength="false" Unicode="false" />
+          <Property Name="Funcao" Type="String" MaxLength="100" FixedLength="false" Unicode="false" />
+          <Property Name="DataNascimento" Type="String" MaxLength="30" FixedLength="false" Unicode="false" />
+          <Property Name="CPF" Type="String" Nullable="false" MaxLength="100" FixedLength="false" Unicode="false" />
+          <Property Name="Sexo" Type="String" MaxLength="1" FixedLength="true" Unicode="true" />
+          <Property Name="Telefone" Type="String" MaxLength="255" FixedLength="false" Unicode="false" />
+          <Property Name="Email" Type="String" MaxLength="255" FixedLength="false" Unicode="false" />
+          <Property Name="OmbroAOmbro" Type="Decimal" Precision="9" Scale="2" />
+          <Property Name="Ombro" Type="Decimal" Precision="9" Scale="2" />
+          <Property Name="Colarinho" Type="Decimal" Precision="9" Scale="2" />
+          <Property Name="EntreCavasFrente" Type="Decimal" Precision="9" Scale="2" />
+          <Property Name="CentroCosta" Type="Decimal" Precision="9" Scale="2" />
+          <Property Name="Busto" Type="Decimal" Precision="9" Scale="2" />
+          <Property Name="AlturaBusto" Type="Decimal" Precision="9" Scale="2" />
+          <Property Name="SeparacaoBusto" Type="Decimal" Precision="9" Scale="2" />
+          <Property Name="Cintura" Type="Decimal" Precision="9" Scale="2" />
+          <Property Name="Altura" Type="Decimal" Precision="9" Scale="2" />
+          <Property Name="AlturaQuadril" Type="Decimal" Precision="9" Scale="2" />
+          <Property Name="Quadril" Type="Decimal" Precision="9" Scale="2" />
+          <Property Name="AlturaCinturaDoJoelho" Type="Decimal" Precision="9" Scale="2" />
+          <Property Name="AlturaCinturaAoTornozelo" Type="Decimal" Precision="9" Scale="2" />
+          <Property Name="ComprimentoBraco" Type="Decimal" Precision="9" Scale="2" />
+          <Property Name="LarguraBraco" Type="Decimal" Precision="9" Scale="2" />
+          <Property Name="Punho" Type="Decimal" Precision="9" Scale="2" />
+          <Property Name="AlturaManga" Type="Decimal" Precision="9" Scale="2" />
+          <Property Name="AlturaMangaCurta" Type="Decimal" Precision="9" Scale="2" />
+          <Property Name="AlturaDesejadaDaSaia" Type="Decimal" Precision="9" Scale="2" />
+          <Property Name="CaminhoFotoArtista" Type="String" MaxLength="Max" FixedLength="false" Unicode="false" />
+          <NavigationProperty Name="Pagos" Relationship="ProjetoCircoModel.FK_Pagos_Artistas" FromRole="Artistas" ToRole="Pagos" />
+        </EntityType>
+        <EntityType Name="Coleções">
+          <Key>
+            <PropertyRef Name="IDColecao" />
+          </Key>
+          <Property Name="IDColecao" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+          <Property Name="NMColecao" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+          <Property Name="QtdPeçasUnicas" Type="Int32" />
+          <Property Name="DTCricao" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+          <Property Name="CostureiraResponsavel" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+          <Property Name="TecidosEAviamentos" Type="String" MaxLength="Max" FixedLength="false" Unicode="false" />
+          <Property Name="Situacao" Type="Boolean" />
+          <Property Name="Notas" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+          <NavigationProperty Name="Peças" Relationship="ProjetoCircoModel.FK_Peças_Coleções" FromRole="Coleções" ToRole="Peças" />
+        </EntityType>
+        <EntityType Name="Espetaculos">
+          <Key>
+            <PropertyRef Name="IDEspetaculo" />
+          </Key>
+          <Property Name="IDEspetaculo" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+          <Property Name="NMEspetaculo" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+          <Property Name="DTEspetaculo" Type="String" MaxLength="30" FixedLength="true" Unicode="true" />
+          <NavigationProperty Name="Figurino" Relationship="ProjetoCircoModel.FK_Figurino_Espetaculos1" FromRole="Espetaculos" ToRole="Figurino" />
+          <NavigationProperty Name="LocalEspetaculo" Relationship="ProjetoCircoModel.FK_LocalEspetaculo_Espetaculos" FromRole="Espetaculos" ToRole="LocalEspetaculo" />
+          <NavigationProperty Name="Pagos" Relationship="ProjetoCircoModel.FK_Pagos_Espetaculos" FromRole="Espetaculos" ToRole="Pagos" />
+        </EntityType>
+        <EntityType Name="Figurino">
+          <Key>
+            <PropertyRef Name="IDFigurino" />
+          </Key>
+          <Property Name="IDPec" Type="Int32" Nullable="false" />
+          <Property Name="IDEspetaculo" Type="Int32" Nullable="false" />
+          <Property Name="IDFigurino" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+          <NavigationProperty Name="Espetaculos" Relationship="ProjetoCircoModel.FK_Figurino_Espetaculos1" FromRole="Figurino" ToRole="Espetaculos" />
+          <NavigationProperty Name="Peças" Relationship="ProjetoCircoModel.FK_Figurino_Peças" FromRole="Figurino" ToRole="Peças" />
+        </EntityType>
+        <EntityType Name="Financeiro">
+          <Key>
+            <PropertyRef Name="IDFinanceiro" />
+          </Key>
+          <Property Name="IDFinanceiro" Type="Int32" Nullable="false" />
+          <Property Name="Contratante" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+          <Property Name="TotalReceber" Type="Double" />
+          <Property Name="CacheArtista" Type="Double" />
+          <Property Name="FormaPagamento" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+          <Property Name="PrevisaoPagamento" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+          <Property Name="Status" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+          <Property Name="Realizado" Type="Boolean" />
+        </EntityType>
+        <EntityType Name="Funcionario">
+          <Key>
+            <PropertyRef Name="IDFuncionario" />
+          </Key>
+          <Property Name="IDFuncionario" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+          <Property Name="CPF" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+          <Property Name="NMFuncionario" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+          <Property Name="Sexo" Type="String" MaxLength="10" FixedLength="true" Unicode="true" />
+          <Property Name="RG" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+          <Property Name="DTNascimento" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+          <Property Name="Cargo" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+          <Property Name="Telefone" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+          <Property Name="Email" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+          <Property Name="Usuario" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+          <Property Name="Senha" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+          <Property Name="CaminhoImagem" Type="String" MaxLength="Max" FixedLength="false" Unicode="false" />
+        </EntityType>
+        <EntityType Name="Local">
+          <Key>
+            <PropertyRef Name="IDLocal" />
+          </Key>
+          <Property Name="IDLocal" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+          <Property Name="NMLocal" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+          <NavigationProperty Name="LocalEspetaculo" Relationship="ProjetoCircoModel.FK_LocalEspetaculo_Local" FromRole="Local" ToRole="LocalEspetaculo" />
+        </EntityType>
+        <EntityType Name="LocalEspetaculo">
+          <Key>
+            <PropertyRef Name="IDLocalEspetaculo" />
+          </Key>
+          <Property Name="IDLocal" Type="Int32" Nullable="false" />
+          <Property Name="IDEspetaculo" Type="Int32" Nullable="false" />
+          <Property Name="IDLocalEspetaculo" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+          <NavigationProperty Name="Espetaculos" Relationship="ProjetoCircoModel.FK_LocalEspetaculo_Espetaculos" FromRole="LocalEspetaculo" ToRole="Espetaculos" />
+          <NavigationProperty Name="Local" Relationship="ProjetoCircoModel.FK_LocalEspetaculo_Local" FromRole="LocalEspetaculo" ToRole="Local" />
+        </EntityType>
+        <EntityType Name="Pagos">
+          <Key>
+            <PropertyRef Name="IDPago" />
+          </Key>
+          <Property Name="IDArtista" Type="Int32" Nullable="false" />
+          <Property Name="IDEspetaculo" Type="Int32" Nullable="false" />
+          <Property Name="Pago" Type="Boolean" Nullable="false" />
+          <Property Name="IDPago" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+          <NavigationProperty Name="Artistas" Relationship="ProjetoCircoModel.FK_Pagos_Artistas" FromRole="Pagos" ToRole="Artistas" />
+          <NavigationProperty Name="Espetaculos" Relationship="ProjetoCircoModel.FK_Pagos_Espetaculos" FromRole="Pagos" ToRole="Espetaculos" />
+        </EntityType>
+        <EntityType Name="Peças">
+          <Key>
+            <PropertyRef Name="CDPeças" />
+          </Key>
+          <Property Name="CDPeças" Type="Int32" Nullable="false" />
+          <Property Name="QtdComponentes" Type="Int32" />
+          <Property Name="Reparo" Type="Boolean" />
+          <Property Name="Situacao" Type="Boolean" />
+          <Property Name="Notas" Type="String" MaxLength="Max" FixedLength="false" Unicode="false" />
+          <Property Name="AnexoCroquis" Type="String" MaxLength="Max" FixedLength="false" Unicode="false" />
+          <Property Name="IDColecao" Type="Int32" Nullable="false" />
+          <NavigationProperty Name="Coleções" Relationship="ProjetoCircoModel.FK_Peças_Coleções" FromRole="Peças" ToRole="Coleções" />
+          <NavigationProperty Name="Figurino" Relationship="ProjetoCircoModel.FK_Figurino_Peças" FromRole="Peças" ToRole="Figurino" />
+        </EntityType>
+        <EntityType Name="sysdiagrams">
+          <Key>
+            <PropertyRef Name="diagram_id" />
+          </Key>
+          <Property Name="name" Type="String" Nullable="false" MaxLength="128" FixedLength="false" Unicode="true" />
+          <Property Name="principal_id" Type="Int32" Nullable="false" />
+          <Property Name="diagram_id" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+          <Property Name="version" Type="Int32" />
+          <Property Name="definition" Type="Binary" MaxLength="Max" FixedLength="false" />
+        </EntityType>
+        <Association Name="FK_Pagos_Artistas">
+          <End Type="ProjetoCircoModel.Artistas" Role="Artistas" Multiplicity="1" />
+          <End Type="ProjetoCircoModel.Pagos" Role="Pagos" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="Artistas">
+              <PropertyRef Name="Id" />
+            </Principal>
+            <Dependent Role="Pagos">
+              <PropertyRef Name="IDArtista" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK_Peças_Coleções">
+          <End Type="ProjetoCircoModel.Coleções" Role="Coleções" Multiplicity="1" />
+          <End Type="ProjetoCircoModel.Peças" Role="Peças" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="Coleções">
+              <PropertyRef Name="IDColecao" />
+            </Principal>
+            <Dependent Role="Peças">
+              <PropertyRef Name="IDColecao" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK_Figurino_Espetaculos1">
+          <End Type="ProjetoCircoModel.Espetaculos" Role="Espetaculos" Multiplicity="1" />
+          <End Type="ProjetoCircoModel.Figurino" Role="Figurino" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="Espetaculos">
+              <PropertyRef Name="IDEspetaculo" />
+            </Principal>
+            <Dependent Role="Figurino">
+              <PropertyRef Name="IDEspetaculo" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK_LocalEspetaculo_Espetaculos">
+          <End Type="ProjetoCircoModel.Espetaculos" Role="Espetaculos" Multiplicity="1" />
+          <End Type="ProjetoCircoModel.LocalEspetaculo" Role="LocalEspetaculo" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="Espetaculos">
+              <PropertyRef Name="IDEspetaculo" />
+            </Principal>
+            <Dependent Role="LocalEspetaculo">
+              <PropertyRef Name="IDEspetaculo" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK_Pagos_Espetaculos">
+          <End Type="ProjetoCircoModel.Espetaculos" Role="Espetaculos" Multiplicity="1" />
+          <End Type="ProjetoCircoModel.Pagos" Role="Pagos" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="Espetaculos">
+              <PropertyRef Name="IDEspetaculo" />
+            </Principal>
+            <Dependent Role="Pagos">
+              <PropertyRef Name="IDEspetaculo" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK_Figurino_Peças">
+          <End Type="ProjetoCircoModel.Peças" Role="Peças" Multiplicity="1" />
+          <End Type="ProjetoCircoModel.Figurino" Role="Figurino" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="Peças">
+              <PropertyRef Name="CDPeças" />
+            </Principal>
+            <Dependent Role="Figurino">
+              <PropertyRef Name="IDPec" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK_LocalEspetaculo_Local">
+          <End Type="ProjetoCircoModel.Local" Role="Local" Multiplicity="1" />
+          <End Type="ProjetoCircoModel.LocalEspetaculo" Role="LocalEspetaculo" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="Local">
+              <PropertyRef Name="IDLocal" />
+            </Principal>
+            <Dependent Role="LocalEspetaculo">
+              <PropertyRef Name="IDLocal" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        </Schema>
+    </edmx:ConceptualModels>
+    <!-- C-S mapping content -->
+    <edmx:Mappings>
+      <Mapping Space="C-S" xmlns="http://schemas.microsoft.com/ado/2009/11/mapping/cs">
+        <EntityContainerMapping StorageEntityContainer="ProjetoCircoModelStoreContainer" CdmEntityContainer="ProjetoCircoEntities">
+          <EntitySetMapping Name="Artistas">
+            <EntityTypeMapping TypeName="ProjetoCircoModel.Artistas">
+              <MappingFragment StoreEntitySet="Artistas">
+                <ScalarProperty Name="CaminhoFotoArtista" ColumnName="CaminhoFotoArtista" />
+                <ScalarProperty Name="AlturaDesejadaDaSaia" ColumnName="AlturaDesejadaDaSaia" />
+                <ScalarProperty Name="AlturaMangaCurta" ColumnName="AlturaMangaCurta" />
+                <ScalarProperty Name="AlturaManga" ColumnName="AlturaManga" />
+                <ScalarProperty Name="Punho" ColumnName="Punho" />
+                <ScalarProperty Name="LarguraBraco" ColumnName="LarguraBraco" />
+                <ScalarProperty Name="ComprimentoBraco" ColumnName="ComprimentoBraco" />
+                <ScalarProperty Name="AlturaCinturaAoTornozelo" ColumnName="AlturaCinturaAoTornozelo" />
+                <ScalarProperty Name="AlturaCinturaDoJoelho" ColumnName="AlturaCinturaDoJoelho" />
+                <ScalarProperty Name="Quadril" ColumnName="Quadril" />
+                <ScalarProperty Name="AlturaQuadril" ColumnName="AlturaQuadril" />
+                <ScalarProperty Name="Altura" ColumnName="Altura" />
+                <ScalarProperty Name="Cintura" ColumnName="Cintura" />
+                <ScalarProperty Name="SeparacaoBusto" ColumnName="SeparacaoBusto" />
+                <ScalarProperty Name="AlturaBusto" ColumnName="AlturaBusto" />
+                <ScalarProperty Name="Busto" ColumnName="Busto" />
+                <ScalarProperty Name="CentroCosta" ColumnName="CentroCosta" />
+                <ScalarProperty Name="EntreCavasFrente" ColumnName="EntreCavasFrente" />
+                <ScalarProperty Name="Colarinho" ColumnName="Colarinho" />
+                <ScalarProperty Name="Ombro" ColumnName="Ombro" />
+                <ScalarProperty Name="OmbroAOmbro" ColumnName="OmbroAOmbro" />
+                <ScalarProperty Name="Email" ColumnName="Email" />
+                <ScalarProperty Name="Telefone" ColumnName="Telefone" />
+                <ScalarProperty Name="Sexo" ColumnName="Sexo" />
+                <ScalarProperty Name="CPF" ColumnName="CPF" />
+                <ScalarProperty Name="DataNascimento" ColumnName="DataNascimento" />
+                <ScalarProperty Name="Funcao" ColumnName="Funcao" />
+                <ScalarProperty Name="Nome" ColumnName="Nome" />
+                <ScalarProperty Name="Id" ColumnName="Id" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="Coleções">
+            <EntityTypeMapping TypeName="ProjetoCircoModel.Coleções">
+              <MappingFragment StoreEntitySet="Coleções">
+                <ScalarProperty Name="Notas" ColumnName="Notas" />
+                <ScalarProperty Name="Situacao" ColumnName="Situacao" />
+                <ScalarProperty Name="TecidosEAviamentos" ColumnName="TecidosEAviamentos" />
+                <ScalarProperty Name="CostureiraResponsavel" ColumnName="CostureiraResponsavel" />
+                <ScalarProperty Name="DTCricao" ColumnName="DTCricao" />
+                <ScalarProperty Name="QtdPeçasUnicas" ColumnName="QtdPeçasUnicas" />
+                <ScalarProperty Name="NMColecao" ColumnName="NMColecao" />
+                <ScalarProperty Name="IDColecao" ColumnName="IDColecao" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="Espetaculos">
+            <EntityTypeMapping TypeName="ProjetoCircoModel.Espetaculos">
+              <MappingFragment StoreEntitySet="Espetaculos">
+                <ScalarProperty Name="DTEspetaculo" ColumnName="DTEspetaculo" />
+                <ScalarProperty Name="NMEspetaculo" ColumnName="NMEspetaculo" />
+                <ScalarProperty Name="IDEspetaculo" ColumnName="IDEspetaculo" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="Figurino">
+            <EntityTypeMapping TypeName="ProjetoCircoModel.Figurino">
+              <MappingFragment StoreEntitySet="Figurino">
+                <ScalarProperty Name="IDFigurino" ColumnName="IDFigurino" />
+                <ScalarProperty Name="IDEspetaculo" ColumnName="IDEspetaculo" />
+                <ScalarProperty Name="IDPec" ColumnName="IDPec" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="Financeiro">
+            <EntityTypeMapping TypeName="ProjetoCircoModel.Financeiro">
+              <MappingFragment StoreEntitySet="Financeiro">
+                <ScalarProperty Name="Realizado" ColumnName="Realizado" />
+                <ScalarProperty Name="Status" ColumnName="Status" />
+                <ScalarProperty Name="PrevisaoPagamento" ColumnName="PrevisaoPagamento" />
+                <ScalarProperty Name="FormaPagamento" ColumnName="FormaPagamento" />
+                <ScalarProperty Name="CacheArtista" ColumnName="CacheArtista" />
+                <ScalarProperty Name="TotalReceber" ColumnName="TotalReceber" />
+                <ScalarProperty Name="Contratante" ColumnName="Contratante" />
+                <ScalarProperty Name="IDFinanceiro" ColumnName="IDFinanceiro" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="Funcionario">
+            <EntityTypeMapping TypeName="ProjetoCircoModel.Funcionario">
+              <MappingFragment StoreEntitySet="Funcionario">
+                <ScalarProperty Name="CaminhoImagem" ColumnName="CaminhoImagem" />
+                <ScalarProperty Name="Senha" ColumnName="Senha" />
+                <ScalarProperty Name="Usuario" ColumnName="Usuario" />
+                <ScalarProperty Name="Email" ColumnName="Email" />
+                <ScalarProperty Name="Telefone" ColumnName="Telefone" />
+                <ScalarProperty Name="Cargo" ColumnName="Cargo" />
+                <ScalarProperty Name="DTNascimento" ColumnName="DTNascimento" />
+                <ScalarProperty Name="RG" ColumnName="RG" />
+                <ScalarProperty Name="Sexo" ColumnName="Sexo" />
+                <ScalarProperty Name="NMFuncionario" ColumnName="NMFuncionario" />
+                <ScalarProperty Name="CPF" ColumnName="CPF" />
+                <ScalarProperty Name="IDFuncionario" ColumnName="IDFuncionario" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="Local">
+            <EntityTypeMapping TypeName="ProjetoCircoModel.Local">
+              <MappingFragment StoreEntitySet="Local">
+                <ScalarProperty Name="NMLocal" ColumnName="NMLocal" />
+                <ScalarProperty Name="IDLocal" ColumnName="IDLocal" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="LocalEspetaculo">
+            <EntityTypeMapping TypeName="ProjetoCircoModel.LocalEspetaculo">
+              <MappingFragment StoreEntitySet="LocalEspetaculo">
+                <ScalarProperty Name="IDLocalEspetaculo" ColumnName="IDLocalEspetaculo" />
+                <ScalarProperty Name="IDEspetaculo" ColumnName="IDEspetaculo" />
+                <ScalarProperty Name="IDLocal" ColumnName="IDLocal" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="Pagos">
+            <EntityTypeMapping TypeName="ProjetoCircoModel.Pagos">
+              <MappingFragment StoreEntitySet="Pagos">
+                <ScalarProperty Name="IDPago" ColumnName="IDPago" />
+                <ScalarProperty Name="Pago" ColumnName="Pago" />
+                <ScalarProperty Name="IDEspetaculo" ColumnName="IDEspetaculo" />
+                <ScalarProperty Name="IDArtista" ColumnName="IDArtista" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="Peças">
+            <EntityTypeMapping TypeName="ProjetoCircoModel.Peças">
+              <MappingFragment StoreEntitySet="Peças">
+                <ScalarProperty Name="IDColecao" ColumnName="IDColecao" />
+                <ScalarProperty Name="AnexoCroquis" ColumnName="AnexoCroquis" />
+                <ScalarProperty Name="Notas" ColumnName="Notas" />
+                <ScalarProperty Name="Situacao" ColumnName="Situacao" />
+                <ScalarProperty Name="Reparo" ColumnName="Reparo" />
+                <ScalarProperty Name="QtdComponentes" ColumnName="QtdComponentes" />
+                <ScalarProperty Name="CDPeças" ColumnName="CDPeças" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="sysdiagrams">
+            <EntityTypeMapping TypeName="ProjetoCircoModel.sysdiagrams">
+              <MappingFragment StoreEntitySet="sysdiagrams">
+                <ScalarProperty Name="definition" ColumnName="definition" />
+                <ScalarProperty Name="version" ColumnName="version" />
+                <ScalarProperty Name="diagram_id" ColumnName="diagram_id" />
+                <ScalarProperty Name="principal_id" ColumnName="principal_id" />
+                <ScalarProperty Name="name" ColumnName="name" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+        </EntityContainerMapping>
+      </Mapping>
+    </edmx:Mappings>
+  </edmx:Runtime>
+  <!-- EF Designer content (DO NOT EDIT MANUALLY BELOW HERE) -->
+  <Designer xmlns="http://schemas.microsoft.com/ado/2009/11/edmx">
+    <Connection>
+      <DesignerInfoPropertySet>
+        <DesignerProperty Name="MetadataArtifactProcessing" Value="EmbedInOutputAssembly" />
+      </DesignerInfoPropertySet>
+    </Connection>
+    <Options>
+      <DesignerInfoPropertySet>
+        <DesignerProperty Name="ValidateOnBuild" Value="true" />
+        <DesignerProperty Name="EnablePluralization" Value="false" />
+        <DesignerProperty Name="IncludeForeignKeysInModel" Value="true" />
+        <DesignerProperty Name="UseLegacyProvider" Value="false" />
+        <DesignerProperty Name="CodeGenerationStrategy" Value="None" />
+      </DesignerInfoPropertySet>
+    </Options>
+    <!-- Diagram content (shape and connector positions) -->
+    <Diagrams></Diagrams>
+  </Designer>
+</edmx:Edmx>

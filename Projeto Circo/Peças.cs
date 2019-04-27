@@ -14,6 +14,12 @@ namespace Projeto_Circo
     
     public partial class Peças
     {
+        [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Usage", "CA2214:DoNotCallOverridableMethodsInConstructors")]
+        public Peças()
+        {
+            this.Figurino = new HashSet<Figurino>();
+        }
+    
         public int CDPeças { get; set; }
         public Nullable<int> QtdComponentes { get; set; }
         public Nullable<bool> Reparo { get; set; }
@@ -23,5 +29,13 @@ namespace Projeto_Circo
         public int IDColecao { get; set; }
     
         public virtual Coleções Coleções { get; set; }
-    }
+        [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Usage", "CA2227:CollectionPropertiesShouldBeReadOnly")]
+        public virtual ICollection<Figurino> Figurino { get; set; }
+
+		public override string ToString()
+		{
+			return CDPeças + "";
+		}
+
+	}
 }
