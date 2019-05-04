@@ -31,11 +31,5 @@ namespace Projeto_Circo
         public virtual Coleções Coleções { get; set; }
         [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Usage", "CA2227:CollectionPropertiesShouldBeReadOnly")]
         public virtual ICollection<Figurino> Figurino { get; set; }
-
-		public override string ToString()
-		{
-			return CDPeças + "";
-		}
-
-	}
+    }
 }

@@ -57,24 +57,7 @@ namespace Projeto_Circo
 			}
 		}
 
-		private void btnExcluirLocal_Click(object sender, EventArgs e)
-		{
-			var deletados = lstLocal.SelectedItems;
-			DialogResult result = MessageBox.Show("Tem certeza que deseja excluir? ", "Mensagem do Sistema", MessageBoxButtons.YesNo, MessageBoxIcon.Question);
-			if (result == DialogResult.Yes)
-			{
-				ProjetoCircoEntities db = new ProjetoCircoEntities();
-
-				foreach (Local l in deletados)
-				{
-					db.Local.Remove(db.Local.Single(x => x.IDLocal == l.IDLocal));
-
-				}
-				db.SaveChanges();
-				AtualizarFrmEspetaculo(db);
-				MessageBox.Show("CADASTRO DE LOCAL EXCLUIDO COM SUCESSO", "Mensagem do Sistema", MessageBoxButtons.OK, MessageBoxIcon.Information);
-			}
-		}
+	
 
 		private void btnAtualizar_Click(object sender, EventArgs e)
 		{
@@ -96,6 +79,7 @@ namespace Projeto_Circo
 			if (LoadEspetaculos(espetaculos))
 			{
 				MessageBox.Show("Espetaculo salvo com sucesso!", "Mensagem do sistema");
+				this.Close();
 			}
 
 		}
@@ -111,7 +95,7 @@ namespace Projeto_Circo
 			db.Espetaculos.Add(es);
 			db.SaveChanges();
 
-
+			
 			ListBox.SelectedObjectCollection listaCol = lstCol.SelectedItems;
 			ListBox.SelectedObjectCollection listLocal = lstLocal.SelectedItems;
 			ListBox.SelectedObjectCollection listArtista = lstArtistas.SelectedItems;
@@ -125,7 +109,7 @@ namespace Projeto_Circo
 					{
 						IDArtista = art.Id,
 						IDEspetaculo = es.IDEspetaculo,
-						Pago = false
+						Pago = null
 					};
 					db.Pagos.Add(f);
 				}

@@ -37,7 +37,6 @@
 			this.lstCol = new System.Windows.Forms.ListBox();
 			this.lstArtistas = new System.Windows.Forms.ListBox();
 			this.panel2 = new System.Windows.Forms.Panel();
-			this.btnExcluirLocal = new System.Windows.Forms.Button();
 			this.btnInserirLocal = new System.Windows.Forms.Button();
 			this.label1 = new System.Windows.Forms.Label();
 			this.lstLocal = new System.Windows.Forms.ListBox();
@@ -143,7 +142,7 @@
 			// 
 			this.panel2.BackColor = System.Drawing.SystemColors.ButtonHighlight;
 			this.panel2.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
-			this.panel2.Controls.Add(this.btnExcluirLocal);
+			this.panel2.Controls.Add(this.btnAtualizar);
 			this.panel2.Controls.Add(this.btnInserirLocal);
 			this.panel2.Controls.Add(this.label1);
 			this.panel2.Controls.Add(this.lstLocal);
@@ -152,28 +151,14 @@
 			this.panel2.Size = new System.Drawing.Size(297, 111);
 			this.panel2.TabIndex = 23;
 			// 
-			// btnExcluirLocal
-			// 
-			this.btnExcluirLocal.BackColor = System.Drawing.SystemColors.ButtonHighlight;
-			this.btnExcluirLocal.Cursor = System.Windows.Forms.Cursors.Hand;
-			this.btnExcluirLocal.Font = new System.Drawing.Font("Times New Roman", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-			this.btnExcluirLocal.Location = new System.Drawing.Point(7, 65);
-			this.btnExcluirLocal.Name = "btnExcluirLocal";
-			this.btnExcluirLocal.Size = new System.Drawing.Size(90, 23);
-			this.btnExcluirLocal.TabIndex = 16;
-			this.btnExcluirLocal.Text = "Excluir Local";
-			this.btnExcluirLocal.TextAlign = System.Drawing.ContentAlignment.BottomCenter;
-			this.btnExcluirLocal.UseVisualStyleBackColor = false;
-			this.btnExcluirLocal.Click += new System.EventHandler(this.btnExcluirLocal_Click);
-			// 
 			// btnInserirLocal
 			// 
 			this.btnInserirLocal.BackColor = System.Drawing.SystemColors.ButtonHighlight;
 			this.btnInserirLocal.Cursor = System.Windows.Forms.Cursors.Hand;
-			this.btnInserirLocal.Font = new System.Drawing.Font("Times New Roman", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+			this.btnInserirLocal.Font = new System.Drawing.Font("Times New Roman", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
 			this.btnInserirLocal.Location = new System.Drawing.Point(7, 36);
 			this.btnInserirLocal.Name = "btnInserirLocal";
-			this.btnInserirLocal.Size = new System.Drawing.Size(90, 23);
+			this.btnInserirLocal.Size = new System.Drawing.Size(90, 24);
 			this.btnInserirLocal.TabIndex = 15;
 			this.btnInserirLocal.Text = "Inserir Local";
 			this.btnInserirLocal.TextAlign = System.Drawing.ContentAlignment.BottomCenter;
@@ -200,7 +185,7 @@
 			this.lstLocal.Name = "lstLocal";
 			this.lstLocal.ScrollAlwaysVisible = true;
 			this.lstLocal.SelectionMode = System.Windows.Forms.SelectionMode.MultiSimple;
-			this.lstLocal.Size = new System.Drawing.Size(181, 80);
+			this.lstLocal.Size = new System.Drawing.Size(181, 99);
 			this.lstLocal.TabIndex = 8;
 			// 
 			// panel3
@@ -213,7 +198,7 @@
 			this.panel3.Controls.Add(this.label6);
 			this.panel3.Location = new System.Drawing.Point(235, 162);
 			this.panel3.Name = "panel3";
-			this.panel3.Size = new System.Drawing.Size(193, 111);
+			this.panel3.Size = new System.Drawing.Size(193, 124);
 			this.panel3.TabIndex = 24;
 			// 
 			// txtNMEspetaculo
@@ -227,7 +212,7 @@
 			// txtDTHR
 			// 
 			this.txtDTHR.Font = new System.Drawing.Font("Times New Roman", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-			this.txtDTHR.Location = new System.Drawing.Point(8, 83);
+			this.txtDTHR.Location = new System.Drawing.Point(8, 86);
 			this.txtDTHR.Mask = "00/00/0000 00:00";
 			this.txtDTHR.Name = "txtDTHR";
 			this.txtDTHR.Size = new System.Drawing.Size(175, 26);
@@ -238,7 +223,7 @@
 			this.label7.AutoSize = true;
 			this.label7.BackColor = System.Drawing.SystemColors.ButtonHighlight;
 			this.label7.Font = new System.Drawing.Font("Times New Roman", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-			this.label7.Location = new System.Drawing.Point(4, 58);
+			this.label7.Location = new System.Drawing.Point(4, 66);
 			this.label7.Name = "label7";
 			this.label7.Size = new System.Drawing.Size(102, 22);
 			this.label7.TabIndex = 18;
@@ -288,7 +273,7 @@
 			this.btnAtualizar.Cursor = System.Windows.Forms.Cursors.Hand;
 			this.btnAtualizar.Font = new System.Drawing.Font("Times New Roman", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
 			this.btnAtualizar.ImageAlign = System.Drawing.ContentAlignment.BottomCenter;
-			this.btnAtualizar.Location = new System.Drawing.Point(446, 127);
+			this.btnAtualizar.Location = new System.Drawing.Point(7, 75);
 			this.btnAtualizar.Name = "btnAtualizar";
 			this.btnAtualizar.Size = new System.Drawing.Size(79, 29);
 			this.btnAtualizar.TabIndex = 28;
@@ -303,7 +288,6 @@
 			this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
 			this.BackColor = System.Drawing.SystemColors.ButtonHighlight;
 			this.ClientSize = new System.Drawing.Size(552, 419);
-			this.Controls.Add(this.btnAtualizar);
 			this.Controls.Add(this.btnSalvarEspetaculo);
 			this.Controls.Add(this.lblMenu);
 			this.Controls.Add(this.panel2);
@@ -334,7 +318,6 @@
         private System.Windows.Forms.ListBox lstCol;
         private System.Windows.Forms.ListBox lstArtistas;
         private System.Windows.Forms.Panel panel2;
-        private System.Windows.Forms.Button btnExcluirLocal;
         private System.Windows.Forms.Button btnInserirLocal;
         private System.Windows.Forms.Label label1;
         private System.Windows.Forms.ListBox lstLocal;

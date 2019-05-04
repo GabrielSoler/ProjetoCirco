@@ -30,25 +30,30 @@
         {
 			System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(FrmRelatorio));
 			this.panel3 = new System.Windows.Forms.Panel();
+			this.btnData = new System.Windows.Forms.Button();
+			this.monthCalendar = new System.Windows.Forms.MonthCalendar();
+			this.exibirCalender = new System.Windows.Forms.Button();
+			this.txtBuscaDt = new System.Windows.Forms.TextBox();
+			this.label8 = new System.Windows.Forms.Label();
+			this.btnBuscar = new System.Windows.Forms.Button();
 			this.btnTudo = new System.Windows.Forms.Button();
-			this.textBox2 = new System.Windows.Forms.TextBox();
+			this.txtBuscar = new System.Windows.Forms.TextBox();
 			this.label7 = new System.Windows.Forms.Label();
-			this.listBox5 = new System.Windows.Forms.ListBox();
+			this.lstBuscar = new System.Windows.Forms.ListBox();
 			this.panel2 = new System.Windows.Forms.Panel();
+			this.txtNMEsp = new System.Windows.Forms.TextBox();
+			this.label1 = new System.Windows.Forms.Label();
 			this.label4 = new System.Windows.Forms.Label();
-			this.listBox1 = new System.Windows.Forms.ListBox();
+			this.lstLocal = new System.Windows.Forms.ListBox();
 			this.label6 = new System.Windows.Forms.Label();
-			this.maskedTextBox1 = new System.Windows.Forms.MaskedTextBox();
-			this.monthCalendar1 = new System.Windows.Forms.MonthCalendar();
-			this.listBox2 = new System.Windows.Forms.ListBox();
-			this.listBox3 = new System.Windows.Forms.ListBox();
+			this.txtDtEsp = new System.Windows.Forms.MaskedTextBox();
+			this.lstArt = new System.Windows.Forms.ListBox();
+			this.lstCol = new System.Windows.Forms.ListBox();
 			this.label3 = new System.Windows.Forms.Label();
 			this.label5 = new System.Windows.Forms.Label();
-			this.listBox4 = new System.Windows.Forms.ListBox();
+			this.lstPec = new System.Windows.Forms.ListBox();
 			this.label2 = new System.Windows.Forms.Label();
 			this.panel1 = new System.Windows.Forms.Panel();
-			this.textBox1 = new System.Windows.Forms.TextBox();
-			this.label1 = new System.Windows.Forms.Label();
 			this.panel3.SuspendLayout();
 			this.panel2.SuspendLayout();
 			this.panel1.SuspendLayout();
@@ -58,15 +63,89 @@
 			// 
 			this.panel3.BackColor = System.Drawing.SystemColors.ButtonHighlight;
 			this.panel3.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
-			this.panel3.Controls.Add(this.monthCalendar1);
+			this.panel3.Controls.Add(this.btnData);
+			this.panel3.Controls.Add(this.monthCalendar);
+			this.panel3.Controls.Add(this.exibirCalender);
+			this.panel3.Controls.Add(this.txtBuscaDt);
+			this.panel3.Controls.Add(this.label8);
+			this.panel3.Controls.Add(this.btnBuscar);
 			this.panel3.Controls.Add(this.btnTudo);
-			this.panel3.Controls.Add(this.textBox2);
+			this.panel3.Controls.Add(this.txtBuscar);
 			this.panel3.Controls.Add(this.label7);
-			this.panel3.Controls.Add(this.listBox5);
+			this.panel3.Controls.Add(this.lstBuscar);
 			this.panel3.Location = new System.Drawing.Point(12, 12);
 			this.panel3.Name = "panel3";
-			this.panel3.Size = new System.Drawing.Size(249, 365);
+			this.panel3.Size = new System.Drawing.Size(249, 397);
 			this.panel3.TabIndex = 1;
+			// 
+			// btnData
+			// 
+			this.btnData.BackColor = System.Drawing.SystemColors.ButtonHighlight;
+			this.btnData.Cursor = System.Windows.Forms.Cursors.Hand;
+			this.btnData.Font = new System.Drawing.Font("Times New Roman", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+			this.btnData.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
+			this.btnData.Location = new System.Drawing.Point(176, 179);
+			this.btnData.Name = "btnData";
+			this.btnData.Size = new System.Drawing.Size(55, 24);
+			this.btnData.TabIndex = 27;
+			this.btnData.Text = "Buscar";
+			this.btnData.UseVisualStyleBackColor = false;
+			this.btnData.Click += new System.EventHandler(this.btnData_Click);
+			// 
+			// monthCalendar
+			// 
+			this.monthCalendar.BackColor = System.Drawing.SystemColors.HotTrack;
+			this.monthCalendar.Location = new System.Drawing.Point(9, 230);
+			this.monthCalendar.Name = "monthCalendar";
+			this.monthCalendar.TabIndex = 26;
+			this.monthCalendar.Visible = false;
+			this.monthCalendar.DateChanged += new System.Windows.Forms.DateRangeEventHandler(this.monthCalendar_DateChanged);
+			// 
+			// exibirCalender
+			// 
+			this.exibirCalender.BackColor = System.Drawing.SystemColors.ButtonHighlight;
+			this.exibirCalender.Cursor = System.Windows.Forms.Cursors.Hand;
+			this.exibirCalender.Font = new System.Drawing.Font("Times New Roman", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+			this.exibirCalender.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
+			this.exibirCalender.Location = new System.Drawing.Point(14, 204);
+			this.exibirCalender.Name = "exibirCalender";
+			this.exibirCalender.Size = new System.Drawing.Size(111, 24);
+			this.exibirCalender.TabIndex = 24;
+			this.exibirCalender.Text = "Exibir Calendário";
+			this.exibirCalender.UseVisualStyleBackColor = false;
+			this.exibirCalender.Click += new System.EventHandler(this.exibirCalender_Click);
+			// 
+			// txtBuscaDt
+			// 
+			this.txtBuscaDt.Location = new System.Drawing.Point(62, 181);
+			this.txtBuscaDt.Name = "txtBuscaDt";
+			this.txtBuscaDt.Size = new System.Drawing.Size(108, 20);
+			this.txtBuscaDt.TabIndex = 22;
+			// 
+			// label8
+			// 
+			this.label8.AutoSize = true;
+			this.label8.BackColor = System.Drawing.SystemColors.ButtonHighlight;
+			this.label8.Font = new System.Drawing.Font("Times New Roman", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+			this.label8.Location = new System.Drawing.Point(10, 179);
+			this.label8.Name = "label8";
+			this.label8.Size = new System.Drawing.Size(55, 22);
+			this.label8.TabIndex = 23;
+			this.label8.Text = "Data:";
+			// 
+			// btnBuscar
+			// 
+			this.btnBuscar.BackColor = System.Drawing.SystemColors.ButtonHighlight;
+			this.btnBuscar.Cursor = System.Windows.Forms.Cursors.Hand;
+			this.btnBuscar.Font = new System.Drawing.Font("Times New Roman", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+			this.btnBuscar.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
+			this.btnBuscar.Location = new System.Drawing.Point(189, 9);
+			this.btnBuscar.Name = "btnBuscar";
+			this.btnBuscar.Size = new System.Drawing.Size(55, 24);
+			this.btnBuscar.TabIndex = 21;
+			this.btnBuscar.Text = "Buscar";
+			this.btnBuscar.UseVisualStyleBackColor = false;
+			this.btnBuscar.Click += new System.EventHandler(this.btnBuscar_Click);
 			// 
 			// btnTudo
 			// 
@@ -82,13 +161,14 @@
 			this.btnTudo.Text = "Exibir Todos";
 			this.btnTudo.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
 			this.btnTudo.UseVisualStyleBackColor = false;
+			this.btnTudo.Click += new System.EventHandler(this.btnTudo_Click);
 			// 
-			// textBox2
+			// txtBuscar
 			// 
-			this.textBox2.Location = new System.Drawing.Point(80, 13);
-			this.textBox2.Name = "textBox2";
-			this.textBox2.Size = new System.Drawing.Size(108, 20);
-			this.textBox2.TabIndex = 1;
+			this.txtBuscar.Location = new System.Drawing.Point(80, 13);
+			this.txtBuscar.Name = "txtBuscar";
+			this.txtBuscar.Size = new System.Drawing.Size(108, 20);
+			this.txtBuscar.TabIndex = 1;
 			// 
 			// label7
 			// 
@@ -101,30 +181,53 @@
 			this.label7.TabIndex = 2;
 			this.label7.Text = "Buscar:";
 			// 
-			// listBox5
+			// lstBuscar
 			// 
-			this.listBox5.ColumnWidth = 1;
-			this.listBox5.FormattingEnabled = true;
-			this.listBox5.Location = new System.Drawing.Point(14, 39);
-			this.listBox5.Name = "listBox5";
-			this.listBox5.ScrollAlwaysVisible = true;
-			this.listBox5.Size = new System.Drawing.Size(222, 95);
-			this.listBox5.TabIndex = 8;
+			this.lstBuscar.ColumnWidth = 1;
+			this.lstBuscar.FormattingEnabled = true;
+			this.lstBuscar.Location = new System.Drawing.Point(14, 39);
+			this.lstBuscar.Name = "lstBuscar";
+			this.lstBuscar.ScrollAlwaysVisible = true;
+			this.lstBuscar.Size = new System.Drawing.Size(222, 95);
+			this.lstBuscar.TabIndex = 8;
+			this.lstBuscar.Click += new System.EventHandler(this.lstBuscar_Click);
+			this.lstBuscar.SelectedIndexChanged += new System.EventHandler(this.lstBuscar_SelectedIndexChanged);
 			// 
 			// panel2
 			// 
 			this.panel2.BackColor = System.Drawing.SystemColors.ButtonHighlight;
 			this.panel2.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
-			this.panel2.Controls.Add(this.textBox1);
+			this.panel2.Controls.Add(this.txtNMEsp);
 			this.panel2.Controls.Add(this.label1);
 			this.panel2.Controls.Add(this.label4);
-			this.panel2.Controls.Add(this.listBox1);
+			this.panel2.Controls.Add(this.lstLocal);
 			this.panel2.Controls.Add(this.label6);
-			this.panel2.Controls.Add(this.maskedTextBox1);
+			this.panel2.Controls.Add(this.txtDtEsp);
+			this.panel2.Font = new System.Drawing.Font("Times New Roman", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
 			this.panel2.Location = new System.Drawing.Point(267, 12);
 			this.panel2.Name = "panel2";
-			this.panel2.Size = new System.Drawing.Size(193, 249);
+			this.panel2.Size = new System.Drawing.Size(193, 236);
 			this.panel2.TabIndex = 5;
+			// 
+			// txtNMEsp
+			// 
+			this.txtNMEsp.Font = new System.Drawing.Font("Times New Roman", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+			this.txtNMEsp.Location = new System.Drawing.Point(13, 38);
+			this.txtNMEsp.Name = "txtNMEsp";
+			this.txtNMEsp.Size = new System.Drawing.Size(163, 26);
+			this.txtNMEsp.TabIndex = 18;
+			// 
+			// label1
+			// 
+			this.label1.AutoSize = true;
+			this.label1.BackColor = System.Drawing.Color.White;
+			this.label1.Font = new System.Drawing.Font("Times New Roman", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+			this.label1.ForeColor = System.Drawing.SystemColors.ActiveCaptionText;
+			this.label1.Location = new System.Drawing.Point(12, 13);
+			this.label1.Name = "label1";
+			this.label1.Size = new System.Drawing.Size(158, 22);
+			this.label1.TabIndex = 19;
+			this.label1.Text = "Nome Espetáculo:";
 			// 
 			// label4
 			// 
@@ -137,14 +240,16 @@
 			this.label4.TabIndex = 2;
 			this.label4.Text = "Data:";
 			// 
-			// listBox1
+			// lstLocal
 			// 
-			this.listBox1.FormattingEnabled = true;
-			this.listBox1.Location = new System.Drawing.Point(16, 140);
-			this.listBox1.Name = "listBox1";
-			this.listBox1.ScrollAlwaysVisible = true;
-			this.listBox1.Size = new System.Drawing.Size(160, 95);
-			this.listBox1.TabIndex = 7;
+			this.lstLocal.Font = new System.Drawing.Font("Times New Roman", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+			this.lstLocal.FormattingEnabled = true;
+			this.lstLocal.ItemHeight = 19;
+			this.lstLocal.Location = new System.Drawing.Point(16, 140);
+			this.lstLocal.Name = "lstLocal";
+			this.lstLocal.ScrollAlwaysVisible = true;
+			this.lstLocal.Size = new System.Drawing.Size(160, 80);
+			this.lstLocal.TabIndex = 7;
 			// 
 			// label6
 			// 
@@ -157,37 +262,36 @@
 			this.label6.TabIndex = 17;
 			this.label6.Text = "Local:";
 			// 
-			// maskedTextBox1
+			// txtDtEsp
 			// 
-			this.maskedTextBox1.Location = new System.Drawing.Point(16, 90);
-			this.maskedTextBox1.Mask = "00/00/0000";
-			this.maskedTextBox1.Name = "maskedTextBox1";
-			this.maskedTextBox1.Size = new System.Drawing.Size(160, 20);
-			this.maskedTextBox1.TabIndex = 6;
+			this.txtDtEsp.Font = new System.Drawing.Font("Times New Roman", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+			this.txtDtEsp.Location = new System.Drawing.Point(16, 90);
+			this.txtDtEsp.Mask = "00/00/0000";
+			this.txtDtEsp.Name = "txtDtEsp";
+			this.txtDtEsp.Size = new System.Drawing.Size(160, 26);
+			this.txtDtEsp.TabIndex = 6;
 			// 
-			// monthCalendar1
+			// lstArt
 			// 
-			this.monthCalendar1.Location = new System.Drawing.Point(9, 188);
-			this.monthCalendar1.Name = "monthCalendar1";
-			this.monthCalendar1.TabIndex = 7;
+			this.lstArt.Font = new System.Drawing.Font("Times New Roman", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+			this.lstArt.FormattingEnabled = true;
+			this.lstArt.ItemHeight = 19;
+			this.lstArt.Location = new System.Drawing.Point(13, 38);
+			this.lstArt.Name = "lstArt";
+			this.lstArt.ScrollAlwaysVisible = true;
+			this.lstArt.Size = new System.Drawing.Size(151, 80);
+			this.lstArt.TabIndex = 3;
 			// 
-			// listBox2
+			// lstCol
 			// 
-			this.listBox2.FormattingEnabled = true;
-			this.listBox2.Location = new System.Drawing.Point(13, 38);
-			this.listBox2.Name = "listBox2";
-			this.listBox2.ScrollAlwaysVisible = true;
-			this.listBox2.Size = new System.Drawing.Size(151, 95);
-			this.listBox2.TabIndex = 3;
-			// 
-			// listBox3
-			// 
-			this.listBox3.FormattingEnabled = true;
-			this.listBox3.Location = new System.Drawing.Point(13, 161);
-			this.listBox3.Name = "listBox3";
-			this.listBox3.ScrollAlwaysVisible = true;
-			this.listBox3.Size = new System.Drawing.Size(151, 95);
-			this.listBox3.TabIndex = 4;
+			this.lstCol.Font = new System.Drawing.Font("Times New Roman", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+			this.lstCol.FormattingEnabled = true;
+			this.lstCol.ItemHeight = 19;
+			this.lstCol.Location = new System.Drawing.Point(13, 161);
+			this.lstCol.Name = "lstCol";
+			this.lstCol.ScrollAlwaysVisible = true;
+			this.lstCol.Size = new System.Drawing.Size(151, 80);
+			this.lstCol.TabIndex = 4;
 			// 
 			// label3
 			// 
@@ -211,14 +315,16 @@
 			this.label5.TabIndex = 16;
 			this.label5.Text = "Codigo de peça:";
 			// 
-			// listBox4
+			// lstPec
 			// 
-			this.listBox4.FormattingEnabled = true;
-			this.listBox4.Location = new System.Drawing.Point(13, 284);
-			this.listBox4.Name = "listBox4";
-			this.listBox4.ScrollAlwaysVisible = true;
-			this.listBox4.Size = new System.Drawing.Size(151, 95);
-			this.listBox4.TabIndex = 5;
+			this.lstPec.Font = new System.Drawing.Font("Times New Roman", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+			this.lstPec.FormattingEnabled = true;
+			this.lstPec.ItemHeight = 19;
+			this.lstPec.Location = new System.Drawing.Point(13, 284);
+			this.lstPec.Name = "lstPec";
+			this.lstPec.ScrollAlwaysVisible = true;
+			this.lstPec.Size = new System.Drawing.Size(151, 80);
+			this.lstPec.TabIndex = 5;
 			// 
 			// label2
 			// 
@@ -236,41 +342,22 @@
 			this.panel1.BackColor = System.Drawing.SystemColors.ButtonHighlight;
 			this.panel1.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
 			this.panel1.Controls.Add(this.label2);
-			this.panel1.Controls.Add(this.listBox4);
+			this.panel1.Controls.Add(this.lstPec);
 			this.panel1.Controls.Add(this.label5);
 			this.panel1.Controls.Add(this.label3);
-			this.panel1.Controls.Add(this.listBox3);
-			this.panel1.Controls.Add(this.listBox2);
+			this.panel1.Controls.Add(this.lstCol);
+			this.panel1.Controls.Add(this.lstArt);
 			this.panel1.Location = new System.Drawing.Point(482, 12);
 			this.panel1.Name = "panel1";
 			this.panel1.Size = new System.Drawing.Size(182, 391);
 			this.panel1.TabIndex = 2;
-			// 
-			// textBox1
-			// 
-			this.textBox1.Location = new System.Drawing.Point(13, 38);
-			this.textBox1.Name = "textBox1";
-			this.textBox1.Size = new System.Drawing.Size(154, 20);
-			this.textBox1.TabIndex = 18;
-			// 
-			// label1
-			// 
-			this.label1.AutoSize = true;
-			this.label1.BackColor = System.Drawing.Color.White;
-			this.label1.Font = new System.Drawing.Font("Times New Roman", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-			this.label1.ForeColor = System.Drawing.SystemColors.ActiveCaptionText;
-			this.label1.Location = new System.Drawing.Point(12, 13);
-			this.label1.Name = "label1";
-			this.label1.Size = new System.Drawing.Size(158, 22);
-			this.label1.TabIndex = 19;
-			this.label1.Text = "Nome Espetáculo:";
 			// 
 			// FrmRelatorio
 			// 
 			this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
 			this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
 			this.BackColor = System.Drawing.SystemColors.ButtonHighlight;
-			this.ClientSize = new System.Drawing.Size(693, 414);
+			this.ClientSize = new System.Drawing.Size(693, 421);
 			this.Controls.Add(this.panel2);
 			this.Controls.Add(this.panel3);
 			this.Controls.Add(this.panel1);
@@ -292,24 +379,29 @@
 
         #endregion
         private System.Windows.Forms.Panel panel3;
-        private System.Windows.Forms.TextBox textBox2;
+        private System.Windows.Forms.TextBox txtBuscar;
         private System.Windows.Forms.Label label7;
-        private System.Windows.Forms.ListBox listBox5;
+        private System.Windows.Forms.ListBox lstBuscar;
         private System.Windows.Forms.Button btnTudo;
-		private System.Windows.Forms.MonthCalendar monthCalendar1;
 		private System.Windows.Forms.Panel panel2;
-		private System.Windows.Forms.TextBox textBox1;
+		private System.Windows.Forms.TextBox txtNMEsp;
 		private System.Windows.Forms.Label label1;
 		private System.Windows.Forms.Label label4;
-		private System.Windows.Forms.ListBox listBox1;
+		private System.Windows.Forms.ListBox lstLocal;
 		private System.Windows.Forms.Label label6;
-		private System.Windows.Forms.MaskedTextBox maskedTextBox1;
-		private System.Windows.Forms.ListBox listBox2;
-		private System.Windows.Forms.ListBox listBox3;
+		private System.Windows.Forms.MaskedTextBox txtDtEsp;
+		private System.Windows.Forms.ListBox lstArt;
+		private System.Windows.Forms.ListBox lstCol;
 		private System.Windows.Forms.Label label3;
 		private System.Windows.Forms.Label label5;
-		private System.Windows.Forms.ListBox listBox4;
+		private System.Windows.Forms.ListBox lstPec;
 		private System.Windows.Forms.Label label2;
 		private System.Windows.Forms.Panel panel1;
+		private System.Windows.Forms.Button btnBuscar;
+		private System.Windows.Forms.Button exibirCalender;
+		private System.Windows.Forms.TextBox txtBuscaDt;
+		private System.Windows.Forms.Label label8;
+		private System.Windows.Forms.MonthCalendar monthCalendar;
+		private System.Windows.Forms.Button btnData;
 	}
 }

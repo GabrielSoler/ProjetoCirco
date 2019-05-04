@@ -86,10 +86,10 @@
 			// rbtInativo
 			// 
 			this.rbtInativo.AutoSize = true;
-			this.rbtInativo.Font = new System.Drawing.Font("Times New Roman", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-			this.rbtInativo.Location = new System.Drawing.Point(113, 208);
+			this.rbtInativo.Font = new System.Drawing.Font("Times New Roman", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+			this.rbtInativo.Location = new System.Drawing.Point(113, 219);
 			this.rbtInativo.Name = "rbtInativo";
-			this.rbtInativo.Size = new System.Drawing.Size(66, 21);
+			this.rbtInativo.Size = new System.Drawing.Size(68, 23);
 			this.rbtInativo.TabIndex = 6;
 			this.rbtInativo.TabStop = true;
 			this.rbtInativo.Text = "Inativo";
@@ -98,10 +98,10 @@
 			// rbtAtivo
 			// 
 			this.rbtAtivo.AutoSize = true;
-			this.rbtAtivo.Font = new System.Drawing.Font("Times New Roman", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-			this.rbtAtivo.Location = new System.Drawing.Point(22, 208);
+			this.rbtAtivo.Font = new System.Drawing.Font("Times New Roman", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+			this.rbtAtivo.Location = new System.Drawing.Point(22, 219);
 			this.rbtAtivo.Name = "rbtAtivo";
-			this.rbtAtivo.Size = new System.Drawing.Size(58, 21);
+			this.rbtAtivo.Size = new System.Drawing.Size(60, 23);
 			this.rbtAtivo.TabIndex = 5;
 			this.rbtAtivo.TabStop = true;
 			this.rbtAtivo.Text = "Ativo";
@@ -109,14 +109,16 @@
 			// 
 			// txtTeciAvi
 			// 
-			this.txtTeciAvi.Location = new System.Drawing.Point(21, 163);
+			this.txtTeciAvi.Font = new System.Drawing.Font("Times New Roman", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+			this.txtTeciAvi.Location = new System.Drawing.Point(21, 172);
 			this.txtTeciAvi.Name = "txtTeciAvi";
-			this.txtTeciAvi.Size = new System.Drawing.Size(190, 20);
+			this.txtTeciAvi.Size = new System.Drawing.Size(190, 26);
 			this.txtTeciAvi.TabIndex = 4;
 			// 
 			// txtNotas
 			// 
-			this.txtNotas.Location = new System.Drawing.Point(21, 295);
+			this.txtNotas.Font = new System.Drawing.Font("Times New Roman", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+			this.txtNotas.Location = new System.Drawing.Point(21, 307);
 			this.txtNotas.Multiline = true;
 			this.txtNotas.Name = "txtNotas";
 			this.txtNotas.ScrollBars = System.Windows.Forms.ScrollBars.Vertical;
@@ -125,101 +127,106 @@
 			// 
 			// txtQtdPecUnic
 			// 
-			this.txtQtdPecUnic.Location = new System.Drawing.Point(21, 250);
+			this.txtQtdPecUnic.Font = new System.Drawing.Font("Times New Roman", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+			this.txtQtdPecUnic.Location = new System.Drawing.Point(21, 261);
 			this.txtQtdPecUnic.Name = "txtQtdPecUnic";
-			this.txtQtdPecUnic.Size = new System.Drawing.Size(190, 20);
+			this.txtQtdPecUnic.Size = new System.Drawing.Size(190, 26);
 			this.txtQtdPecUnic.TabIndex = 7;
 			// 
 			// txtDataCria
 			// 
-			this.txtDataCria.Location = new System.Drawing.Point(21, 76);
+			this.txtDataCria.Font = new System.Drawing.Font("Times New Roman", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+			this.txtDataCria.Location = new System.Drawing.Point(21, 78);
 			this.txtDataCria.Mask = "00/00/0000";
 			this.txtDataCria.Name = "txtDataCria";
-			this.txtDataCria.Size = new System.Drawing.Size(126, 20);
+			this.txtDataCria.Size = new System.Drawing.Size(126, 26);
 			this.txtDataCria.TabIndex = 2;
 			// 
 			// txtNomeCole
 			// 
+			this.txtNomeCole.Font = new System.Drawing.Font("Times New Roman", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
 			this.txtNomeCole.Location = new System.Drawing.Point(21, 31);
 			this.txtNomeCole.Name = "txtNomeCole";
-			this.txtNomeCole.Size = new System.Drawing.Size(190, 20);
+			this.txtNomeCole.Size = new System.Drawing.Size(190, 26);
 			this.txtNomeCole.TabIndex = 1;
 			// 
 			// label6
 			// 
 			this.label6.AutoSize = true;
-			this.label6.Font = new System.Drawing.Font("Times New Roman", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-			this.label6.Location = new System.Drawing.Point(18, 273);
+			this.label6.Font = new System.Drawing.Font("Times New Roman", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+			this.label6.Location = new System.Drawing.Point(18, 285);
 			this.label6.Name = "label6";
-			this.label6.Size = new System.Drawing.Size(58, 21);
+			this.label6.Size = new System.Drawing.Size(49, 19);
 			this.label6.TabIndex = 90;
 			this.label6.Text = "Notas:";
 			// 
 			// label5
 			// 
 			this.label5.AutoSize = true;
-			this.label5.Font = new System.Drawing.Font("Times New Roman", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-			this.label5.Location = new System.Drawing.Point(17, 186);
+			this.label5.Font = new System.Drawing.Font("Times New Roman", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+			this.label5.Location = new System.Drawing.Point(17, 197);
 			this.label5.Name = "label5";
-			this.label5.Size = new System.Drawing.Size(78, 21);
+			this.label5.Size = new System.Drawing.Size(64, 19);
 			this.label5.TabIndex = 89;
 			this.label5.Text = "Situação:";
 			// 
 			// label4
 			// 
 			this.label4.AutoSize = true;
-			this.label4.Font = new System.Drawing.Font("Times New Roman", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-			this.label4.Location = new System.Drawing.Point(17, 141);
+			this.label4.Font = new System.Drawing.Font("Times New Roman", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+			this.label4.Location = new System.Drawing.Point(17, 150);
 			this.label4.Name = "label4";
-			this.label4.Size = new System.Drawing.Size(175, 21);
+			this.label4.Size = new System.Drawing.Size(141, 19);
 			this.label4.TabIndex = 87;
 			this.label4.Text = "Tecidos e aviamentos:";
 			// 
 			// label3
 			// 
 			this.label3.AutoSize = true;
-			this.label3.Font = new System.Drawing.Font("Times New Roman", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-			this.label3.Location = new System.Drawing.Point(17, 228);
+			this.label3.Font = new System.Drawing.Font("Times New Roman", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+			this.label3.Location = new System.Drawing.Point(17, 239);
 			this.label3.Name = "label3";
-			this.label3.Size = new System.Drawing.Size(222, 21);
+			this.label3.Size = new System.Drawing.Size(181, 19);
 			this.label3.TabIndex = 88;
 			this.label3.Text = "Quantidade de peças unicas:";
 			// 
 			// label2
 			// 
 			this.label2.AutoSize = true;
-			this.label2.Font = new System.Drawing.Font("Times New Roman", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-			this.label2.Location = new System.Drawing.Point(17, 95);
+			this.label2.Font = new System.Drawing.Font("Times New Roman", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+			this.label2.Location = new System.Drawing.Point(17, 103);
 			this.label2.Name = "label2";
-			this.label2.Size = new System.Drawing.Size(206, 21);
+			this.label2.Size = new System.Drawing.Size(168, 19);
 			this.label2.TabIndex = 86;
 			this.label2.Text = "Costureiro(a) responsável:";
 			// 
 			// label1
 			// 
 			this.label1.AutoSize = true;
-			this.label1.Font = new System.Drawing.Font("Times New Roman", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-			this.label1.Location = new System.Drawing.Point(17, 54);
+			this.label1.Font = new System.Drawing.Font("Times New Roman", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+			this.label1.Location = new System.Drawing.Point(17, 56);
 			this.label1.Name = "label1";
-			this.label1.Size = new System.Drawing.Size(130, 21);
+			this.label1.Size = new System.Drawing.Size(108, 19);
 			this.label1.TabIndex = 85;
 			this.label1.Text = "Data de criação:";
 			// 
 			// label24
 			// 
 			this.label24.AutoSize = true;
-			this.label24.Font = new System.Drawing.Font("Times New Roman", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+			this.label24.Font = new System.Drawing.Font("Times New Roman", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
 			this.label24.Location = new System.Drawing.Point(17, 9);
 			this.label24.Name = "label24";
-			this.label24.Size = new System.Drawing.Size(145, 21);
+			this.label24.Size = new System.Drawing.Size(120, 19);
 			this.label24.TabIndex = 84;
 			this.label24.Text = "Nome da coleção:";
 			// 
 			// txtCostuResp
 			// 
-			this.txtCostuResp.Location = new System.Drawing.Point(21, 118);
+			this.txtCostuResp.Font = new System.Drawing.Font("Times New Roman", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+			this.txtCostuResp.Location = new System.Drawing.Point(21, 125);
 			this.txtCostuResp.Name = "txtCostuResp";
-			this.txtCostuResp.Size = new System.Drawing.Size(190, 20);
+			this.txtCostuResp.ReadOnly = true;
+			this.txtCostuResp.Size = new System.Drawing.Size(190, 26);
 			this.txtCostuResp.TabIndex = 3;
 			// 
 			// FrmDelAltColecoes
@@ -227,7 +234,7 @@
 			this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
 			this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
 			this.BackColor = System.Drawing.SystemColors.ControlLightLight;
-			this.ClientSize = new System.Drawing.Size(287, 450);
+			this.ClientSize = new System.Drawing.Size(262, 450);
 			this.Controls.Add(this.txtCostuResp);
 			this.Controls.Add(this.btnCancelar);
 			this.Controls.Add(this.btnEditar);

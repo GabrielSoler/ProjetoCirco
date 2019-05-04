@@ -76,7 +76,7 @@
 			this.btnTudo.Font = new System.Drawing.Font("Times New Roman", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
 			this.btnTudo.Image = global::Projeto_Circo.Properties.Resources.mostrarBitmap;
 			this.btnTudo.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-			this.btnTudo.Location = new System.Drawing.Point(78, 146);
+			this.btnTudo.Location = new System.Drawing.Point(80, 180);
 			this.btnTudo.Name = "btnTudo";
 			this.btnTudo.Size = new System.Drawing.Size(149, 33);
 			this.btnTudo.TabIndex = 36;
@@ -95,7 +95,7 @@
 			this.lstPesquisa.Margin = new System.Windows.Forms.Padding(20, 3, 3, 3);
 			this.lstPesquisa.Name = "lstPesquisa";
 			this.lstPesquisa.ScrollAlwaysVisible = true;
-			this.lstPesquisa.Size = new System.Drawing.Size(177, 72);
+			this.lstPesquisa.Size = new System.Drawing.Size(177, 106);
 			this.lstPesquisa.TabIndex = 7;
 			this.lstPesquisa.Click += new System.EventHandler(this.lstPesquisa_Click);
 			// 

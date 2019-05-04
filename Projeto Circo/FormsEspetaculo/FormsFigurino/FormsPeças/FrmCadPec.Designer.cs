@@ -289,9 +289,10 @@
 			this.btnSair.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
 			this.btnSair.Location = new System.Drawing.Point(153, 410);
 			this.btnSair.Name = "btnSair";
-			this.btnSair.Size = new System.Drawing.Size(103, 33);
+			this.btnSair.Size = new System.Drawing.Size(71, 33);
 			this.btnSair.TabIndex = 13;
 			this.btnSair.Text = "Sair";
+			this.btnSair.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
 			this.btnSair.UseVisualStyleBackColor = false;
 			this.btnSair.Click += new System.EventHandler(this.btnSair_Click);
 			// 
@@ -304,9 +305,10 @@
 			this.btnSalvar.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
 			this.btnSalvar.Location = new System.Drawing.Point(33, 410);
 			this.btnSalvar.Name = "btnSalvar";
-			this.btnSalvar.Size = new System.Drawing.Size(106, 33);
+			this.btnSalvar.Size = new System.Drawing.Size(84, 33);
 			this.btnSalvar.TabIndex = 12;
 			this.btnSalvar.Text = "Salvar";
+			this.btnSalvar.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
 			this.btnSalvar.UseVisualStyleBackColor = false;
 			this.btnSalvar.Click += new System.EventHandler(this.btnSalvar_Click);
 			// 

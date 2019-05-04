@@ -19,8 +19,13 @@ namespace Projeto_Circo.FormsFinanceiro
 
         private void lstPesquisa_Click(object sender, EventArgs e)
         {
-            FrmBuscaAltFinanceiro Form = new FrmBuscaAltFinanceiro();
-            Form.Show();
+			var financeiro = (Financeiro)lstPesquisa.SelectedItem;
+			if (financeiro != null)
+			{
+				this.Close();
+				FrmBuscaAltFinanceiro Form = new FrmBuscaAltFinanceiro(financeiro);
+				Form.Show();
+			}			
         }
 
         private void btnCad_Click(object sender, EventArgs e)
@@ -31,8 +36,35 @@ namespace Projeto_Circo.FormsFinanceiro
 
         private void btnTudo_Click(object sender, EventArgs e)
         {
+			ProjetoCircoEntities db = new ProjetoCircoEntities();
 
-        }
+			lstPesquisa.Items.Clear();
 
-    }
+			var financeiro = db.Financeiro.Where(s => s.IDFinanceiro > 0);
+
+			foreach (Financeiro a in financeiro)
+			{
+				lstPesquisa.Items.Add(a);
+			}
+		}
+
+		private void FrmFinanceiro_Load(object sender, EventArgs e)
+		{
+
+		}
+
+		private void btnBusca_Click(object sender, EventArgs e)
+		{
+			ProjetoCircoEntities db = new ProjetoCircoEntities();
+
+			lstPesquisa.Items.Clear();
+
+			var financeiro = db.Financeiro.Where(x => x.Contratante.Contains(toolStripTextBoxPesquisa.Text));
+			foreach (Financeiro a in financeiro)
+			{
+				lstPesquisa.Items.Add(a);
+			}
+
+		}
+	}
 }

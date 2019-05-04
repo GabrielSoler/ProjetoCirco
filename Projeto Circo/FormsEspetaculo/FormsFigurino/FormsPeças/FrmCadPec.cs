@@ -46,10 +46,21 @@ namespace Projeto_Circo.FormsFigurino
 
 			if (LoadPec(pec))
 			{
-				limparFrmCadPec();
-				db.Peças.Add(pec);
-				db.SaveChanges();
-				MessageBox.Show("Peça salva com sucesso!", "Mensagem do sistema");
+
+				var objPec = db.Peças.Where(x => x.CDPeças == pec.CDPeças).SingleOrDefault();
+
+				if(objPec == null)
+				{
+					db.Peças.Add(pec);
+					db.SaveChanges();
+					MessageBox.Show("Peça salva com sucesso!", "Mensagem do sistema");
+					limparFrmCadPec();
+
+				}
+				else{
+					MessageBox.Show("Código peça já existente, não aceitamos peça com codigo igual", "Mensagem do sistema");
+					txtCodPec.Focus();
+				}
 			}
 		}
 
@@ -103,6 +114,7 @@ namespace Projeto_Circo.FormsFigurino
 			}
 			else if (!txtCodPec.MaskFull)
 			{
+				txtCodPec.Focus();
 				MessageBox.Show("PREENCHA o campo Código Peça!!!");
 				return false;
 			}

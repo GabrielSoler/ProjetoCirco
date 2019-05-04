@@ -72,7 +72,7 @@
 			// 
 			this.label2.AutoSize = true;
 			this.label2.Font = new System.Drawing.Font("Times New Roman", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-			this.label2.Location = new System.Drawing.Point(12, 102);
+			this.label2.Location = new System.Drawing.Point(12, 106);
 			this.label2.Name = "label2";
 			this.label2.Size = new System.Drawing.Size(206, 21);
 			this.label2.TabIndex = 70;
@@ -82,7 +82,7 @@
 			// 
 			this.label3.AutoSize = true;
 			this.label3.Font = new System.Drawing.Font("Times New Roman", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-			this.label3.Location = new System.Drawing.Point(12, 235);
+			this.label3.Location = new System.Drawing.Point(12, 241);
 			this.label3.Name = "label3";
 			this.label3.Size = new System.Drawing.Size(222, 21);
 			this.label3.TabIndex = 71;
@@ -92,7 +92,7 @@
 			// 
 			this.label4.AutoSize = true;
 			this.label4.Font = new System.Drawing.Font("Times New Roman", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-			this.label4.Location = new System.Drawing.Point(12, 148);
+			this.label4.Location = new System.Drawing.Point(12, 155);
 			this.label4.Name = "label4";
 			this.label4.Size = new System.Drawing.Size(175, 21);
 			this.label4.TabIndex = 71;
@@ -102,7 +102,7 @@
 			// 
 			this.label5.AutoSize = true;
 			this.label5.Font = new System.Drawing.Font("Times New Roman", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-			this.label5.Location = new System.Drawing.Point(12, 193);
+			this.label5.Location = new System.Drawing.Point(12, 200);
 			this.label5.Name = "label5";
 			this.label5.Size = new System.Drawing.Size(78, 21);
 			this.label5.TabIndex = 72;
@@ -112,7 +112,7 @@
 			// 
 			this.label6.AutoSize = true;
 			this.label6.Font = new System.Drawing.Font("Times New Roman", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-			this.label6.Location = new System.Drawing.Point(13, 280);
+			this.label6.Location = new System.Drawing.Point(13, 289);
 			this.label6.Name = "label6";
 			this.label6.Size = new System.Drawing.Size(58, 21);
 			this.label6.TabIndex = 73;
@@ -120,29 +120,33 @@
 			// 
 			// txtNomeCole
 			// 
+			this.txtNomeCole.Font = new System.Drawing.Font("Times New Roman", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
 			this.txtNomeCole.Location = new System.Drawing.Point(16, 38);
 			this.txtNomeCole.Name = "txtNomeCole";
-			this.txtNomeCole.Size = new System.Drawing.Size(190, 20);
+			this.txtNomeCole.Size = new System.Drawing.Size(190, 26);
 			this.txtNomeCole.TabIndex = 0;
 			// 
 			// txtDataCria
 			// 
+			this.txtDataCria.Font = new System.Drawing.Font("Times New Roman", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
 			this.txtDataCria.Location = new System.Drawing.Point(16, 83);
 			this.txtDataCria.Mask = "00/00/0000";
 			this.txtDataCria.Name = "txtDataCria";
-			this.txtDataCria.Size = new System.Drawing.Size(126, 20);
+			this.txtDataCria.Size = new System.Drawing.Size(126, 26);
 			this.txtDataCria.TabIndex = 1;
 			// 
 			// txtQtdPecUnic
 			// 
-			this.txtQtdPecUnic.Location = new System.Drawing.Point(16, 257);
+			this.txtQtdPecUnic.Font = new System.Drawing.Font("Times New Roman", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+			this.txtQtdPecUnic.Location = new System.Drawing.Point(16, 263);
 			this.txtQtdPecUnic.Name = "txtQtdPecUnic";
-			this.txtQtdPecUnic.Size = new System.Drawing.Size(190, 20);
+			this.txtQtdPecUnic.Size = new System.Drawing.Size(190, 26);
 			this.txtQtdPecUnic.TabIndex = 6;
 			// 
 			// txtNotas
 			// 
-			this.txtNotas.Location = new System.Drawing.Point(16, 302);
+			this.txtNotas.Font = new System.Drawing.Font("Times New Roman", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+			this.txtNotas.Location = new System.Drawing.Point(16, 311);
 			this.txtNotas.Multiline = true;
 			this.txtNotas.Name = "txtNotas";
 			this.txtNotas.ScrollBars = System.Windows.Forms.ScrollBars.Vertical;
@@ -151,18 +155,19 @@
 			// 
 			// txtTeciAvi
 			// 
-			this.txtTeciAvi.Location = new System.Drawing.Point(16, 170);
+			this.txtTeciAvi.Font = new System.Drawing.Font("Times New Roman", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+			this.txtTeciAvi.Location = new System.Drawing.Point(16, 176);
 			this.txtTeciAvi.Name = "txtTeciAvi";
-			this.txtTeciAvi.Size = new System.Drawing.Size(190, 20);
+			this.txtTeciAvi.Size = new System.Drawing.Size(190, 26);
 			this.txtTeciAvi.TabIndex = 3;
 			// 
 			// rbtAtivo
 			// 
 			this.rbtAtivo.AutoSize = true;
-			this.rbtAtivo.Font = new System.Drawing.Font("Times New Roman", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-			this.rbtAtivo.Location = new System.Drawing.Point(17, 215);
+			this.rbtAtivo.Font = new System.Drawing.Font("Times New Roman", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+			this.rbtAtivo.Location = new System.Drawing.Point(17, 219);
 			this.rbtAtivo.Name = "rbtAtivo";
-			this.rbtAtivo.Size = new System.Drawing.Size(58, 21);
+			this.rbtAtivo.Size = new System.Drawing.Size(60, 23);
 			this.rbtAtivo.TabIndex = 4;
 			this.rbtAtivo.TabStop = true;
 			this.rbtAtivo.Text = "Ativo";
@@ -171,10 +176,10 @@
 			// rbtInativo
 			// 
 			this.rbtInativo.AutoSize = true;
-			this.rbtInativo.Font = new System.Drawing.Font("Times New Roman", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-			this.rbtInativo.Location = new System.Drawing.Point(108, 215);
+			this.rbtInativo.Font = new System.Drawing.Font("Times New Roman", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+			this.rbtInativo.Location = new System.Drawing.Point(108, 219);
 			this.rbtInativo.Name = "rbtInativo";
-			this.rbtInativo.Size = new System.Drawing.Size(66, 21);
+			this.rbtInativo.Size = new System.Drawing.Size(68, 23);
 			this.rbtInativo.TabIndex = 5;
 			this.rbtInativo.TabStop = true;
 			this.rbtInativo.Text = "Inativo";
@@ -182,10 +187,11 @@
 			// 
 			// cboCostu
 			// 
+			this.cboCostu.Font = new System.Drawing.Font("Times New Roman", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
 			this.cboCostu.FormattingEnabled = true;
-			this.cboCostu.Location = new System.Drawing.Point(16, 124);
+			this.cboCostu.Location = new System.Drawing.Point(16, 128);
 			this.cboCostu.Name = "cboCostu";
-			this.cboCostu.Size = new System.Drawing.Size(190, 21);
+			this.cboCostu.Size = new System.Drawing.Size(190, 27);
 			this.cboCostu.TabIndex = 2;
 			// 
 			// btnCancelar
@@ -196,7 +202,7 @@
 			this.btnCancelar.Font = new System.Drawing.Font("Times New Roman", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
 			this.btnCancelar.ForeColor = System.Drawing.SystemColors.ControlText;
 			this.btnCancelar.Image = ((System.Drawing.Image)(resources.GetObject("btnCancelar.Image")));
-			this.btnCancelar.Location = new System.Drawing.Point(130, 368);
+			this.btnCancelar.Location = new System.Drawing.Point(130, 377);
 			this.btnCancelar.Name = "btnCancelar";
 			this.btnCancelar.Size = new System.Drawing.Size(88, 70);
 			this.btnCancelar.TabIndex = 9;
@@ -212,7 +218,7 @@
 			this.btnSalvar.Cursor = System.Windows.Forms.Cursors.Hand;
 			this.btnSalvar.Font = new System.Drawing.Font("Times New Roman", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
 			this.btnSalvar.Image = ((System.Drawing.Image)(resources.GetObject("btnSalvar.Image")));
-			this.btnSalvar.Location = new System.Drawing.Point(24, 368);
+			this.btnSalvar.Location = new System.Drawing.Point(24, 377);
 			this.btnSalvar.Name = "btnSalvar";
 			this.btnSalvar.Size = new System.Drawing.Size(88, 70);
 			this.btnSalvar.TabIndex = 8;

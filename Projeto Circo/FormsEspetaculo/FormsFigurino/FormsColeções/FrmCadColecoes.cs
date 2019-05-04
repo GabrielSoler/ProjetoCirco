@@ -12,10 +12,18 @@ namespace Projeto_Circo.FormsFigurino
 		public FrmCadColecoes()
         {
             InitializeComponent();
-        }
+
+			var lst = db.Funcionario.Where(x=>x.Cargo.Contains("Costureira" ) || x.Cargo.Contains("Costureiro"));
+			foreach (Funcionario funcionario in lst)
+			{
+				cboCostu.Items.Add(funcionario);
+			}
 
 
-        private void btnCancelar_Click(object sender, EventArgs e)
+		}
+
+
+		private void btnCancelar_Click(object sender, EventArgs e)
         {
             this.Close();
         }
@@ -82,5 +90,7 @@ namespace Projeto_Circo.FormsFigurino
 			}
 
 		}
+
+	
 	}
 }

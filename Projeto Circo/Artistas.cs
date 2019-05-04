@@ -52,10 +52,5 @@ namespace Projeto_Circo
     
         [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Usage", "CA2227:CollectionPropertiesShouldBeReadOnly")]
         public virtual ICollection<Pagos> Pagos { get; set; }
-
-		public override string ToString()
-		{
-			return Nome + "";
-		}
-	}
+    }
 }

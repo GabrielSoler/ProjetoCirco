@@ -85,7 +85,7 @@
 			this.btnSair.BackColor = System.Drawing.SystemColors.ButtonHighlight;
 			this.btnSair.Cursor = System.Windows.Forms.Cursors.Hand;
 			this.btnSair.Font = new System.Drawing.Font("Times New Roman", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-			this.btnSair.Location = new System.Drawing.Point(244, 436);
+			this.btnSair.Location = new System.Drawing.Point(244, 420);
 			this.btnSair.Name = "btnSair";
 			this.btnSair.Size = new System.Drawing.Size(95, 33);
 			this.btnSair.TabIndex = 13;
@@ -98,7 +98,7 @@
 			this.btnSalvar.BackColor = System.Drawing.SystemColors.ButtonHighlight;
 			this.btnSalvar.Cursor = System.Windows.Forms.Cursors.Hand;
 			this.btnSalvar.Font = new System.Drawing.Font("Times New Roman", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-			this.btnSalvar.Location = new System.Drawing.Point(114, 436);
+			this.btnSalvar.Location = new System.Drawing.Point(114, 420);
 			this.btnSalvar.Name = "btnSalvar";
 			this.btnSalvar.Size = new System.Drawing.Size(97, 33);
 			this.btnSalvar.TabIndex = 12;
@@ -121,7 +121,7 @@
 			this.btnInserirFoto.BackColor = System.Drawing.SystemColors.ButtonHighlight;
 			this.btnInserirFoto.Cursor = System.Windows.Forms.Cursors.Hand;
 			this.btnInserirFoto.Font = new System.Drawing.Font("Times New Roman", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-			this.btnInserirFoto.Location = new System.Drawing.Point(323, 222);
+			this.btnInserirFoto.Location = new System.Drawing.Point(323, 190);
 			this.btnInserirFoto.Name = "btnInserirFoto";
 			this.btnInserirFoto.Size = new System.Drawing.Size(90, 33);
 			this.btnInserirFoto.TabIndex = 10;
@@ -168,9 +168,9 @@
 			// picFoto
 			// 
 			this.picFoto.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
-			this.picFoto.Location = new System.Drawing.Point(290, 12);
+			this.picFoto.Location = new System.Drawing.Point(281, 12);
 			this.picFoto.Name = "picFoto";
-			this.picFoto.Size = new System.Drawing.Size(162, 172);
+			this.picFoto.Size = new System.Drawing.Size(171, 172);
 			this.picFoto.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
 			this.picFoto.TabIndex = 145;
 			this.picFoto.TabStop = false;
@@ -282,7 +282,7 @@
 			this.panel1.Controls.Add(this.label3);
 			this.panel1.Controls.Add(this.label4);
 			this.panel1.Controls.Add(this.txtSenha);
-			this.panel1.Location = new System.Drawing.Point(281, 265);
+			this.panel1.Location = new System.Drawing.Point(281, 233);
 			this.panel1.Name = "panel1";
 			this.panel1.Size = new System.Drawing.Size(171, 165);
 			this.panel1.TabIndex = 11;
@@ -346,7 +346,7 @@
 			this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
 			this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
 			this.BackColor = System.Drawing.SystemColors.ButtonHighlight;
-			this.ClientSize = new System.Drawing.Size(488, 478);
+			this.ClientSize = new System.Drawing.Size(488, 461);
 			this.Controls.Add(this.panel1);
 			this.Controls.Add(this.label1);
 			this.Controls.Add(this.txtRG);

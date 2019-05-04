@@ -22,5 +22,6 @@ namespace Projeto_Circo
         public string PrevisaoPagamento { get; set; }
         public string Status { get; set; }
         public Nullable<bool> Realizado { get; set; }
+        public int IDEspetaculo { get; set; }
     }
 }

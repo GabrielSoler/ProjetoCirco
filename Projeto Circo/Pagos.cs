@@ -16,7 +16,7 @@ namespace Projeto_Circo
     {
         public int IDArtista { get; set; }
         public int IDEspetaculo { get; set; }
-        public bool Pago { get; set; }
+        public Nullable<bool> Pago { get; set; }
         public int IDPago { get; set; }
     
         public virtual Artistas Artistas { get; set; }
